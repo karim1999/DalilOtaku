@@ -1,0 +1,224 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $arabic-font;
+    color: $font_color;
+}
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.unique {
+    color: $secondary2_color;
+}
+.unique2 {
+    color: $secondary3_color;
+}
+h1, .h1 {
+    font-size: $h1;
+}
+h2, .h2 {
+    font-size: $h2;
+}
+h3, .h3 {
+    font-size: $h3;
+}
+h4, .h4 {
+    font-size: $h4;
+}
+h5, .h5 {
+    font-size: $h5;
+}
+h6, .h6 {
+    font-size: $h6;
+}
+.no-decoration {
+    text-decoration: none;
+}
+.main-container{
+    background-color: $primary_color;
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+
+    // nav
+    .main-nav{
+        background-color: $secondary_color;
+        //background-color: blue;
+        margin: 0;
+        padding: 10px 20px;
+        @include center-horizontal;
+        box-shadow: 0px 5px 5px -4px rgba(203, 203, 203, 0.2);
+        img{
+            width: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: $font-color;
+            font-size: $h4;
+        }
+        li {
+            //float: right;
+            list-style-type: none;
+            &.active a{
+                color: $secondary2_color;
+            }
+        }
+        .start-nav{
+            flex: 0;
+        }
+        .middle-nav {
+            flex: auto;
+            li {
+                float: right;
+                margin-left: 25px;
+            }
+        }
+        .end-nav {
+            flex: auto;
+            @include center-horizontal;
+            justify-content: flex-end;
+            li {
+                margin-right: 25px;
+                button.signup-button {
+                    @include button-light-rounded ($h3);
+                }
+                img {
+                    height: 18px;
+                    @include center-horizontal;
+                }
+                input {
+                    @include input;
+                }
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        box-shadow: 0px -5px 5px -4px rgba(203, 203, 203, 0.2);
+        margin: 0;
+        padding: 10px 0 0 0;
+        .top {
+            @include center-horizontal;
+            align-items: baseline;
+            font-size: $h4;
+        }
+        .col {
+            padding: 20px;
+            flex: 1;
+            @include center-horizontal;
+            flex-direction: column;
+            &>img {
+                width: 60px;
+            }
+            &.companies {
+                img {
+                    height: 100px;
+                    width: auto;
+                }
+            }
+        }
+        .bottom {
+            @include center-horizontal;
+            p {
+                display: block;
+                font-size: $h6;
+            }
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
+.input-container {
+    display: flex;
+    position: relative;
+    input {
+        @include input;
+    }
+    textarea {
+        @include textarea;
+    }
+    img {
+        left: 0;
+        position: absolute;
+        padding: 14px 4px;
+        height: 20px;
+        text-align: center;
+    }
+}
+.submit-button{
+    @include button-filled($h5)
+}
+
+
+
+
+// Contact us form
+.content {
+    @include center-horizontal;
+    flex-direction: column;
+    margin: 50px;
+    form {
+        padding: 20px 40px;
+        box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+        border-radius: 10px;
+        background-color: $secondary_color;
+        text-align: center;
+        min-width: 350px;
+        .input-container {
+            margin-top: 30px;
+        }
+        .submit-button{
+            @include button-filled($h5);
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.horizontal-list {
+    flex: 1;
+    padding: 0;
+    @include center-horizontal;
+    li {
+        list-style-type: none;
+    }
+}
+
+.alert-success {
+    @include alert($success, $white);
+}
+.alert-warning {
+    @include alert($warning, $white);
+}
+
+//Auth
+.login-form {
+    .logo {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    .horizontal-list {
+        li {
+            box-shadow: 0px 0px 1px 1px rgba(203, 203, 203, 0.2);
+            border-radius: 5px;
+            padding: 20px 40px;
+        }
+        img {
+            width: 20px;
+        }
+    }
+}

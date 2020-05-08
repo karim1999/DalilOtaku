@@ -1,0 +1,49 @@
+@mixin button-light-rounded($size) {
+    background: transparent;
+    padding: 12px 20px;
+    font-family: $arabic-font;
+    border-radius: 25px;
+    font-size: $size;
+    border: $secondary2_color solid thin;
+    color: $secondary2_color;
+}
+@mixin button-filled($size) {
+    background: $secondary2_color;
+    padding: 15px;
+    font-family: $arabic-font;
+    border-radius: 5px;
+    font-size: $size;
+    color: $secondary_color;
+    width: 100%;
+}
+@mixin center-horizontal(){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin input(){
+    border: transparent;
+    background-color: $primary_color;
+    font-family: $arabic-font;
+    border-radius: 5px;
+    font-size: $h4;
+    height: 30px;
+    padding: 8px;
+    width: 100%;
+    outline: none;
+    &:focus{
+        border: thin solid $secondary2_color;
+        background-color: $secondary_color;
+    }
+}
+@mixin textarea(){
+    @include input;
+    height: 200px;
+}
+@mixin alert($background-color, $font-color){
+    text-align: right;
+    padding: 20px;
+    color: $font-color;
+    background-color: $background-color;
+}
