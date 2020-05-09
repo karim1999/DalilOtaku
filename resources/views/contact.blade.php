@@ -1,4 +1,6 @@
 @extends('layouts.main')
+@section('title', 'Contact Us')
+@section('description', 'Anime Website')
 
 @section('content')
 <div class="content">

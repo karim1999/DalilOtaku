@@ -1,19 +1,19 @@
-@mixin button-light-rounded($size) {
-    background: transparent;
-    padding: 12px 20px;
+@mixin button($size, $background, $color, $border-radius) {
     font-family: $arabic-font;
-    border-radius: 25px;
+    cursor: pointer;
+    background-color: $background;
     font-size: $size;
+    color: $color;
+    border-radius: $border-radius;
+}
+@mixin button-light-rounded($size) {
+    @include button($size, transparent, $secondary2_color, 25px);
+    padding: 12px 20px;
     border: $secondary2_color solid thin;
-    color: $secondary2_color;
 }
 @mixin button-filled($size) {
-    background: $secondary2_color;
+    @include button($size, $secondary2_color, $secondary_color, 5px);
     padding: 15px;
-    font-family: $arabic-font;
-    border-radius: 5px;
-    font-size: $size;
-    color: $secondary_color;
     width: 100%;
 }
 @mixin center-horizontal(){
@@ -46,4 +46,14 @@
     padding: 20px;
     color: $font-color;
     background-color: $background-color;
+}
+@mixin box($background-color, $font_color, $border-radius, $padding){
+    background-color: $background-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    color: $font_color;
+}
+@mixin light-box(){
+    @include box($secondary_color, $font_color, 10px, 0px 30px);
+    border: $border;
 }

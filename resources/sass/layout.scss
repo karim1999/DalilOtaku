@@ -4,6 +4,18 @@ body {
     font-family: $arabic-font;
     color: $font_color;
 }
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 .no-padding {
     padding: 0 !important;
     margin: 0 !important;
@@ -41,14 +53,26 @@ h5, .h5 {
 h6, .h6 {
     font-size: $h6;
 }
+.clickable {
+    cursor: pointer;
+}
 .no-decoration {
     text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: $font-color;
+    font-size: $h4;
+    &:hover {
+        color: $secondary2_color;
+    }
 }
 .main-container{
     background-color: $primary_color;
     //background-color: red;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
     width: 100%;
 
@@ -62,11 +86,6 @@ h6, .h6 {
         box-shadow: 0px 5px 5px -4px rgba(203, 203, 203, 0.2);
         img{
             width: 50px;
-        }
-        a {
-            text-decoration: none;
-            color: $font-color;
-            font-size: $h4;
         }
         li {
             //float: right;
@@ -104,7 +123,16 @@ h6, .h6 {
             }
         }
     }
-
+    .row {
+        flex: 1;
+        @include center-horizontal;
+        flex-direction: row;
+    }
+    .col {
+        flex: 1;
+        @include center-horizontal;
+        flex-direction: column;
+    }
     // Footer
     .footer {
         box-shadow: 0px -5px 5px -4px rgba(203, 203, 203, 0.2);
@@ -117,9 +145,6 @@ h6, .h6 {
         }
         .col {
             padding: 20px;
-            flex: 1;
-            @include center-horizontal;
-            flex-direction: column;
             &>img {
                 width: 60px;
             }
@@ -128,6 +153,9 @@ h6, .h6 {
                     height: 100px;
                     width: auto;
                 }
+            }
+            a {
+                padding: 10px;
             }
         }
         .bottom {
@@ -221,4 +249,9 @@ h6, .h6 {
             width: 20px;
         }
     }
+}
+
+.box{
+    @include light-box;
+    margin-top: 20px;
 }

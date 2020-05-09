@@ -4,14 +4,14 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ config('app.name', 'Laravel') }}</title>
+<title>{{ config('app.name', 'دليل اوتاكو') }} - @yield('title', 'الرئيسية')</title>
+<meta name="description"
+      content="@yield('description', 'موقع انميات')"></head>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
-
-<!-- Fonts -->
-{{--<link rel="dns-prefetch" href="//fonts.gstatic.com">--}}
-{{--<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">--}}
+@yield('scripts')
 
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@yield('styles')

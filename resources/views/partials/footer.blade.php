@@ -13,7 +13,15 @@
         </div>
         <div class="col">
             <img src="{{asset("assets/footer/g22078@2x.png")}}" alt="">
-            <p>الأسئلة الشائعة  -  سياسة الخصوصية  -  من نحن  -  أتصل بنا</p>
+            <div class="row">
+                <a href="{{route("faq")}}">الأسئلة الشائعة</a>
+                -
+                <a href="{{route("policy")}}">سياسة الخصوصية</a>
+                -
+                <a href="{{route("who")}}">من نحن</a>
+                -
+                <a href="{{route("contact")}}">أتصل بنا</a>
+            </div>
         </div>
     </div>
     <div class="middle">
