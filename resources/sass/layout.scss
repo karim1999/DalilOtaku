@@ -122,6 +122,12 @@ a {
                 }
             }
         }
+        //secondary nav
+        &.secondary-nav {
+            background-color: transparent;
+            box-shadow: none;
+            align-self: flex-start;
+        }
     }
     .row {
         flex: 1;
@@ -232,6 +238,9 @@ a {
 .alert-warning {
     @include alert($warning, $white);
 }
+.alert-info {
+    @include alert($info, $black);
+}
 
 //Auth
 .login-form {
@@ -254,4 +263,91 @@ a {
 .box{
     @include light-box;
     margin-top: 20px;
+}
+
+
+
+//Anime
+.list-container{
+    @include center-horizontal;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+        list-style-type: none;
+    }
+    .list-item {
+        flex-basis: 30%;
+        margin: 1%;
+    }
+    .anime-container{
+        background-color: $secondary_color;
+        box-shadow: 0px 0px 5px 5px rgba(203, 203, 203, 0.2);
+        padding-top: 10px;
+        .top{
+            ul{
+                padding: 10px 30px;
+                justify-content: center;
+                li{
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .middle{
+            height: 300px;
+            &>img{
+                //width: 40%;
+            }
+            .left{
+                padding: 10px;
+                ul{
+                    @include center-horizontal;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    li{
+                        flex-basis: auto;
+                        min-width: 46%;
+                        margin-left: 2%;
+                        margin-bottom: 15px;
+                        i{
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                p {
+                    overflow-y: auto;
+                    height: 150px;
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: $primary_color;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: $black;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+        .bottom{
+            ul{
+                padding: 10px;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .actions-area{
+        justify-content: flex-end;
+        i {
+            margin-right: 5px;
+        }
+        p {
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
 }

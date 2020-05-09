@@ -46,6 +46,7 @@
     padding: 20px;
     color: $font-color;
     background-color: $background-color;
+    margin: 20px;
 }
 @mixin box($background-color, $font_color, $border-radius, $padding){
     background-color: $background-color;
