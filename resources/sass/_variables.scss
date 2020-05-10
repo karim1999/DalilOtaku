@@ -28,9 +28,9 @@ $blue: #55c4ffff;
 $red: #ff4e6aff;
 
 //Dark Colors
-//$dark_grey: #808080ff;
-//$dark_blue: #1e2a32ff;
-//$darker_blue: #2b3844ff;
+$dark_grey: #808080ff;
+$dark_blue: #1e2a32ff;
+$darker_blue: #2b3844ff;
 
 //Main Colors (Light)
 $primary_color: $grey;
@@ -38,6 +38,13 @@ $secondary_color: $white;
 $secondary2_color: $red;
 $secondary3_color: $blue;
 $font_color: $black;
+
+//Main Colors (Dark)
+//$primary_color: $dark_blue;
+//$secondary_color: $darker_blue;
+//$secondary2_color: $red;
+//$secondary3_color: $blue;
+//$font_color: $grey;
 
 
 //Font Size

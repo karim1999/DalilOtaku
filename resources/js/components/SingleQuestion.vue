@@ -1,5 +1,5 @@
 <template>
-    <div class="col-5 box">
+    <div class="col-5 col-md-10 box">
         <div class="row clickable" @click="toggle">
             <h4 :class="{'unique': active}">{{title}}</h4>
             <i  :class="[active? activeClass: inactiveClass]"></i>

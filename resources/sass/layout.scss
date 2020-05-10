@@ -171,6 +171,9 @@ a {
             a {
                 padding: 10px;
             }
+            p {
+                min-width: 300px;
+            }
         }
         .bottom {
             @include display-flex(row, space-between, center);
@@ -351,6 +354,7 @@ a {
                 padding: 10px;
                 img{
                     width: 30px;
+                    filter: invert(90%);
                 }
             }
         }

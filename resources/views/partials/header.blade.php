@@ -7,6 +7,7 @@
 <title>{{ config('app.name', 'دليل اوتاكو') }} - @yield('title', 'الرئيسية')</title>
 <meta name="description"
       content="@yield('description', 'موقع انميات')"></head>
+<link rel="icon" href="{{asset("assets/logo.png")}}" type="image/gif" sizes="16x16">
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>

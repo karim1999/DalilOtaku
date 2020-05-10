@@ -309,6 +309,10 @@ a:hover {
   padding: 10px;
 }
 
+.main-container .footer .col p {
+  min-width: 300px;
+}
+
 .main-container .footer .bottom {
   display: flex;
   flex-direction: row;
@@ -579,6 +583,8 @@ a:hover {
 
 .list-container .anime-container .bottom ul img {
   width: 30px;
+  -webkit-filter: invert(90%);
+          filter: invert(90%);
 }
 
 .list-container .actions-area {
