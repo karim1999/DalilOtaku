@@ -16,11 +16,12 @@
     padding: 15px;
     width: 100%;
 }
-@mixin center-horizontal(){
+@mixin display-flex($flex-direction, $justify-content, $align-items, $wrap: nowrap){
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $wrap;
 }
 @mixin input(){
     border: transparent;

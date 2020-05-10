@@ -12904,6 +12904,17 @@ var files = __webpack_require__("./resources/js sync recursive \\.vue$/");
 files.keys().map(function (key) {
   return Vue.component(key.split('/').pop().split('.')[0], files(key)["default"]);
 });
+var nav = new Vue({
+  el: "#nav",
+  data: {
+    showMenu: true
+  },
+  methods: {
+    menuToggle: function menuToggle() {
+      this.showMenu = !this.showMenu;
+    }
+  }
+});
 
 /***/ }),
 
