@@ -23,13 +23,13 @@
             <li class="{{ (request()->is('/airing')) ? 'active' : '' }}"><a href="{{route("home")}}">انمي مستمر</a></li>
         </ul>
     </div>
-    <div class="list-container">
-        @for ($i = 0; $i < 10; $i++)
+    <div class="list-container col-10">
+        @for ($i = 0; $i < 6; $i++)
             <div class="list-item">
                 <div class="anime-container">
                     <div class="top">
-                        <h4 class="ar-title text-center">سورد ارد اونلاين اليزايزيشن</h4>
-                        <h5 class="en-title text-center">Sword Art Online Alicization</h5>
+                        <h5 class="ar-title text-center">سورد ارد اونلاين اليزايزيشن</h5>
+                        <h6 class="en-title text-center">Sword Art Online Alicization</h6>
                         <ul class="categories row">
                             <li>
                                 <a href="">

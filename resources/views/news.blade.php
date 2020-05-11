@@ -3,8 +3,8 @@
 @section('description', 'موقع انميات')
 
 @section('content')
-    <div class="content news col-9">
-        <div class="filter">
+    <div class="content news col-md-12 col-9">
+        <div class="filter col-sm-12">
             <h4 class="unique2 text-center">خيارات العرض</h4>
             <ul class="list-container text-right" id="dropdown">
                 <li class="active"><a href=""><i></i> عرض كل النتائج</a><i class="far fa-check-circle"></i></li>

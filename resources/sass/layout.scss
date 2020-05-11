@@ -24,10 +24,12 @@ body {
     display: none;
 }
 .text-left {
+    align-self: flex-end;
     text-align: left;
 }
 .text-right {
     text-align: right;
+    align-self: flex-start;
 }
 .text-center {
     text-align: center;
@@ -284,10 +286,24 @@ a {
 }
 
 
-
 //Anime
 .list-container{
     @include display-flex(row, center, center, wrap);
+    &.version2 {
+        @include display-flex(row, flex-start, flex-start, wrap);
+        .list-item {
+            flex-basis: auto;
+            .anime-container {
+                background-color: transparent;
+                box-shadow: none;
+                img {
+                    height: 280px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
     li {
         list-style-type: none;
     }
@@ -370,7 +386,6 @@ a {
         }
     }
 }
-
 
 
 
