@@ -81,32 +81,42 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/faq.js":
+/***/ "./resources/js/nav.js":
 /*!*****************************!*\
-  !*** ./resources/js/faq.js ***!
+  !*** ./resources/js/nav.js ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var faq = new Vue({
-  el: '#faq'
+var nav = new Vue({
+  el: "#nav",
+  data: {
+    showMenu: false,
+    showClass: 'sm-only',
+    hideClass: 'hidden-sm'
+  },
+  methods: {
+    menuToggle: function menuToggle() {
+      this.showMenu = !this.showMenu;
+    }
+  }
 });
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!***********************************!*\
-  !*** multi ./resources/js/faq.js ***!
+  !*** multi ./resources/js/nav.js ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\projects\web\DalilOtaku\resources\js\faq.js */"./resources/js/faq.js");
+module.exports = __webpack_require__(/*! C:\projects\web\DalilOtaku\resources\js\nav.js */"./resources/js/nav.js");
 
 
 /***/ })

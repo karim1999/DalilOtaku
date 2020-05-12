@@ -35,6 +35,9 @@
     .sm-only{
         display: block !important;
     }
+    .hidden-sm{
+        display: none !important;
+    }
     .main-container #nav, .main-container #nav .middle-nav, .main-container #nav .end-nav, .main-container #nav .end-nav li{
         flex-direction: column;
         text-align: center;

@@ -1,7 +1,9 @@
-export let nav= new Vue({
+let nav= new Vue({
     el: "#nav",
     data: {
-        showMenu: true
+        showMenu: false,
+        showClass: 'sm-only',
+        hideClass: 'hidden-sm'
     },
     methods: {
         menuToggle(){
