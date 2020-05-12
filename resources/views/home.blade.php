@@ -23,7 +23,7 @@
             <li class="{{ (request()->is('/airing')) ? 'active' : '' }}"><a href="{{route("home")}}">انمي مستمر</a></li>
         </ul>
     </div>
-    <div class="list-container col-10">
+    <div class="list-container">
         @for ($i = 0; $i < 6; $i++)
             <div class="list-item">
                 <div class="anime-container">

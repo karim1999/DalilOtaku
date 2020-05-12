@@ -38,6 +38,7 @@ $secondary_color: $white;
 $secondary2_color: $red;
 $secondary3_color: $blue;
 $font_color: $black;
+$border: #e0e0e0 solid 1px;
 
 //Main Colors (Dark)
 //$primary_color: $dark_blue;
@@ -45,6 +46,7 @@ $font_color: $black;
 //$secondary2_color: $red;
 //$secondary3_color: $blue;
 //$font_color: $grey;
+//$border: none;
 
 
 //Font Size
@@ -57,4 +59,4 @@ $h6: 11px;
 
 
 //Border
-$border: #e0e0e0 solid 1px;
+$box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
