@@ -17,3 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/nav.js', 'public/js')
 mix.js('resources/js/faq.js', 'public/js')
 mix.js('resources/js/dropdown.js', 'public/js')
+
+
+
+
+//Admin
+mix.sass('resources/sass/admin.scss', 'public/css')

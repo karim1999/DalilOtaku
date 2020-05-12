@@ -1,0 +1,3 @@
+.main-container {
+    @include display-flex(row, flex-start, flex-start)
+}
