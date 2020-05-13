@@ -25,10 +25,6 @@ Route::get('/calendar', "CalendarController@index")->name("calendar");
 Auth::routes();
 
 
-
-
-
-
 //Admin Routes
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace
