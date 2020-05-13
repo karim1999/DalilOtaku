@@ -5,10 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/admin-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin-layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +198,7 @@
       <updated>1588877278316</updated>
       <workItem from="1588877279635" duration="72000" />
       <workItem from="1588877385615" duration="31525000" />
-      <workItem from="1589027722858" duration="68387000" />
+      <workItem from="1589027722858" duration="70840000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -300,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589320928329</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="-Fixed Responsive">
+      <created>1589360948272</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589360948272</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +340,7 @@
     <MESSAGE value="-Nav Responsive Fixed" />
     <MESSAGE value="-News Page responsive" />
     <MESSAGE value="-Added Admin Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added Admin Structure" />
+    <MESSAGE value="-Fixed Responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Fixed Responsive" />
   </component>
 </project>

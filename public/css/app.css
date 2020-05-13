@@ -174,7 +174,7 @@
 }
 
 .main-container .footer .col p {
-  min-width: 300px;
+  min-width: 250px;
 }
 
 .main-container .footer .bottom {
@@ -308,6 +308,7 @@
 .list-container .anime-container .top ul {
   padding: 10px 30px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .list-container .anime-container .top ul li {
@@ -370,10 +371,13 @@
 }
 
 .list-container .anime-container .bottom ul {
-  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .list-container .anime-container .bottom ul img {
+  margin-right: 5px;
   width: 30px;
   -webkit-filter: invert(90%);
           filter: invert(90%);
@@ -978,10 +982,19 @@ a:hover {
     display: none !important;
   }
 
-  .list-container .anime-container .middle {
+  .list-container .list-item {
+    flex-basis: 95%;
+    margin-top: 20px;
+  }
+
+  .list-container .list-item .middle {
     flex-wrap: wrap;
     height: auto;
     justify-content: center;
+  }
+
+  .list-container .list-item .middle img {
+    height: 200px;
   }
 
   .main-container #nav,
