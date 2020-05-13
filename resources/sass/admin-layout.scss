@@ -31,5 +31,29 @@
         flex: 5;
         background-color: $primary_color;
         padding: 0px 20px;
+        .form-container{
+            padding: 30px;
+            .input-container{
+                flex-direction: column;
+                label {
+                    margin-bottom: 20px;
+                    margin-top: 40px;
+                }
+                input, textarea {
+                    background-color: $secondary_color;
+                    border: $border;
+                    :focus {
+                        border-color: $secondary2_color;
+                    }
+                }
+            }
+            button {
+                @include button-filled($h3);
+                margin-top: 20px;
+                padding: 15px 70px;
+                width: auto;
+                border-radius: 7px;
+            }
+        }
     }
 }

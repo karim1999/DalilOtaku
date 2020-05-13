@@ -8,4 +8,9 @@ use Illuminate\Http\Request;
 class AnimeController extends Controller
 {
     //
+    public function index(){
+        $data= [];
+        return view("admin.settings", $data);
+    }
+
 }

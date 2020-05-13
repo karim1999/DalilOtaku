@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends Model
 {
+    protected $fillable = ['key', 'value'];
     //
     public static function setOption($key, $value){
         self::updateOrCreate([
@@ -14,8 +15,13 @@ class Setting extends Model
             'value' => $value
         ]);
     }
-    public function getOption($key, $first= true){
+    public static function setOptions($arr){
+        foreach ($arr as $key => $value){
+            self::setOption($key, $value);
+        }
+    }
+    public static function getOption($key, $first= true){
         $result= self::where('key', $key)->first();
-        return $first ? $result : $result->value;
+        return $first ? $result->value : $result;
     }
 }

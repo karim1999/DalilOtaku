@@ -113,7 +113,8 @@
 }
 
 .main-container .main-nav .end-nav li input:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 
@@ -478,7 +479,8 @@
 }
 
 .news .filter ul input:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 
@@ -713,7 +715,8 @@ a:hover {
 }
 
 .input-container input:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 
@@ -731,7 +734,8 @@ a:hover {
 }
 
 .input-container textarea:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 

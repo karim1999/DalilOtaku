@@ -2,13 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Setting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SettingsSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/animes/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/faq/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/faq/view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/policy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/sources/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/sources/view.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/terms.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_13_115418_create_settings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_13_115418_create_settings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/RolesAndPermissionsSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AlertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AlertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FaqController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FaqController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PolicyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PolicyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TermsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TermsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/admin-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin-layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/assets/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/alerts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/alerts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +50,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
-        <option value="blade" />
         <option value="SCSS File" />
+        <option value="Vue Single File Component" />
+        <option value="blade" />
       </list>
     </option>
   </component>
@@ -156,7 +181,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -168,15 +193,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views" />
+      <recent name="C:\projects\web\DalilOtaku\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass" />
       <recent name="C:\projects\web\DalilOtaku\public\assets" />
       <recent name="C:\projects\web\DalilOtaku\public\assets\social" />
-      <recent name="C:\projects\web\DalilOtaku\public\assets\footer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\web\DalilOtaku\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -210,7 +237,7 @@
       <workItem from="1588877279635" duration="72000" />
       <workItem from="1588877385615" duration="31525000" />
       <workItem from="1589027722858" duration="73965000" />
-      <workItem from="1589373350650" duration="8521000" />
+      <workItem from="1589373350650" duration="16056000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -338,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589379369386</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="-Seeders">
+      <created>1589399621893</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1589399621893</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +409,7 @@
     <MESSAGE value="-Added Admin Structure" />
     <MESSAGE value="-Fixed Responsive" />
     <MESSAGE value="-Migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Migrations" />
+    <MESSAGE value="-Seeders" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Seeders" />
   </component>
 </project>

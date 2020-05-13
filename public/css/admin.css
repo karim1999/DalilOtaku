@@ -64,6 +64,45 @@
   padding: 0px 20px;
 }
 
+.main-container .content .form-container {
+  padding: 30px;
+}
+
+.main-container .content .form-container .input-container {
+  flex-direction: column;
+}
+
+.main-container .content .form-container .input-container label {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.main-container .content .form-container .input-container input,
+.main-container .content .form-container .input-container textarea {
+  background-color: #ffffff;
+  border: #e0e0e0 solid 1px;
+}
+
+.main-container .content .form-container .input-container input :focus,
+.main-container .content .form-container .input-container textarea :focus {
+  border-color: #ff4e6aff;
+}
+
+.main-container .content .form-container button {
+  font-family: "arabicFont";
+  cursor: pointer;
+  background-color: #ff4e6aff;
+  font-size: 17px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 70px;
+  width: auto;
+  border-radius: 7px;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -219,7 +258,8 @@ a:hover {
 }
 
 .input-container input:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 
@@ -237,7 +277,8 @@ a:hover {
 }
 
 .input-container textarea:focus {
-  border: thin solid #ff4e6aff;
+  border: #e0e0e0 solid 1px;
+  border-color: #ff4e6aff !important;
   background-color: #ffffff;
 }
 

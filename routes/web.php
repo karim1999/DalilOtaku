@@ -28,5 +28,28 @@ Auth::routes();
 //Admin Routes
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace
-    Route::get('/', "AlertController@index")->name("home");
+    Route::name('alert.')->prefix('alert')->group(function(){
+        Route::get('/', "AlertController@index")->name("form");
+        Route::put('/action', "AlertController@action")->name("action");
+    });
+    Route::name('terms.')->prefix('terms')->group(function(){
+        Route::get('/', "TermsController@index")->name("form");
+        Route::put('/action', "TermsController@action")->name("action");
+    });
+    Route::name('policy.')->prefix('policy')->group(function(){
+        Route::get('/', "PolicyController@index")->name("form");
+        Route::put('/action', "PolicyController@action")->name("action");
+    });
+    Route::name('settings.')->prefix('settings')->group(function(){
+        Route::get('/', "SettingController@index")->name("form");
+        Route::put('/action', "SettingController@action")->name("action");
+    });
+
+    Route::resource('animes', 'AnimeController');
+    Route::resource('categories', 'CategoryController');
+    Route::resource('faq', 'FaqController');
+    Route::resource('sources', 'SourceController');
+    Route::resource('studios', 'StudioController');
+    Route::resource('users', 'UserController');
+
 });

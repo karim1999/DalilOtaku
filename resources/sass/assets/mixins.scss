@@ -34,7 +34,8 @@
     width: 100%;
     outline: none;
     &:focus{
-        border: thin solid $secondary2_color;
+        border: $border;
+        border-color: $secondary2_color !important;
         background-color: $secondary_color;
     }
 }

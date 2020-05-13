@@ -8,4 +8,9 @@ use Illuminate\Http\Request;
 class SourceController extends Controller
 {
     //
+    public function index(){
+        $data= [];
+        return view("admin.settings", $data);
+    }
+
 }
