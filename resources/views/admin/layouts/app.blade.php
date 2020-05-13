@@ -6,7 +6,9 @@
 <body>
 <div class="main-container">
     @include('admin.partials.menu')
-    @yield('content')
+    <div class="content">
+        @yield('content')
+    </div>
     @include('admin.partials.footer')
 </div>
 </body>

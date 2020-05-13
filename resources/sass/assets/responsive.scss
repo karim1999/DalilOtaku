@@ -33,6 +33,11 @@
     .hidden-sm{
         display: none !important;
     }
+    .list-container .anime-container .middle{
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: center;
+    }
     .main-container #nav, .main-container #nav .middle-nav, .main-container #nav .end-nav, .main-container #nav .end-nav li{
         flex-direction: column;
         text-align: center;

@@ -978,6 +978,12 @@ a:hover {
     display: none !important;
   }
 
+  .list-container .anime-container .middle {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+
   .main-container #nav,
   .main-container #nav .middle-nav,
   .main-container #nav .end-nav,

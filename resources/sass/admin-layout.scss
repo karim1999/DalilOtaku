@@ -1,3 +1,35 @@
 .main-container {
-    @include display-flex(row, flex-start, flex-start)
+    @include display-flex(row, flex-start, flex-start);
+    .menu {
+        min-height: 100vh;
+        flex: 1;
+        background-color: $dark_blue;
+        padding-top: 30px;
+        @include display-flex(column, flex-start, center);
+        ul.menu-list {
+            @include display-flex(column, flex-start, flex-start);
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin-right: 50px;
+                font-size: $h3;
+                margin-top: 40px;
+                color: $secondary_color;
+                i {
+                    margin-left: 10px;
+                }
+            }
+            a:hover, li:hover, a.active, li.active {
+                color: $secondary2_color;
+            }
+        }
+    }
+    .content {
+        min-height: 100vh;
+        flex: 5;
+        background-color: $primary_color;
+        padding: 0px 20px;
+    }
 }
