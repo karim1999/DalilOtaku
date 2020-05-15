@@ -1,6 +1,7 @@
 .main-container {
     @include display-flex(row, flex-start, flex-start);
     .menu {
+        align-self: stretch;
         min-height: 100vh;
         flex: 1;
         background-color: $dark_blue;
@@ -33,13 +34,49 @@
         padding: 0px 20px;
         .form-container{
             padding: 30px;
+            .img-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .profile-img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 100%;
+                }
+            }
+            .splitter {
+                @include display-flex(row, flex-start, center);
+                h4 {
+                    margin-left: 10px;
+                }
+                span {
+                    flex: 1;
+                    border-bottom: $border;
+                    height: .5px;
+                }
+            }
+            .section {
+                @include display-flex(row, flex-start, flex-end);
+                margin-bottom: 40px;
+                .input-container{
+                    flex: 1;
+                    margin-left: 30px;
+                }
+                button {
+                    margin-top: 0px;
+                }
+                &.base-line {
+                }
+            }
+            &>.input-container {
+                margin-bottom: 40px;
+            }
             .input-container{
                 flex-direction: column;
                 label {
                     margin-bottom: 20px;
-                    margin-top: 40px;
                 }
-                input, textarea {
+                input, textarea, select {
                     background-color: $secondary_color;
                     border: $border;
                     :focus {
@@ -53,6 +90,25 @@
                 padding: 15px 70px;
                 width: auto;
                 border-radius: 7px;
+                &.btn-edit {
+                    @include button-light-rounded($h4, $secondary3_color);
+                    margin-left: 20px;
+                }
+                &.btn-delete {
+                    @include button-light-rounded($h4);
+                }
+            }
+        }
+        .add-btn {
+            margin-bottom: 20px;
+        }
+        .table {
+            width: 100%;
+            tr {
+                @include display-flex(row, center, center);
+                td, th {
+                    flex: 1
+                }
             }
         }
     }

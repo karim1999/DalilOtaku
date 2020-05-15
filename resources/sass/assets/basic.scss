@@ -49,6 +49,27 @@ h5, .h5 {
 h6, .h6 {
     font-size: $h6;
 }
+.flex-0 {
+    flex: 0 !important;
+}
+.flex-1 {
+    flex: 1 !important;
+}
+.flex-2 {
+    flex: 2 !important;
+}
+.flex-3 {
+    flex: 3 !important;
+}
+.flex-4 {
+    flex: 4 !important;
+}
+.flex-5 {
+    flex: 5 !important;
+}
+.flex-6 {
+    flex: 6 !important;
+}
 .clickable {
     cursor: pointer;
 }
@@ -90,9 +111,31 @@ a {
     position: relative;
     input {
         @include input;
+        &[type= file]::-webkit-file-upload-button {
+            visibility: hidden;
+        }
+        &:disabled {
+            background-color: $primary_color !important;
+        }
+
+        &[type= file]::before {
+            content: 'استعراض';
+            border: $border;
+            border-radius: 10px;
+            padding: 5px 8px;
+            outline: none;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            cursor: pointer;
+            text-shadow: 1px 1px #fff;
+            font-size: $h4;
+        }
     }
     textarea {
         @include textarea;
+    }
+    select {
+        @include select
     }
     img, .icon {
         left: 0;

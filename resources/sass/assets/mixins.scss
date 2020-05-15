@@ -6,10 +6,10 @@
     color: $color;
     border-radius: $border-radius;
 }
-@mixin button-light-rounded($size) {
-    @include button($size, transparent, $secondary2_color, 25px);
+@mixin button-light-rounded($size, $background-color: $secondary2_color) {
+    @include button($size, transparent, $background-color, 25px);
     padding: 12px 20px;
-    border: $secondary2_color solid thin;
+    border: $background-color solid thin;
 }
 @mixin button-filled($size) {
     @include button($size, $secondary2_color, $secondary_color, 5px);
@@ -42,6 +42,10 @@
 @mixin textarea(){
     @include input;
     height: 200px;
+}
+@mixin select(){
+    @include input;
+    height: 48px;
 }
 @mixin alert($background-color, $font-color){
     text-align: right;

@@ -47,7 +47,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('animes', 'AnimeController');
     Route::resource('categories', 'CategoryController');
-    Route::resource('faq', 'FaqController');
+    Route::resource('questions', 'QuestionController');
     Route::resource('sources', 'SourceController');
     Route::resource('studios', 'StudioController');
     Route::resource('users', 'UserController');
