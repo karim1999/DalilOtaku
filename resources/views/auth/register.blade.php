@@ -33,6 +33,13 @@
             @error('password')
             <h6 class="unique text-right no-padding">{{ $message }}</h6>
             @enderror
+            <div class="input-container">
+                <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_conformation') is-invalid @enderror" name="password_conformation" required autocomplete="new-password">
+                <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
+            </div>
+            @error('password_conformation')
+            <h6 class="unique text-right no-padding">{{ $message }}</h6>
+            @enderror
             <h5 class="text-right">بتسجيلك في الموقع انت توافق علي <a class="no-decoration unique" href="{{ route('password.request') }}">شروط الاستحدام</a></h5>
             <button class="submit-button" type="submit">
                 تسجيل

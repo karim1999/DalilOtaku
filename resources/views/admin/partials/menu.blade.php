@@ -12,5 +12,6 @@
         <a href="{{route("admin.policy.form")}}"><li class="{{ (request()->is('admin/policy*')) ? 'active' : '' }}"><i class="fa fa-user-shield"></i>سياسة الخصوصية</li></a>
         <a href="{{route("admin.terms.form")}}"><li class="{{ (request()->is('admin/terms*')) ? 'active' : '' }}"><i class="fa fa-calendar-check"></i>شروط الاستخدام</li></a>
         <a href="{{route("admin.settings.form")}}"><li class="{{ (request()->is('admin/settings*')) ? 'active' : '' }}"><i class="fa fa-cog"></i>الاعدادات</li></a>
+        <a href="{{route("logout")}}"><li class="{{ (request()->is('logout')) ? 'active' : '' }}"><i class="fa fa-sign-out"></i>تسجيل الخروج</li></a>
     </ul>
 </div>

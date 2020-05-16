@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="form-container" >
-        <form method="post" action="{{route("admin.terms.action")}}">
+        <form method="post" action="{{route("admin.settings.action")}}">
             @method('PUT')
             @csrf
             @if (session('status'))
@@ -21,15 +21,15 @@
                 </div>
                 <div class="input-container">
                     <label for="title">اسم الموقع:</label>
-                    <input placeholder="اكتب عنوان الموقع..." type="text" name="title" value="" autofocus>
+                    <input placeholder="اكتب عنوان الموقع..." type="text" name="title" value="{{$title}}" autofocus>
                 </div>
                 <div class="input-container">
                     <label for="subtitle">عنوان فرعي:</label>
-                    <input placeholder="اكتب عنوان فرعي..." type="text" name="subtitle" value="" autofocus>
+                    <input placeholder="اكتب عنوان فرعي..." type="text" name="subtitle" value="{{$subtitle}}" autofocus>
                 </div>
                 <div class="input-container flex-2">
                     <label for="description">وصف بسيط:</label>
-                    <input placeholder="اكتب وصف الموقع..." type="text" name="description" value="" autofocus>
+                    <input placeholder="اكتب وصف الموقع..." type="text" name="description" value="{{$description}}" autofocus>
                 </div>
             </div>
             <div class="splitter">
@@ -50,7 +50,7 @@
             <div class="section">
                 <div class="input-container">
                     <label for="google_id">كود مصادقة جوجل:</label>
-                    <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google_id" value="" autofocus>
+                    <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google_id" value="{{$google_id}}" autofocus>
                 </div>
                 <div class="input-container">
                     <label for="google">كود مصادقة جوجل:</label>
@@ -65,15 +65,15 @@
             <div class="section">
                 <div class="input-container">
                     <label for="facebook">فيسبوك:</label>
-                    <input placeholder="فيسبوك..." type="text" name="facebook" value="" autofocus>
+                    <input placeholder="فيسبوك..." type="text" name="facebook" value="{{$facebook}}" autofocus>
                 </div>
                 <div class="input-container">
                     <label for="twitter">تويتر:</label>
-                    <input placeholder="تويتر..." type="text" name="twitter" value="" autofocus>
+                    <input placeholder="تويتر..." type="text" name="twitter" value="{{$twitter}}" autofocus>
                 </div>
                 <div class="input-container">
                     <label for="instagram">انستجرام:</label>
-                    <input placeholder="انستجرام..." type="text" name="instagram" value="" autofocus>
+                    <input placeholder="انستجرام..." type="text" name="instagram" value="{{$instagram}}" autofocus>
                 </div>
                 <div class="flex-2"></div>
             </div>

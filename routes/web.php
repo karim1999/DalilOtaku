@@ -23,11 +23,11 @@ Route::get('/terms', "TermsController@index")->name("terms");
 Route::get('/calendar', "CalendarController@index")->name("calendar");
 
 Auth::routes();
-
+Route::get('/logout', "Auth\LoginController@logout");
 
 //Admin Routes
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
-    // Controllers Within The "App\Http\Controllers\Admin" Namespace
+Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 'can:access admin'])->group(function () {
+    Route::get('/', "AlertController@index")->name("home");
     Route::name('alert.')->prefix('alert')->group(function(){
         Route::get('/', "AlertController@index")->name("form");
         Route::put('/action', "AlertController@action")->name("action");
