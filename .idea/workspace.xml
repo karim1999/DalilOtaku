@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +209,7 @@
       <workItem from="1588877279635" duration="72000" />
       <workItem from="1588877385615" duration="31525000" />
       <workItem from="1589027722858" duration="73965000" />
-      <workItem from="1589373350650" duration="52331000" />
+      <workItem from="1589373350650" duration="52508000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -386,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589660034047</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed Registration Problem">
+      <created>1589660194074</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1589660194074</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
