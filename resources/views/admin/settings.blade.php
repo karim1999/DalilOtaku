@@ -16,19 +16,19 @@
         </div>
         <div class="section">
             <div class="input-container">
-                <label for="terms_title">ايقونة الموقع:</label>
+                <label for="icon">ايقونة الموقع:</label>
                 <input placeholder="اكتب عنوان الرسالة..." type="file" name="icon" value="" autofocus>
             </div>
             <div class="input-container">
-                <label for="terms_title">اسم الموقع:</label>
+                <label for="title">اسم الموقع:</label>
                 <input placeholder="اكتب عنوان الموقع..." type="text" name="title" value="" autofocus>
             </div>
             <div class="input-container">
-                <label for="terms_title">عنوان فرعي:</label>
+                <label for="subtitle">عنوان فرعي:</label>
                 <input placeholder="اكتب عنوان فرعي..." type="text" name="subtitle" value="" autofocus>
             </div>
             <div class="input-container flex-2">
-                <label for="terms_title">وصف بسيط:</label>
+                <label for="description">وصف بسيط:</label>
                 <input placeholder="اكتب وصف الموقع..." type="text" name="description" value="" autofocus>
             </div>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="section">
             <div class="input-container">
-                <label for="terms_title">شعار الموقع:</label>
+                <label for="logo">شعار الموقع:</label>
                 <input placeholder="اكتب عنوان الرسالة..." type="file" name="logo" value="" autofocus>
             </div>
             <div class="flex-4"></div>
@@ -49,11 +49,11 @@
         </div>
         <div class="section">
             <div class="input-container">
-                <label for="terms_title">كود مصادقة جوجل:</label>
-                <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google" value="" autofocus>
+                <label for="google_id">كود مصادقة جوجل:</label>
+                <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google_id" value="" autofocus>
             </div>
             <div class="input-container">
-                <label for="terms_title">كود مصادقة جوجل:</label>
+                <label for="google">كود مصادقة جوجل:</label>
                 <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google" value="" autofocus>
             </div>
             <div class="flex-3"></div>
@@ -64,15 +64,15 @@
         </div>
         <div class="section">
             <div class="input-container">
-                <label for="terms_title">فيسبوك:</label>
+                <label for="facebook">فيسبوك:</label>
                 <input placeholder="فيسبوك..." type="text" name="facebook" value="" autofocus>
             </div>
             <div class="input-container">
-                <label for="terms_title">تويتر:</label>
-                <input placeholder="تويتر..." type="text" name="facebook" value="" autofocus>
+                <label for="twitter">تويتر:</label>
+                <input placeholder="تويتر..." type="text" name="twitter" value="" autofocus>
             </div>
             <div class="input-container">
-                <label for="terms_title">انستجرام:</label>
+                <label for="instagram">انستجرام:</label>
                 <input placeholder="انستجرام..." type="text" name="instagram" value="" autofocus>
             </div>
             <div class="flex-2"></div>

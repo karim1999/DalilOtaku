@@ -11,17 +11,32 @@ class SettingController extends Controller
     //
     public function index(){
         $data= [
-//            'terms_title' => Setting::getOption('terms_title'),
-//            'terms_content' => Setting::getOption('terms_content')
+            'title' => Setting::getOption('title'),
+            'subtitle' => Setting::getOption('subtitle'),
+            'logo' => Setting::getOption('logo'),
+            'icon' => Setting::getOption('icon'),
+            'description' => Setting::getOption('description'),
+            'google_id' => Setting::getOption('google_id'),
+            'facebook' => Setting::getOption('facebook'),
+            'twitter' => Setting::getOption('twitter'),
+            'instagram' => Setting::getOption('instagram'),
         ];
         return view("admin.settings", $data);
     }
     public function action(Request $request){
         $data= [
-//            'terms_title' => $request->input('terms_title'),
-//            'terms_content' => $request->input('terms_content')
+            'title' => $request->input('title'),
+            'subtitle' => $request->input('subtitle'),
+            'logo' => $request->input('logo'),
+            'icon' => $request->input('icon'),
+            'description' => $request->input('description'),
+            'google_id' => $request->input('google_id'),
+            'facebook' => $request->input('facebook'),
+            'twitter' => $request->input('twitter'),
+            'instagram' => $request->input('instagram'),
         ];
         Setting::setOptions($data);
-        return back()->with('status', 'تم تعديل شروط الاستخدام بنجاح');;
+        return back()->with('status', 'تم تعديل الاعدادات بنجاح');
     }
+
 }
