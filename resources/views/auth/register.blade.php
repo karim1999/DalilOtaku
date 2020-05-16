@@ -34,7 +34,7 @@
             <h6 class="unique text-right no-padding">{{ $message }}</h6>
             @enderror
             <div class="input-container">
-                <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_conformation') is-invalid @enderror" name="password_conformation" required autocomplete="new-password">
+                <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
                 <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
             </div>
             @error('password_conformation')
