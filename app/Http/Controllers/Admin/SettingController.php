@@ -39,4 +39,5 @@ class SettingController extends Controller
         return back()->with('status', 'تم تعديل الاعدادات بنجاح');
     }
 
+
 }
