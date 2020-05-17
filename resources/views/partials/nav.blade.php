@@ -24,7 +24,13 @@
             <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
         </li>
         <li class="no-padding"><a href="{{route("home")}}"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></a></li>
-        <li class="no-padding"><a href="{{route("login")}}">دخول</a></li>
-        <li><a href="{{route("register")}}"><button class="signup-button">تسجيل</button></a></li>
+        @auth
+            <li class="no-padding"><a href="{{route("home")}}"><img class="profile-img" src="{{Auth::user()->getFirstMediaUrl('avatar')}}" alt=""></a></li>
+            <li class="no-padding"><a href="{{route("logout")}}">تسجيل الخروج</a></li>
+        @endauth
+        @guest
+            <li class="no-padding"><a href="{{route("login")}}">دخول</a></li>
+            <li><a href="{{route("register")}}"><button class="signup-button">تسجيل</button></a></li>
+        @endguest
     </ul>
 </div>

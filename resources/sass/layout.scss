@@ -52,6 +52,12 @@
                     height: 18px;
                     @include display-flex(row, space-between, center);
                 }
+                .profile-img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    margin-left: 10px;
+                }
                 input {
                     @include input;
                     min-width: 200px;

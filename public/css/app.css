@@ -101,6 +101,13 @@
   flex-wrap: nowrap;
 }
 
+.main-container .main-nav .end-nav li .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
 .main-container .main-nav .end-nav li input {
   border: transparent;
   background-color: #f8fbfcff;

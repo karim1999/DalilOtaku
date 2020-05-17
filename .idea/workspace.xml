@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ScriptController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/WebsiteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/user.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Website.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Website.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,10 +175,10 @@
       <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\web\DalilOtaku\public\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass" />
-      <recent name="C:\projects\web\DalilOtaku\public\assets" />
       <recent name="C:\projects\web\DalilOtaku\public\assets\social" />
     </key>
   </component>
@@ -215,7 +213,7 @@
       <workItem from="1588877279635" duration="72000" />
       <workItem from="1588877385615" duration="31525000" />
       <workItem from="1589027722858" duration="73965000" />
-      <workItem from="1589373350650" duration="59145000" />
+      <workItem from="1589373350650" duration="60804000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -413,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589718052509</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Settings">
+      <created>1589725931964</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1589725931964</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,6 +461,7 @@
     <MESSAGE value="-Nothing" />
     <MESSAGE value="Fixed Registration Problem" />
     <MESSAGE value="Added Categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Categories" />
+    <MESSAGE value="Settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Settings" />
   </component>
 </project>
