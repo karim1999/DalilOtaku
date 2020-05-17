@@ -52,5 +52,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 
     Route::resource('sources', 'SourceController');
     Route::resource('studios', 'StudioController');
     Route::resource('users', 'UserController');
-
+    Route::resource('scripts', 'ScriptController')->only(['store', 'update']);
+    Route::get('scripts/{id}/destroy', 'ScriptController@destroy')->name('scripts.destroy');
+    Route::resource('websites', 'WebsiteController')->only(['store', 'update']);
+    Route::get('websites/{id}/destroy', 'WebsiteController@destroy')->name('websites.destroy');
 });

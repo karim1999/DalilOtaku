@@ -3,11 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Setting extends Model
+class Setting extends Model implements HasMedia
 {
+    use InteractsWithMedia;
     protected $fillable = ['key', 'value'];
-    //
+
     public static function setOption($key, $value){
         self::updateOrCreate([
             'key' => $key
@@ -20,8 +23,19 @@ class Setting extends Model
             self::setOption($key, $value);
         }
     }
-    public static function getOption($key, $first= true){
+    public static function getOption($key, $value= true){
         $result= self::where('key', $key)->first();
-        return $first ? $result->value : $result;
+        return $value ? $result->value : $result;
     }
+
+    public function registerMediaCollections(): void
+    {
+        $this
+            ->addMediaCollection('logo')
+            ->singleFile();
+        $this
+            ->addMediaCollection('icon')
+            ->singleFile();
+    }
+
 }

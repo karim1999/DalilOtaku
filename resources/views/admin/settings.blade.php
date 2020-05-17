@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="form-container" >
-        <form method="post" action="{{route("admin.settings.action")}}">
+        <form enctype="multipart/form-data" method="post" action="{{route("admin.settings.action")}}">
             @method('PUT')
             @csrf
             @if (session('status'))
@@ -84,52 +84,66 @@
             <h4 class="unique">المواقع التابع:</h4>
             <span></span>
         </div>
-        <form class="section">
+        <form enctype="multipart/form-data" class="section" method="post" action="{{route('admin.websites.store')}}">
+            @method('POST')
+            @csrf
             <div class="input-container">
                 <label for="terms_title">الشعار:</label>
-                <input placeholder="اكتب عنوان الرسالة..." type="file" name="icon" value="" autofocus>
+                <input type="file" name="logo" value="" required autofocus>
             </div>
             <div class="input-container">
                 <label for="terms_title">الاسم:</label>
-                <input placeholder="اكتب اسم الموقع..." type="text" name="google" value="" autofocus>
+                <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="" required autofocus>
             </div>
             <div class="input-container flex-2">
                 <label for="terms_title">الرابط:</label>
-                <input placeholder="اكتب رابط الموقع..." type="text" name="link" value="" autofocus>
+                <input placeholder="اكتب رابط الموقع..." type="text" name="description" required value="" autofocus>
             </div>
             <button class="">اضافة</button>
         </form>
-        @for($i=0; $i < 3; $i++)
-            <form class="section base-line">
+        @foreach($websites as $website)
+            <form enctype="multipart/form-data" class="section base-line" method="post" action="{{route('admin.websites.update', $website->id)}}">
+                @method('PUT')
+                @csrf
                 <div class="input-container">
-                    <input placeholder="اكتب عنوان الرسالة..." type="file" name="icon" value="" autofocus>
+                    <input type="file" name="logo" value="" autofocus>
                 </div>
                 <div class="input-container">
-                    <input placeholder="اكتب اسم الموقع..." type="text" name="google" value="" autofocus>
+                    <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="{{$website->title}}" required autofocus>
                 </div>
                 <div class="input-container flex-2">
-                    <input placeholder="اكتب رابط الموقع..." type="text" name="link" value="" autofocus>
+                    <input placeholder="اكتب رابط الموقع..." type="text" name="description" value="{{$website->description}}" required autofocus>
                 </div>
-                <button class="btn-edit">تعديل</button>
-                <button class="btn-delete">حذف</button>
+                <button type="submit" class="btn-edit">تعديل</button>
+                <a href="{{route("admin.websites.destroy", $website->id)}}">
+                    <button type="button" class="btn-delete">حذف</button>
+                </a>
             </form>
-        @endfor
+        @endforeach
         <div class="splitter">
             <h4 class="unique">سكربتات:</h4>
             <span></span>
         </div>
-        <form class="section base-line">
+        <form class="section base-line" method="post" action="{{route('admin.scripts.store')}}">
+            @method('POST')
+            @csrf
             <div class="input-container">
-                <textarea placeholder="اكتب كود السكربت..." type="text" name="description" autofocus></textarea>
+                <textarea placeholder="اكتب كود السكربت..." type="text" required name="script" autofocus></textarea>
             </div>
-            <button class="">اضافة</button>
+            <button class="" type="submit">اضافة</button>
         </form>
-        <form class="section base-line">
-            <div class="input-container">
-                <textarea placeholder="اكتب كود السكربت..." type="text" name="description" autofocus></textarea>
-            </div>
-            <button class="btn-edit">تعديل</button>
-            <button class="btn-delete">حذف</button>
-        </form>
+        @foreach($scripts as $script)
+            <form class="section base-line" method="post" action="{{route('admin.scripts.update', $script->id)}}">
+                @method('PUT')
+                @csrf
+                <div class="input-container">
+                    <textarea placeholder="اكتب كود السكربت..." type="text" required name="script" autofocus>{{$script->script}}</textarea>
+                </div>
+                <button type="submit" class="btn-edit">تعديل</button>
+                <a href="{{route("admin.scripts.destroy", $script->id)}}">
+                    <button type="button" class="btn-delete">حذف</button>
+                </a>
+            </form>
+        @endforeach
     </div>
 @endsection
