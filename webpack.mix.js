@@ -17,6 +17,7 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('resources/js/nav.js', 'public/js')
 mix.js('resources/js/faq.js', 'public/js')
 mix.js('resources/js/dropdown.js', 'public/js')
+mix.js('resources/js/anime.js', 'public/js')
 
 
 

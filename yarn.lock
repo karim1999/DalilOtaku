@@ -6765,6 +6765,11 @@ vue-loader@^15.4.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-promise-btn@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-promise-btn/-/vue-promise-btn-2.0.2.tgz#1ac95896015f63f8850541f8be06fa9a5322ce5d"
+  integrity sha512-6TrBpKz2xGqomkXYAgn8XWNZwSc2AAJr7CGFusn02AANZwjwNLvADs01cnxLrea5zD5RFgKASBvesjxMJGvR/w==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

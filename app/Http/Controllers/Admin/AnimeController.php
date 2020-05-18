@@ -10,7 +10,7 @@ class AnimeController extends Controller
     //
     public function index(){
         $data= [];
-        return view("admin.settings", $data);
+        return view("admin.animes.view", $data);
     }
 
 }
