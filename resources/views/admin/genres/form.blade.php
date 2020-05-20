@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-    <form class="form-container" method="post" action="{{isset($id) ? route("admin.categories.update", $id) : route("admin.categories.store")}}">
+    <form class="form-container" method="post" action="{{isset($id) ? route("admin.genres.update", $id) : route("admin.genres.store")}}">
         @if(isset($id))
             @method('PUT')
         @else

@@ -3,7 +3,7 @@
     <ul class="menu-list">
         <a href="{{route("admin.alert.form")}}"><li class="{{ (request()->is('admin/alert*')) ? 'active' : '' }}"><i class="fa fa-comment-dots"></i>الرسالة الترحيبية</li></a >
         <a href="{{route("admin.animes.index")}}"><li class="{{ (request()->is('admin/animes*')) ? 'active' : '' }}"><i class="fa fa-rocket"></i>قائمة الانمي</li></a>
-        <a href="{{route("admin.categories.index")}}"><li class="{{ (request()->is('admin/categories*')) ? 'active' : '' }}"><i class="fa fa-book"></i>التصنيفات</li></a>
+        <a href="{{route("admin.genres.index")}}"><li class="{{ (request()->is('admin/genres*')) ? 'active' : '' }}"><i class="fa fa-book"></i>التصنيفات</li></a>
         <a href="{{route("admin.studios.index")}}"><li class="{{ (request()->is('admin/studios*')) ? 'active' : '' }}"><i class="fa fa-pen"></i>المنتجون</li></a>
         <a href="{{route("admin.alert.form")}}"><li class="{{ (request()->is('admin/banned*')) ? 'active' : '' }}"><i class="fa fa-ban"></i>قائمة المحظورات</li></a>
         <a href="{{route("admin.sources.index")}}"><li class="{{ (request()->is('admin/sources*')) ? 'active' : '' }}"><i class="fa fa-newspaper"></i>مصادر الاخبار</li></a>

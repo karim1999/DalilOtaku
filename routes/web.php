@@ -47,7 +47,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 
     });
 
     Route::resource('animes', 'AnimeController');
-    Route::resource('categories', 'CategoryController');
+    Route::post('animes/addbatch', 'AnimeController@addbatch');
+    Route::resource('genres', 'GenreController');
     Route::resource('questions', 'QuestionController');
     Route::resource('sources', 'SourceController');
     Route::resource('studios', 'StudioController');

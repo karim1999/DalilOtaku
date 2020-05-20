@@ -13,26 +13,32 @@ class CreateAnimesTable extends Migration
      */
     public function up()
     {
+        Schema::create('seasons', function (Blueprint $table) {
+            $table->id();
+            $table->integer("year");
+            $table->string("season");
+            $table->timestamps();
+        });
+
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
+            $table->integer('mal_id');
             $table->string('title_en');
             $table->string('title')->nullable();
             $table->boolean('isAiring')->default(false);
-            $table->date('start_at');
+            $table->string('start_at')->nullable();
             $table->date('end_at')->nullable();
-            $table->double('score')->default(0);
+            $table->double('score')->default(0)->nullable();
             $table->longText('description')->nullable();
             $table->string('image_url');
-            $table->unsignedBigInteger('studio_id');
-            $table->foreign('studio_id')->references('id')
-                ->on('studios')
-                ->onDelete('cascade');
             $table->integer('episodes')->nullable();
             $table->integer('last_episode')->nullable();
             $table->integer('airingAt')->nullable();
             $table->string('broadcast')->nullable();
-            $table->string('season');
-            $table->string('year');
+            $table->unsignedBigInteger('season_id');
+            $table->foreign('season_id')->references('id')
+                ->on('seasons')
+                ->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -46,5 +52,6 @@ class CreateAnimesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('animes');
+        Schema::dropIfExists('seasons');
     }
 }

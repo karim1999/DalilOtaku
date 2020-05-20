@@ -25,6 +25,9 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.13.0",
+        "apollo-boost": "^0.4.9",
+        "graphql": "^15.0.0",
+        "vue-apollo": "^3.0.3",
         "vue-promise-btn": "^2.0.2"
     }
 }

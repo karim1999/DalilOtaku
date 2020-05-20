@@ -3,7 +3,12 @@
 @section('content')
     <div class="form-container" >
         <div id="anime">
-            <button v-promise-btn @click="loadAnime">Load Anime</button>
+            <button v-promise-btn @click="loadSeasonsAchive">Load Anime</button>
+            <pre>
+                <code v-for="item in list">
+                    <li>@{{ item }}</li>
+                </code>
+            </pre>
         </div>
     </div>
 @endsection
