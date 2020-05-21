@@ -30,6 +30,7 @@ class CreateAnimesTable extends Migration
             $table->date('end_at')->nullable();
             $table->double('score')->default(0)->nullable();
             $table->longText('description')->nullable();
+            $table->longText('description_en')->nullable();
             $table->string('image_url');
             $table->integer('episodes')->nullable();
             $table->integer('last_episode')->nullable();

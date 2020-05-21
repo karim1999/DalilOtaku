@@ -2,40 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BannedController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/animes/fetch.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/banned/animes.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/banned/genres.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/GenreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GenreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/StudioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FaqController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FaqController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PolicyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PolicyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TermsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TermsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WhoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WhoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_13_115443_create_genres_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_13_115443_create_genres_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Setting.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_17_192234_create_animes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_17_192234_create_animes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/SettingsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SettingsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/FrequentlyQuestions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/FrequentlyQuestions.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/admin-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin-layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/assets/basic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/basic.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/assets/mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/genres/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/genres/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/faq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/policy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/policy.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/terms.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/terms.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/who.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/who.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/animes/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/animes/form.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +163,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -243,7 +214,8 @@
       <workItem from="1588877385615" duration="31525000" />
       <workItem from="1589027722858" duration="73965000" />
       <workItem from="1589373350650" duration="63325000" />
-      <workItem from="1589748215900" duration="46379000" />
+      <workItem from="1589748215900" duration="48450000" />
+      <workItem from="1590086007513" duration="2443000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -476,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589989791138</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Banned">
+      <created>1590083543109</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1590083543109</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +478,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Readme" />
     <MESSAGE value="Lots of pages" />
     <MESSAGE value="Home Page" />
     <MESSAGE value="Procfile for Heroku" />
@@ -524,6 +502,7 @@
     <MESSAGE value="Anime Api" />
     <MESSAGE value="Anime Api Fetch" />
     <MESSAGE value="Genres, and Studios Api Fetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genres, and Studios Api Fetch" />
+    <MESSAGE value="Banned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Banned" />
   </component>
 </project>

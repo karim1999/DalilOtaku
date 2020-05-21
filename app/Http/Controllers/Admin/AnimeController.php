@@ -14,8 +14,8 @@ class AnimeController extends Controller
     //
     public function index(){
         $data= [
-            'animes' => Anime::where('banned', '0')->whereNull("title")->paginate(10),
-            'published' => Anime::where('banned', '0')->whereNotNull("title")->count(),
+            'animes' => Anime::where('banned', '0')->whereNull("description")->paginate(10),
+            'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
             'translating' => Anime::where('banned', '0')->whereNull("title")->count(),
         ];
@@ -23,40 +23,55 @@ class AnimeController extends Controller
     }
     public function published(){
         $data= [
-            'animes' => Anime::where('banned', '0')->where("title", "")->paginate(10),
-            'published' => Anime::where('banned', '0')->whereNotNull("title")->count(),
+            'animes' => Anime::where('banned', '0')->whereNotNull("description")->paginate(10),
+            'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
-            'translating' => Anime::where('banned', '0')->whereNull("title")->count(),
+            'translating' => Anime::where('banned', '0')->whereNull("description")->count(),
         ];
         return view("admin.animes.view", $data);
     }
     public function airing(){
         $data= [
             'animes' => Anime::where('banned', '0')->where("is_airing", 1)->paginate(10),
-            'published' => Anime::where('banned', '0')->whereNotNull("title")->count(),
+            'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
-            'translating' => Anime::where('banned', '0')->whereNull("title")->count(),
+            'translating' => Anime::where('banned', '0')->whereNull("description")->count(),
         ];
         return view("admin.animes.view", $data);
     }
-    public function create(){
-        $data= [];
-        return view("admin.animes.form", $data);
-    }
+//    public function create(){
+//        $data= [];
+//        return view("admin.animes.form", $data);
+//    }
     public function edit(Anime $anime){
         return view("admin.animes.form", $anime);
     }
 
-    public function store(Request $request){
-        $anime= new Anime();
-        $anime->name_en= $request->input("name_en");
-        $anime->name= $request->input("name");
-        $anime->save();
-        return redirect()->route('admin.animes.index')->with('status', 'تم اضافة انمي بنجاح');
-    }
+//    public function store(Request $request){
+//        $anime= new Anime();
+//        $anime->name_en= $request->input("name_en");
+//        $anime->name= $request->input("name");
+//        $anime->save();
+//        return redirect()->route('admin.animes.index')->with('status', 'تم اضافة انمي بنجاح');
+//    }
     public function update(Anime $anime, Request $request){
-        $anime->name_en= $request->input("name_en");
-        $anime->name= $request->input("name");
+        $anime->title_en= $request->input("title_en");
+        $anime->title= $request->input("title");
+        $anime->description= $request->input("description");
+        $anime->description_en= $request->input("description_en");
+        $anime->facebook= $request->input("facebook");
+        $anime->twitter= $request->input("twitter");
+        $anime->instagram= $request->input("instagram");
+        $anime->youtube= $request->input("youtube");
+        $anime->mal= $request->input("mal");
+        $anime->website= $request->input("website");
+        $anime->ani_search= $request->input("ani_search");
+        $anime->ani_planet= $request->input("anime_planet");
+        $anime->ani_db= $request->input("ani_db");
+        $anime->kitsu= $request->input("kitsu");
+        $anime->crunchyroll= $request->input("crunchyroll");
+        $anime->anilist= $request->input("anilist");
+        $anime->live_chart= $request->input("live_chart");
         $anime->save();
         return back()->with('status', 'تم تعديل الانمي بنجاح');
     }
@@ -104,7 +119,7 @@ class AnimeController extends Controller
                 'is_airing'=> $anime['continuing'],
                 'start_at'=> $anime['airing_start'],
                 'score'=> $anime['score'],
-                'description'=> $anime['synopsis'],
+                'description_en'=> $anime['synopsis'],
                 'image_url'=> $anime['image_url'],
                 'episodes'=> $anime['episodes'],
                 'season_id'=> $current_season->id,

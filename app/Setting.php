@@ -32,9 +32,11 @@ class Setting extends Model implements HasMedia
     {
         $this
             ->addMediaCollection('logo')
+            ->useFallbackUrl('/assets/logo.png')
             ->singleFile();
         $this
             ->addMediaCollection('icon')
+            ->useFallbackUrl('/assets/logo.png')
             ->singleFile();
     }
 
