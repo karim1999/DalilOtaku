@@ -3,17 +3,13 @@
 @section('content')
     <div class="form-container" >
         <div class="label-container">
-            <a href="{{route("admin.animes.index")}}" class="label {{ request()->is('admin/animes') ? 'active' : '' }}">
-                <h5>انميات تحت الترجمة</h5>
-                <h5>{{$translating}}</h5>
+            <a href="{{route("admin.banned.animes")}}" class="label {{ request()->is('admin/banned') ? 'active' : '' }}">
+                <h5>انميات محظورة</h5>
+                <h5>{{$banned_animes}}</h5>
             </a>
-            <a href="{{route("admin.animes.published")}}" class="label {{ request()->is('admin/animes/published') ? 'active' : '' }}">
-                <h5>انميات منشورة</h5>
-                <h5>{{$published}}</h5>
-            </a>
-            <a href="{{route("admin.animes.airing")}}" class="label {{ request()->is('admin/animes/airing') ? 'active' : '' }}">
-                <h5>انميات تعرض الان</h5>
-                <h5>{{$airing}}</h5>
+            <a href="{{route("admin.banned.genres")}}" class="label {{ request()->is('admin/banned/genres') ? 'active' : '' }}">
+                <h5>تصنيفات محظورة</h5>
+                <h5>{{$banned_genres}}</h5>
             </a>
         </div>
         @if (session('status'))
@@ -23,8 +19,7 @@
         @endif
         {{--        <a href="{{route("admin.animes.create")}}"><button class="add-btn">اضف</button></a>--}}
         @foreach($animes as $anime)
-            <form class="section {{$loop->first ? "" : "base-line"}}" method="post" action="{{route("admin.animes.destroy", $anime->id)}}">
-                @method('DELETE')
+            <form class="section {{$loop->first ? "" : "base-line"}}" method="get" action="{{route("admin.animes.enable", $anime->id)}}">
                 @csrf
                 <div class="img-container flex-1">
                     <img class="profile-img" src="{{$anime->image_url}}" alt="">
@@ -44,7 +39,7 @@
                 <a href="{{route("admin.animes.edit", $anime->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>
                 </a>
-                <button type="submit" class="btn-delete">حظر</button>
+                <button type="submit" class="btn-edit">الغاء الحظر</button>
             </form>
         @endforeach
         {{ $animes->links() }}

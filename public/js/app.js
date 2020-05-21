@@ -167,31 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "FrequentlyQuestions",
-  data: function data() {
-    return {
-      questions: [{
-        id: 1,
-        title: "هل يدعم الموقع خاصية التحميل؟",
-        answer: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.",
-        status: true
-      }, {
-        id: 2,
-        title: "هل يدعم الموقع خاصية التحميل؟",
-        answer: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.",
-        status: false
-      }, {
-        id: 3,
-        title: "هل يدعم الموقع خاصية التحميل؟",
-        answer: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.",
-        status: false
-      }, {
-        id: 4,
-        title: "هل يدعم الموقع خاصية التحميل؟",
-        answer: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.",
-        status: false
-      }]
-    };
-  }
+  props: ['questions']
 });
 
 /***/ }),
@@ -768,9 +744,9 @@ var render = function() {
       return _c("single-question", {
         key: question.id,
         attrs: {
-          title: question.title,
+          title: question.question,
           answer: question.answer,
-          status: question.status
+          status: false
         }
       })
     }),

@@ -34,6 +34,22 @@
         padding: 0px 20px;
         .form-container{
             padding: 30px;
+            .label-container{
+                @include display-flex(row, flex-start, flex-start, wrap);
+                margin-bottom: 40px;
+                .label{
+                    @include display-flex(row, space-between, center);
+                    border: $border;
+                    padding: 0px 20px;
+                    margin-left: 20px;
+                    width: 200px;
+                    border-radius: 5px;
+                    &.active{
+                        background-color: $secondary2_color;
+                        color: $secondary_color;
+                    }
+                }
+            }
             .img-container {
                 display: flex;
                 justify-content: center;

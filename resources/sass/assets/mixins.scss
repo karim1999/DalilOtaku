@@ -53,6 +53,10 @@
     color: $font-color;
     background-color: $background-color;
     margin: 20px;
+    button{
+        @include button-filled($h5);
+        width: auto;
+    }
 }
 @mixin box($background-color, $font_color, $border-radius, $padding){
     background-color: $background-color;

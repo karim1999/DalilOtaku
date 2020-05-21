@@ -46,15 +46,36 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 
         Route::put('/action', "SettingController@action")->name("action");
     });
 
-    Route::resource('animes', 'AnimeController');
+    //Animes
+    Route::resource('animes', 'AnimeController')->except(["create", "show"]);
+    Route::get('animes/published', 'AnimeController@published')->name("animes.published");
+    Route::get('animes/airing', 'AnimeController@airing')->name("animes.airing");
+    Route::get('fetch', 'AnimeController@fetch');
     Route::post('animes/addbatch', 'AnimeController@addbatch');
+    Route::get('animes/{id}/enable', 'AnimeController@enable')->name("animes.enable");
+
+    //Genres
     Route::resource('genres', 'GenreController');
+    Route::get('genres/{id}/enable', 'GenreController@enable')->name("genres.enable");
+
+    //FAQ
     Route::resource('questions', 'QuestionController');
+
+    //Banned
+    Route::get('banned', 'BannedController@animes')->name("banned.animes");
+    Route::get('banned/genres', 'BannedController@genres')->name("banned.genres");
+
+    //News Sources
     Route::resource('sources', 'SourceController');
+
+    //Studios
     Route::resource('studios', 'StudioController');
+
     Route::resource('users', 'UserController');
+
     Route::resource('scripts', 'ScriptController')->only(['store', 'update']);
     Route::get('scripts/{id}/destroy', 'ScriptController@destroy')->name('scripts.destroy');
+
     Route::resource('websites', 'WebsiteController')->only(['store', 'update']);
     Route::get('websites/{id}/destroy', 'WebsiteController@destroy')->name('websites.destroy');
 });

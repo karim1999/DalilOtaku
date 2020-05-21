@@ -174,17 +174,31 @@
   width: 60px;
 }
 
-.main-container .footer .col.companies img {
-  height: 100px;
-  width: auto;
-}
-
 .main-container .footer .col a {
   padding: 10px;
 }
 
 .main-container .footer .col p {
   min-width: 250px;
+}
+
+.main-container .footer .middle .companies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-container .footer .middle .companies a {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.main-container .footer .middle .companies a img {
+  height: 50px;
+  width: 50px;
 }
 
 .main-container .footer .bottom {
@@ -200,8 +214,8 @@
   font-size: 11px;
 }
 
-.main-container .footer .bottom img {
-  width: 20px;
+.main-container .footer .bottom a {
+  font-size: 20px;
 }
 
 .secondary-nav .middle-nav li {
@@ -709,6 +723,18 @@ a:hover {
   margin: 20px;
 }
 
+.alert-success button {
+  font-family: "arabicFont";
+  cursor: pointer;
+  background-color: #ff4e6aff;
+  font-size: 13px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  width: auto;
+}
+
 .alert-warning {
   text-align: right;
   padding: 20px;
@@ -717,12 +743,36 @@ a:hover {
   margin: 20px;
 }
 
+.alert-warning button {
+  font-family: "arabicFont";
+  cursor: pointer;
+  background-color: #ff4e6aff;
+  font-size: 13px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  width: auto;
+}
+
 .alert-info {
   text-align: right;
   padding: 20px;
   color: rgba(97, 97, 97, 0.9);
   background-color: #EDF2F7;
   margin: 20px;
+}
+
+.alert-info button {
+  font-family: "arabicFont";
+  cursor: pointer;
+  background-color: #ff4e6aff;
+  font-size: 13px;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  width: auto;
 }
 
 .box {
@@ -823,6 +873,24 @@ a:hover {
   padding: 14px 4px;
   height: 20px;
   text-align: center;
+}
+
+ul.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+ul.pagination li {
+  font-size: 15px;
+  margin: 10px;
+  list-style-type: none;
+}
+
+ul.pagination li.active {
+  color: #ff4e6aff;
 }
 
 .col-1 {

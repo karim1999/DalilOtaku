@@ -93,17 +93,25 @@
             &>img {
                 width: 60px;
             }
-            &.companies {
-                img {
-                    height: 100px;
-                    width: auto;
-                }
-            }
             a {
                 padding: 10px;
             }
             p {
                 min-width: 250px;
+            }
+        }
+        .middle {
+            .companies {
+                @include display-flex(row, center, center, wrap);
+                a {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    text-align: center;
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
             }
         }
         .bottom {
@@ -112,8 +120,8 @@
                 display: block;
                 font-size: $h6;
             }
-            img {
-                width: 20px;
+            a {
+                font-size: 20px;
             }
         }
     }

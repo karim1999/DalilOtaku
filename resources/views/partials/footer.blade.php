@@ -2,8 +2,7 @@
     <div class="top">
         <div class="col">
             <img src="{{asset("assets/footer/g22078@2x.png")}}" alt="">
-            <p>هنا نص غير حقيقي الهدف منه تعبئة الفراغ لا أكثر، يجب أن يوضع نص حقيقي بــــدل
-                منه عند برمجة الموقـع شـــرط أن يعبر عن الموقع وهدفه وما إلى ذلك..</p>
+            <p>{{\App\Setting::getOption("description")}}</p>
         </div>
         <div class="col">
             <img src="{{asset("assets/footer/image22014@2x.png")}}" alt="">
@@ -25,16 +24,21 @@
         </div>
     </div>
     <div class="middle">
-        <div class="col companies">
-            <img src="{{asset("assets/footer/g22120@2x.png")}}" alt="">
+        <div class="companies">
+            @foreach(\App\Website::all() as $website)
+                <a href="">
+                    <img src="{{$website->getFirstMediaUrl('logo')}}" alt="">
+                    <p class="h6">{{$website->title}}</p>
+                </a>
+            @endforeach
         </div>
     </div>
     <div class="bottom">
         <p class="text-right col">حميع الحقوق محفوظة لموقع دليل اوتاكو</p>
         <ul class="text-center">
-            <img src="{{asset("assets/social/016-instagram.svg")}}" alt="">
-            <img src="{{asset("assets/social/017-facebook.svg")}}" alt="">
-            <img src="{{asset("assets/social/018-twitter.svg")}}" alt="">
+            <a href="{{\App\Setting::getOption("facebook")}}"><i class="fab fa-facebook-square"></i></a>
+            <a href="{{\App\Setting::getOption("twitter")}}"><i class="fab fa-twitter-square"></i></a>
+            <a href="{{\App\Setting::getOption("instagram")}}"><i class="fab fa-instagram-square"></i></a>
         </ul>
         <p class="text-left col">مصمم من <span class="unique">Sasini</span></p>
     </div>

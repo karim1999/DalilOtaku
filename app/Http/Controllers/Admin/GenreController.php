@@ -40,8 +40,16 @@ class GenreController extends Controller
         return back()->with('status', 'تم تعديل التصنيف بنجاح');
     }
     public function destroy(Genre $genre){
-        $genre->delete();
-        return back()->with('status', 'تم حذف التصنيف بنجاح');
+//        $genre->delete();
+        $genre->banned= 1;
+        $genre->save();
+        return back()->with('status', 'تم حظر التصنيف بنجاح');
+    }
+    public function enable($genre_id){
+        $genre= Genre::findOrFail($genre_id);
+        $genre->banned= 0;
+        $genre->save();
+        return back()->with('status', 'تم فك حظر التصنيف بنجاح');
     }
 
 }

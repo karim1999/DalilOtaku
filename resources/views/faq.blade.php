@@ -4,7 +4,7 @@
 
 @section('content')
     <div id="faq">
-        <frequently-questions />
+        <frequently-questions :questions='@json($questions)' />
     </div>
 @endsection
 

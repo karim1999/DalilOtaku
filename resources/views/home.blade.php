@@ -2,11 +2,15 @@
 
 @section('content')
 <div class="content no-padding">
-    <div class="alert-info col-6 col-md-10">
-        <h4>اطلاق موقع دليل انمي</h4>
-        <p>ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
-        </p>
-    </div>
+    @if($welcome_title)
+        <div class="alert-info col-6 col-md-10">
+            <h4>{{$welcome_title}}</h4>
+            <p>{{$welcome_content}}</p>
+            @if($welcome_link)
+                <a href="{{$welcome_link}}"><button>اضغط هنا</button></a>
+            @endif
+        </div>
+    @endif
     <div class="main-nav secondary-nav">
         <ul class="middle-nav">
             <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}"><i class="fa fa-list unique"></i></a></li>

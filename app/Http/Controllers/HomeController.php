@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data= [
+            "welcome_title" =>  Setting::getOption("welcome_title"),
+            "welcome_content" =>  Setting::getOption("welcome_content"),
+            "welcome_link" =>  Setting::getOption("welcome_link"),
+        ];
+        return view('home', $data);
     }
 }

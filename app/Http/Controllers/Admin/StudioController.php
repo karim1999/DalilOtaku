@@ -42,5 +42,4 @@ class StudioController extends Controller
         return back()->with('status', 'تم حذف المنتج بنجاح');
     }
 
-
 }

@@ -19,6 +19,7 @@ class CreateGenresTable extends Migration
             $table->string("name_en");
             $table->mediumText("description")->nullable();
             $table->mediumText("description_en")->nullable();
+            $table->boolean('banned')->default(0);
             $table->timestamps();
         });
     }

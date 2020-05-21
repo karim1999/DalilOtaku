@@ -145,3 +145,15 @@ a {
         text-align: center;
     }
 }
+
+ul.pagination{
+    @include display-flex(row, center, center);
+    li {
+        font-size: $h4;
+        margin: 10px;
+        list-style-type: none;
+        &.active {
+            color: $secondary2_color;
+        }
+    }
+}
