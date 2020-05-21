@@ -62,6 +62,9 @@
                     @include input;
                     min-width: 200px;
                 }
+                form {
+                    margin-left: 25px;
+                }
             }
         }
         //secondary nav

@@ -16,13 +16,13 @@
                     @if($loop->first)
                         <label for="name">اسم المنتج بالعربية:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم المنتج بالعربية..." type="text" name="description" value="{{$studio->name}}" autofocus>
+                    <input disabled type="text" name="description" value="{{$studio->name}}" autofocus>
                 </div>
                 <div class="input-container flex-2">
                     @if($loop->first)
-                        <label for="name_en">اسم التصنيف بالانجليزية:</label>
+                        <label for="name_en">اسم المنتج بالانجليزية:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم المنتج بالانجليزية..." type="text" name="name" value="{{$studio->name_en}}" autofocus>
+                    <input disabled type="text" name="name" value="{{$studio->name_en}}" autofocus>
                 </div>
                 <a href="{{route("admin.studios.edit", $studio->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>
@@ -30,5 +30,6 @@
                 <button type="submit" class="btn-delete">حذف</button>
             </form>
         @endforeach
+            {{$studios->links()}}
     </div>
 @endsection

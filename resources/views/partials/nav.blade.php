@@ -20,7 +20,9 @@
     </ul>
     <ul :class="['end-nav', showMenu ? showClass : hideClass]">
         <li class="input-container no-padding">
-            <input placeholder="ابحث في الموقع" type="text">
+            <form method="get" action="{{route("search")}}">
+                <input placeholder="ابحث في الموقع" name="search" type="text">
+            </form>
             <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
         </li>
         <li class="no-padding"><a href="{{route("home")}}"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></a></li>

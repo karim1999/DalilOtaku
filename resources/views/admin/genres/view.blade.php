@@ -16,13 +16,13 @@
                     @if($loop->first)
                         <label for="name">التصنيف:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم التصنيف بالعربية..." type="text" name="name" value="{{$genre->name}}" autofocus>
+                    <input disabled type="text" name="name" value="{{$genre->name}}">
                 </div>
                 <div class="input-container flex-2">
                     @if($loop->first)
-                        <label for="description">الوصف:</label>
+                        <label for="description">التصنيف بالانجليزية:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم الوصف بالعربية..." type="text" name="description" value="{{$genre->description}}" autofocus>
+                    <input disabled type="text" name="description" value="{{$genre->name_en}}">
                 </div>
                 <a href="{{route("admin.genres.edit", $genre->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>
@@ -30,5 +30,6 @@
                 <button type="submit" class="btn-delete">حظر</button>
             </form>
         @endforeach
+        {{$genres->links()}}
     </div>
 @endsection

@@ -11,7 +11,7 @@ class StudioController extends Controller
     //
     public function index(){
         $data= [
-            'studios' => Studio::all()
+            'studios' => Studio::paginate(15)
         ];
         return view("admin.studios.view", $data);
     }

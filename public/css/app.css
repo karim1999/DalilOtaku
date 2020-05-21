@@ -127,6 +127,10 @@
   background-color: #ffffff;
 }
 
+.main-container .main-nav .end-nav li form {
+  margin-left: 25px;
+}
+
 .main-container .main-nav.secondary-nav {
   background-color: transparent;
   box-shadow: none;
