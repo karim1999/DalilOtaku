@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', "HomeController@index")->name("home");
 Route::get('/home', "HomeController@index");
+Route::get('/airing', "HomeController@airing")->name("airing");
+Route::get('/search', "SearchController@search")->name("search");
 Route::get('/contact', "ContactController@index")->name("contact");
 Route::get('/who', "WhoController@index")->name("who");
 Route::get('/faq', "FaqController@index")->name("faq");
@@ -22,6 +24,10 @@ Route::get('/news', "NewsController@index")->name("news");
 Route::get('/policy', "PolicyController@index")->name("policy");
 Route::get('/terms', "TermsController@index")->name("terms");
 Route::get('/calendar', "CalendarController@index")->name("calendar");
+Route::get('genre/{id}', "GenreController@show")->name("genre.show");
+Route::get('type/{type}', "TypeController@show")->name("type.show");
+Route::get('season/{year}/{season}', "SeasonController@year")->name("year.season.show");
+Route::get('season/{season}', "SeasonController@show")->name("season.show");
 
 Auth::routes();
 Route::get('/logout', "Auth\LoginController@logout");

@@ -100,12 +100,12 @@ class AnimeController extends Controller
             $current_studio->animes()->syncWithoutDetaching($anime_id);
         }
     }
-//    public function addGenres($genres, $anime_id){
-//        foreach ($genres as $genre){
-//            $current_genre= Genre::firstOrCreate(['id'=> $genre['mal_id']], ["name_en"=> $genre["name"]]);
-//            $current_genre->animes()->syncWithoutDetaching($anime_id);
-//        }
-//    }
+    public function addGenres($genres, $anime_id){
+        foreach ($genres as $genre){
+            $current_genre= Genre::firstOrCreate(['id'=> $genre['mal_id']], ["name_en"=> $genre["name"]]);
+            $current_genre->animes()->syncWithoutDetaching($anime_id);
+        }
+    }
     public function addBatch(Request $request){
         $anime_list= $request->input('animes');
         $season= $request->input('season');
@@ -116,14 +116,19 @@ class AnimeController extends Controller
             $data= array(
                 'mal_id'=> $anime['mal_id'],
                 'title_en'=> $anime['title'],
+                'description_en'=> $anime['synopsis'],
+                'type'=> $anime['type'],
                 'is_airing'=> $anime['continuing'],
                 'start_at'=> $anime['airing_start'],
                 'score'=> $anime['score'],
-                'description_en'=> $anime['synopsis'],
                 'image_url'=> $anime['image_url'],
                 'episodes'=> $anime['episodes'],
                 'season_id'=> $current_season->id,
                 'mal'=> $anime['url'],
+                //Testing
+//                'title'=> "هذا النص هو مثال لنص",
+//                'description'=> "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+//إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.",
             );
             $current_anime= Anime::firstOrCreate(['mal_id'=> $data['mal_id']], $data);
             $this->addStudio($anime["producers"], $current_anime->id);
