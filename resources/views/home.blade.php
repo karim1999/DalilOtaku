@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="list-container">
-            @foreach ($animes as $anime)
+            @forelse ($animes as $anime)
                 <div class="list-item">
                     <div class="anime-container">
                         <div class="top">
@@ -99,7 +99,9 @@
                         <i class="fa fa-ellipsis-v clickable"></i>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <p class="empty">لا يوجد بيانات</p>
+            @endforelse
             {{ $animes->links() }}
         </div>
     </div>

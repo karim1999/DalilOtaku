@@ -540,6 +540,11 @@ ul.pagination li.active {
   color: #ff4e6aff;
 }
 
+.empty {
+  color: #ff4e6aff;
+  font-size: 15px;
+}
+
 .col-1 {
   width: 8.33%;
 }

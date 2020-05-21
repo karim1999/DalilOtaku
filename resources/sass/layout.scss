@@ -143,7 +143,7 @@
 // Contact us form
 .content {
     flex: 1;
-    @include display-flex(column, space-between, center);
+    @include display-flex(column, flex-start, center);
     flex-direction: column;
     margin: 50px;
     form {
