@@ -132,7 +132,7 @@ class AnimeController extends Controller
             );
             $current_anime= Anime::firstOrCreate(['mal_id'=> $data['mal_id']], $data);
             $this->addStudio($anime["producers"], $current_anime->id);
-//            $this->addGenres($anime["genres"], $current_anime->id);
+            $this->addGenres($anime["genres"], $current_anime->id);
         }
         return true;
     }
