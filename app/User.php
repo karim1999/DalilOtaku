@@ -43,10 +43,13 @@ class User extends Authenticatable implements HasMedia
     ];
 
     public function favorites(){
-        return $this->belongsToMany('App\Anime', 'favorites');
+        return $this->belongsToMany('App\Anime', 'favorites')->withTimestamps();
     }
     public function bookmarks(){
-        return $this->belongsToMany('App\Anime', 'bookmarks');
+        return $this->belongsToMany('App\Anime', 'bookmarks')->withTimestamps();
+    }
+    public function watching(){
+        return $this->belongsToMany('App\Anime', 'watchings')->withPivot("status")->withTimestamps();
     }
 
     public function registerMediaCollections(): void

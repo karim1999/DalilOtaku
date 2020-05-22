@@ -29,6 +29,22 @@ Route::get('type/{type}', "TypeController@show")->name("type.show");
 Route::get('season/{year}/{season}', "SeasonController@year")->name("year.season.show");
 Route::get('season/{season}', "SeasonController@show")->name("season.show");
 
+
+Route::prefix('profile')->name('profile.')->middleware(['auth'])->group(function () {
+    Route::get('/settings', 'ProfileController@settings')->name("settings");
+    Route::get('/watching', 'ProfileController@watching')->name("watching");
+    Route::get('/watched', 'ProfileController@watched')->name("watched");
+    Route::get('/later', 'ProfileController@later')->name("later");
+    Route::get('/favorites', 'ProfileController@favorites')->name("favorites");
+    Route::get('/bookmarked', 'ProfileController@bookmarked')->name("bookmarked");
+});
+
+Route::get('/add/{anime_id}/bookmarks', 'AddController@add_bookmarks')->name("add.bookmarks");
+Route::get('/add/{anime_id}/favorites', 'AddController@add_favorites')->name("add.favorites");
+Route::get('/add/{anime_id}/watching/{status}', 'AddController@add_watching')->name("add.watching");
+
+
+
 Auth::routes();
 Route::get('/logout', "Auth\LoginController@logout");
 

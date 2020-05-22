@@ -115,11 +115,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AnimeActions",
-  props: ["favorites", "bookmarks"],
+  props: ["favorites", "bookmarks", "isFavorite", "isBookmarked", "isWatching", "isWatched", "isLater", "url"],
   data: function data() {
-    return {};
+    return {
+      showMenu: false
+    };
+  },
+  methods: {
+    menuToggle: function menuToggle() {
+      this.showMenu = !this.showMenu;
+    }
   }
 });
 
@@ -5125,17 +5140,67 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "actions-area row" }, [
-    _c("p", { staticClass: "clickable" }, [
-      _vm._v(_vm._s(_vm.bookmarks)),
-      _c("i", { staticClass: "far fa-bookmark" })
-    ]),
+    _c(
+      "a",
+      {
+        class: { unique: _vm.isBookmarked },
+        attrs: { href: _vm.url + "/bookmarks" }
+      },
+      [
+        _c("p", { staticClass: "clickable" }, [
+          _vm._v(_vm._s(_vm.bookmarks)),
+          _c("i", { staticClass: "far fa-bookmark" })
+        ])
+      ]
+    ),
     _vm._v(" "),
-    _c("p", { staticClass: "clickable" }, [
-      _vm._v(_vm._s(_vm.favorites)),
-      _c("i", { staticClass: "far fa-heart" })
-    ]),
+    _c(
+      "a",
+      {
+        class: { unique: _vm.isFavorite },
+        attrs: { href: _vm.url + "/favorites" }
+      },
+      [
+        _c("p", { staticClass: "clickable" }, [
+          _vm._v(_vm._s(_vm.favorites)),
+          _c("i", { staticClass: "far fa-heart" })
+        ])
+      ]
+    ),
     _vm._v(" "),
-    _c("i", { staticClass: "fa fa-ellipsis-v clickable" })
+    _c("i", {
+      staticClass: "fa fa-ellipsis-v clickable",
+      on: { click: _vm.menuToggle }
+    }),
+    _vm._v(" "),
+    _vm.showMenu
+      ? _c("div", { staticClass: "action-list" }, [
+          _c("ul", [
+            _c("li", [_vm._v("اضف الانمي الي:")]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: _vm.url + "/watching/watching" } }, [
+              _c("li", { class: { active: _vm.isWatching } }, [
+                _c("i", { staticClass: "fa fa-check-circle" }),
+                _vm._v(" الانميات المتابعة")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: _vm.url + "/watching/watched" } }, [
+              _c("li", { class: { active: _vm.isWatched } }, [
+                _c("i", { staticClass: "fa fa-check-circle" }),
+                _vm._v(" تمت مشاهدتها")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("a", { attrs: { href: _vm.url + "/watching/later" } }, [
+              _c("li", { class: { active: _vm.isLater } }, [
+                _c("i", { staticClass: "fa fa-check-circle" }),
+                _vm._v(" المشاهدة لاحقا")
+              ])
+            ])
+          ])
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []

@@ -27,7 +27,7 @@
         </li>
         <li class="no-padding"><a href="{{route("home")}}"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></a></li>
         @auth
-            <li class="no-padding"><a href="{{route("home")}}"><img class="profile-img" src="{{Auth::user()->getFirstMediaUrl('avatar')}}" alt=""></a></li>
+            <li class="no-padding"><a href="{{route("profile.favorites")}}"><img class="profile-img" src="{{Auth::user()->getFirstMediaUrl('avatar')}}" alt=""></a></li>
             <li class="no-padding"><a href="{{route("logout")}}">تسجيل الخروج</a></li>
         @endauth
         @guest

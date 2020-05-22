@@ -18,9 +18,12 @@ class Anime extends Model
         return $this->belongsTo('App\Season');
     }
     public function favorites(){
-        return $this->belongsToMany('App\User', 'favorites');
+        return $this->belongsToMany('App\User', 'favorites')->withTimestamps();
     }
     public function bookmarks(){
-        return $this->belongsToMany('App\User', 'bookmarks');
+        return $this->belongsToMany('App\User', 'bookmarks')->withTimestamps();
+    }
+    public function watching_by(){
+        return $this->belongsToMany('App\User', 'watchings')->withPivot("status")->withTimestamps();
     }
 }

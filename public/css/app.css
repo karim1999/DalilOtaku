@@ -419,6 +419,7 @@
 
 .list-container .actions-area {
   justify-content: flex-end;
+  position: relative;
 }
 
 .list-container .actions-area i {
@@ -428,6 +429,31 @@
 .list-container .actions-area p {
   margin: 0;
   margin-right: 10px;
+}
+
+.list-container .actions-area .action-list {
+  padding: 20px 20px;
+  padding-right: 5px;
+  border: #e0e0e0 solid 1px;
+  position: absolute;
+  border-radius: 5px;
+  text-align: right;
+  bottom: 30px;
+  background: #ffffff;
+}
+
+.list-container .actions-area .action-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list-container .actions-area .action-list ul li {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.list-container .actions-area .action-list ul li.active {
+  color: #ff4e6aff;
 }
 
 .news {

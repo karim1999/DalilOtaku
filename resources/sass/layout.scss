@@ -286,12 +286,35 @@
     }
     .actions-area{
         justify-content: flex-end;
+        position: relative;
         i {
             margin-right: 5px;
         }
         p {
             margin: 0;
             margin-right: 10px;
+        }
+        .action-list{
+            padding: 20px 20px;
+            padding-right: 5px;
+            border: $border;
+            position: absolute;
+            border-radius: 5px;
+            text-align: right;
+            bottom: 30px;
+            background: $secondary_color;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                    font-size: $h5;
+                    &.active{
+                        color: $secondary2_color;
+                    }
+                }
+            }
+
         }
     }
 }
