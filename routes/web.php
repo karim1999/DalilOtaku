@@ -32,6 +32,7 @@ Route::get('season/{season}', "SeasonController@show")->name("season.show");
 
 Route::prefix('profile')->name('profile.')->middleware(['auth'])->group(function () {
     Route::get('/settings', 'ProfileController@settings')->name("settings");
+    Route::post('/settings', 'ProfileController@edit')->name("edit");
     Route::get('/watching', 'ProfileController@watching')->name("watching");
     Route::get('/watched', 'ProfileController@watched')->name("watched");
     Route::get('/later', 'ProfileController@later')->name("later");

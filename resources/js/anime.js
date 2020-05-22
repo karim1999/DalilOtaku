@@ -22,7 +22,7 @@ const anime = new Vue({
             return new Promise(resolve => setTimeout(resolve, ms));
         },
         async loadAnimeAiringInfo(mal_id){
-            await this.$apollo.query({
+            return await this.$apollo.query({
                 query: gql`query fetch($idMal: Int){
               Media (idMal: $idMal) {
                 id
@@ -35,8 +35,9 @@ const anime = new Vue({
                 variables: {
                     idMal: mal_id,
                 }
-            }).then(data => {
+            }).then(res => {
                 console.log(data)
+                return res.data
             }).catch(error => {
                 console.log("Error: Anime is not available in Anichart.")
             })
@@ -46,7 +47,13 @@ const anime = new Vue({
             await axios.get(this.mainEndPoint+ 'season/' + year + '/' + season.toLowerCase()).then(async res=> {
                 // for (let m= 0; m < res.data.anime.length; m++){
                 //     let anime= res.data.anime[m]
-                //     await this.loadAnimeAiringInfo(anime.mal_id)
+                //     let animeAiringData=await this.loadAnimeAiringInfo(anime.mal_id)
+                //     res.data.anime[m].is_airing= false
+                //     if(animeAiringData.Media.nextAiringEpisode){
+                //         res.data.anime[m].is_airing= true
+                //         res.data.anime[m].airing_at= animeAiringData.Media.nextAiringEpisode.airingAt
+                //         res.data.anime[m].episode= animeAiringData.Media.nextAiringEpisode.episode
+                //     }
                 // }
                 await axios.post('/admin/animes/addbatch', {
                     year: year,

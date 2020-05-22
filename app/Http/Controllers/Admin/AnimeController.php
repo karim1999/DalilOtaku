@@ -114,6 +114,11 @@ class AnimeController extends Controller
         $anime_list= json_decode($anime_list, true);
         foreach ($anime_list as $anime){
             $data= array(
+                //anichart
+//                'is_airing'=> $anime['is_airing'],
+//                'airing_at'=> $anime['airing_at'],
+//                'last_episode'=> $anime['episode'],
+
                 'mal_id'=> $anime['mal_id'],
                 'title_en'=> $anime['title'],
                 'description_en'=> $anime['synopsis'],

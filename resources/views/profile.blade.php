@@ -19,16 +19,38 @@
                 {{ session('status') }}
             </div>
         @endif
-        <div class="list-container col-11 version2" id="anime_list">
-            @if(isset($animes))
+        @if(isset($animes))
+            <div class="list-container col-11 version2" id="anime_list">
                 @forelse ($animes as $anime)
                     @include("partials.anime_card2", ["anime" => $anime])
                 @empty
                     <p class="empty">لا يوجد بيانات</p>
                 @endforelse
                 {{ $animes->links() }}
-            @endif
-        </div>
+            </div>
+        @else
+            <form action="{{route("profile.edit")}}" method="post">
+                <h4 class="unique2">تغيير اعدادات الملف الشخصي </h4>
+                @csrf
+                <div class="input-container">
+                    <input placeholder="كلمة المرور..." type="password"  class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
+                </div>
+                @error('password')
+                <h6 class="unique text-right no-padding">{{ $message }}</h6>
+                @enderror
+                <div class="input-container">
+                    <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
+                    <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
+                </div>
+                @error('password_conformation')
+                <h6 class="unique text-right no-padding">{{ $message }}</h6>
+                @enderror
+                <button class="submit-button" type="submit">
+                    حفظ
+                </button>
+            </form>
+        @endif
     </div>
 @endsection
 @section('scripts')
