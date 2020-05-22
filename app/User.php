@@ -42,6 +42,12 @@ class User extends Authenticatable implements HasMedia
         'email_verified_at' => 'datetime',
     ];
 
+    public function favorites(){
+        return $this->belongsToMany('App\Anime', 'favorites');
+    }
+    public function bookmarks(){
+        return $this->belongsToMany('App\Anime', 'bookmarks');
+    }
 
     public function registerMediaCollections(): void
     {

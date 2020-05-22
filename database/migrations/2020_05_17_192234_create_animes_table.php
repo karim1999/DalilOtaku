@@ -26,7 +26,7 @@ class CreateAnimesTable extends Migration
             $table->string('title_en');
             $table->string('title')->nullable();
             $table->string('type')->default("TV")->nullable();
-            $table->boolean('is_airing')->default(false);
+            $table->boolean('is_airing')->nullable();
             $table->string('start_at')->nullable();
             $table->date('end_at')->nullable();
             $table->double('score')->default(0)->nullable();

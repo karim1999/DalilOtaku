@@ -17,4 +17,10 @@ class Anime extends Model
     public function season(){
         return $this->belongsTo('App\Season');
     }
+    public function favorites(){
+        return $this->belongsToMany('App\User', 'favorites');
+    }
+    public function bookmarks(){
+        return $this->belongsToMany('App\User', 'bookmarks');
+    }
 }

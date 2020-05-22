@@ -44,10 +44,10 @@ const anime = new Vue({
         },
         async loadAnimeByYearSeason(year, season){
             await axios.get(this.mainEndPoint+ 'season/' + year + '/' + season.toLowerCase()).then(async res=> {
-                // for (let m= 0; m < res.data.anime.length; m++){
-                // let anime= res.data.anime[m]
-                // await this.loadAnimeAiringInfo(anime.mal_id)
-                // }
+                for (let m= 0; m < res.data.anime.length; m++){
+                    let anime= res.data.anime[m]
+                    await this.loadAnimeAiringInfo(anime.mal_id)
+                }
                 await axios.post('/admin/animes/addbatch', {
                     year: year,
                     season,

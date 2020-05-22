@@ -32,7 +32,7 @@
                 </ul>
             </div>
         @endif
-        <div class="list-container">
+        <div class="list-container" id="anime_list">
             @forelse ($animes as $anime)
                 <div class="list-item">
                     <div class="anime-container">
@@ -68,10 +68,10 @@
                                     @if($anime->studios()->count() > 0)
                                         <li><i class="fa fa-pen unique"></i>استديو {{$anime->studios()->first()->name_en}}</li>
                                     @endif
-                                    @if($anime->is_airing)
-                                        <li><i class="fa fa-play-circle unique"></i>الحلقة 4 بعد 3 يوم 4 ساعات 20 دقيقة</li>
+                                    @if($anime->is_airing == null || $anime->is_airing)
+                                        <anime-time mal-id="{{$anime->mal_id}}" :status="true"></anime-time>
                                     @else
-                                        <li><i class="fa fa-play-circle unique"></i>منتهي</li>
+                                        <anime-time mal-id="{{$anime->mal_id}}" :status="false"></anime-time>
                                     @endif
                                 </ul>
                                 <p>{{$anime->description}}</p>
@@ -95,11 +95,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="actions-area row">
-                        <p class="clickable">32<i class="far fa-bookmark"></i></p>
-                        <p class="clickable">20<i class="far fa-heart"></i></p>
-                        <i class="fa fa-ellipsis-v clickable"></i>
-                    </div>
+                    <anime-actions favorites="20" bookmarks="30"></anime-actions>
                 </div>
             @empty
                 <p class="empty">لا يوجد بيانات</p>
@@ -107,4 +103,7 @@
             {{ $animes->links() }}
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/animeList.js') }}" defer></script>
 @endsection

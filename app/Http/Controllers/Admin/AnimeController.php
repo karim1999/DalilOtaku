@@ -118,7 +118,7 @@ class AnimeController extends Controller
                 'title_en'=> $anime['title'],
                 'description_en'=> $anime['synopsis'],
                 'type'=> $anime['type'],
-                'is_airing'=> $anime['continuing'],
+//                'is_airing'=> $anime['continuing'],
                 'start_at'=> $anime['airing_start'],
                 'score'=> $anime['score'],
                 'image_url'=> $anime['image_url'],
