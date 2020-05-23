@@ -11,7 +11,7 @@ class GenreController extends Controller
     //
     public function index(){
         $data= [
-            'genres' => Genre::paginate(15)
+            'genres' => Genre::where("banned", 0)->paginate(15)
         ];
         return view("admin.genres.view", $data);
     }

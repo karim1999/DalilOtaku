@@ -1,0 +1,24 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+@font-face {
+    font-family: arabicFont;
+    src: url("./../fonts/NeoSansArabic.ttf");
+}
+// Variables
+@import 'assets/variables';
+
+//Main Colors (Dark)
+$primary_color: $dark_blue;
+$secondary_color: $darker_blue;
+$secondary2_color: $red;
+$secondary3_color: $blue;
+$font_color: $grey;
+$border: none;
+
+// Bootstrap
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import 'assets/mixins';
+@import 'layout';
+@import 'assets/basic';
+@import 'assets/grid';
+@import 'assets/responsive';

@@ -13,7 +13,7 @@ class SearchController extends Controller
         $data= [
             "disable_secondary_nav" => true,
             "title" => "بحث عن : " . $search,
-            "animes" => Anime::where('banned', 0)->whereNotNull("description")->where(function($q) use($search){
+            "animes" => Anime::active()->where(function($q) use($search){
                 $q->where("title", "like", "%".$search."%")->orWhere("title_en", "like", "%".$search."%");
             })->paginate(15),
         ];

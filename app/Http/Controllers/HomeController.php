@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $data= [
-            "animes" => Anime::where('banned', 0)->whereNotNull("description")->paginate(15),
+            "animes" => Anime::active()->paginate(15),
             "welcome_title" =>  Setting::getOption("welcome_title"),
             "welcome_content" =>  Setting::getOption("welcome_content"),
             "welcome_link" =>  Setting::getOption("welcome_link"),
@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function airing()
     {
         $data= [
-            "animes" => Anime::where(['banned' => 0, "is_airing" => 1])->whereNotNull("description")->paginate(15),
+            "animes" => Anime::active()->where("is_airing", 1)->paginate(15),
         ];
         return view('home', $data);
     }

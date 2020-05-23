@@ -96,47 +96,48 @@ class AnimeController extends Controller
 
     public function addStudio($studios, $anime_id){
         foreach ($studios as $studio){
-            $current_studio= Studio::firstOrCreate(['id'=> $studio['mal_id']], ["name_en"=> $studio["name"]]);
+            $current_studio= Studio::firstOrCreate(["name_en"=> $studio["name"]]);
             $current_studio->animes()->syncWithoutDetaching($anime_id);
         }
     }
     public function addGenres($genres, $anime_id){
         foreach ($genres as $genre){
-            $current_genre= Genre::firstOrCreate(['id'=> $genre['mal_id']], ["name_en"=> $genre["name"]]);
+            $current_genre= Genre::firstOrCreate(["name_en"=> $genre]);
             $current_genre->animes()->syncWithoutDetaching($anime_id);
         }
     }
+    private function make_time($arr){
+        return mktime(0, 0, 0, $arr["month"], $arr["day"], $arr["year"]);
+    }
     public function addBatch(Request $request){
         $anime_list= $request->input('animes');
-        $season= $request->input('season');
-        $year= $request->input('year');
-        $current_season= Season::firstOrCreate(['year' => $year, 'season'=> $season]);
         $anime_list= json_decode($anime_list, true);
         foreach ($anime_list as $anime){
             $data= array(
                 //anichart
-//                'is_airing'=> $anime['is_airing'],
-//                'airing_at'=> $anime['airing_at'],
-//                'last_episode'=> $anime['episode'],
-
-                'mal_id'=> $anime['mal_id'],
-                'title_en'=> $anime['title'],
-                'description_en'=> $anime['synopsis'],
-                'type'=> $anime['type'],
-//                'is_airing'=> $anime['continuing'],
-                'start_at'=> $anime['airing_start'],
-                'score'=> $anime['score'],
-                'image_url'=> $anime['image_url'],
+                'mal_id'=> $anime['idMal'],
+                'title_en'=> $anime['title']['userPreferred'],
+                'description_en'=> $anime['description'],
+                'type'=> $anime['format'],
+                'is_airing'=> $anime['nextAiringEpisode'] ? true : false,
+                'start_at'=> $anime['startDate'] ? $this->make_time($anime['startDate']) : null,
+                'end_at'=> $anime['endDate'] ? $this->make_time($anime['endDate']) : null,
+                'score'=> $anime['averageScore']/10,
+                'image_url'=> $anime['coverImage']['large'],
                 'episodes'=> $anime['episodes'],
-                'season_id'=> $current_season->id,
-                'mal'=> $anime['url'],
+                'season'=> $anime['season'],
+                'year'=> $anime['seasonYear'],
+                'anilist'=> $anime['siteUrl'],
+                'last_episode'=> $anime['nextAiringEpisode'] ? $anime['nextAiringEpisode']['episode'] : null,
+                'airing_at'=> $anime['nextAiringEpisode'] ? $anime['nextAiringEpisode']['airingAt'] : null,
+
                 //Testing
                 'title'=> "هذا النص هو مثال لنص",
                 'description'=> "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
 إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.",
             );
             $current_anime= Anime::firstOrCreate(['mal_id'=> $data['mal_id']], $data);
-            $this->addStudio($anime["producers"], $current_anime->id);
+            $this->addStudio($anime["studios"]["nodes"], $current_anime->id);
             $this->addGenres($anime["genres"], $current_anime->id);
         }
         return true;

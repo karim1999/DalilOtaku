@@ -14,10 +14,12 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .copyDirectory('resources/fonts', 'public/fonts')
+    .sass('resources/sass/dark.scss', 'public/css')
 mix.js('resources/js/nav.js', 'public/js')
 mix.js('resources/js/faq.js', 'public/js')
 mix.js('resources/js/dropdown.js', 'public/js')
 mix.js('resources/js/anime.js', 'public/js')
+mix.js('resources/js/anime2.js', 'public/js')
 mix.js('resources/js/animeList.js', 'public/js')
 
 

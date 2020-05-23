@@ -21,7 +21,7 @@
                     <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}">عرض الكل</a></li>
                     <li class="{{ (request()->is('season/spring')) ? 'active' : '' }}"><a href="{{route("season.show", "spring")}}"><i class="fa fa-cloud-sun"></i> الربيع</a></li>
                     <li class="{{ (request()->is('season/summer')) ? 'active' : '' }}"><a href="{{route("season.show", "summer")}}"><i class="fa fa-sun"></i> الصيف</a></li>
-                    <li class="{{ (request()->is('season/autumn')) ? 'active' : '' }}"><a href="{{route("season.show", "autumn")}}"><i class="fa fa-leaf"></i> الخريف</a></li>
+                    <li class="{{ (request()->is('season/fall')) ? 'active' : '' }}"><a href="{{route("season.show", "fall")}}"><i class="fa fa-leaf"></i> الخريف</a></li>
                     <li class="{{ (request()->is('season/winter')) ? 'active' : '' }}"><a href="{{route("season.show", "winter")}}"><i class="fa fa-snowflake"></i> الشتاء</a></li>
                     <li class="{{ (request()->is('type/tv')) ? 'active' : '' }}"><a href="{{route("type.show", "tv")}}">انمي</a></li>
                     <li class="{{ (request()->is('type/ova')) ? 'active' : '' }}"><a href="{{route("type.show", "ova")}}">اوفا</a></li>

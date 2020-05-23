@@ -13,22 +13,16 @@ class CreateAnimesTable extends Migration
      */
     public function up()
     {
-        Schema::create('seasons', function (Blueprint $table) {
-            $table->id();
-            $table->integer("year");
-            $table->string("season");
-            $table->timestamps();
-        });
 
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
-            $table->integer('mal_id');
+            $table->integer('mal_id')->nullable();
             $table->string('title_en');
             $table->string('title')->nullable();
             $table->string('type')->default("TV")->nullable();
             $table->boolean('is_airing')->nullable();
             $table->string('start_at')->nullable();
-            $table->date('end_at')->nullable();
+            $table->string('end_at')->nullable();
             $table->double('score')->default(0)->nullable();
             $table->longText('description')->nullable();
             $table->longText('description_en')->nullable();
@@ -37,10 +31,13 @@ class CreateAnimesTable extends Migration
             $table->integer('last_episode')->nullable();
             $table->integer('airing_at')->nullable();
             $table->string('broadcast')->nullable();
-            $table->unsignedBigInteger('season_id');
-            $table->foreign('season_id')->references('id')
-                ->on('seasons')
-                ->onDelete('cascade');
+//            $table->unsignedBigInteger('season_id');
+//            $table->foreign('season_id')->references('id')
+//                ->on('seasons')
+//                ->onDelete('cascade');
+            $table->string('season')->nullable();
+            $table->integer('year')->nullable();
+
             $table->boolean('banned')->default(0);
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
@@ -67,6 +64,5 @@ class CreateAnimesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('animes');
-        Schema::dropIfExists('seasons');
     }
 }

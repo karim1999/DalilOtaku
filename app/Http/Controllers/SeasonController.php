@@ -11,18 +11,16 @@ class SeasonController extends Controller
     //
     public function show($season){
         $data= [
-            "animes" => Anime::where('banned', 0)->whereNotNull("description")->whereHas("season", function($q) use($season){
-                $q->where("season", $season);
-            })->paginate(15),
+            "animes" => Anime::where(['season' => $season])->active()->paginate(15),
         ];
         return view('home', $data);
 
     }
     public function year($year, $season){
-        $season= Season::where(["year" => $year, "season" => $season])->first();
+//        $season= Season::where(["year" => $year, "season" => $season])->first();
         $data= [
             "title" => $season->season.", ". $season->year,
-            "animes" => $season->animes()->where('banned', 0)->whereNotNull("description")->paginate(15),
+            "animes" => Anime::where(['season' => $season, 'year' => $year])->active()->paginate(15),
         ];
         return view('home', $data);
 

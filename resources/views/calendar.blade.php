@@ -3,19 +3,62 @@
 @section('description', 'موقع انميات')
 
 @section('content')
-
     <div class="content">
-        <h4 class="unique2 text-right">السبت 6-5-2020</h4>
+        <h4 class="unique2 text-right">السبت</h4>
         <div class="list-container col-12 version2">
-            @for ($i = 0; $i < 4; $i++)
-                @include("partials.anime_card2")
-            @endfor
+            @forelse ($saturday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
         </div>
-        <h4 class="unique2 text-right">الاحد 7-5-2020</h4>
+        <h4 class="unique2 text-right">الاحد</h4>
         <div class="list-container col-12 version2">
-            @for ($i = 0; $i < 2; $i++)
-                @include("partials.anime_card2")
-            @endfor
+            @forelse ($sunday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
+        </div>
+        <h4 class="unique2 text-right">الاثنين</h4>
+        <div class="list-container col-12 version2">
+            @forelse ($monday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
+        </div>
+        <h4 class="unique2 text-right">الثلثاء</h4>
+        <div class="list-container col-12 version2">
+            @forelse ($tuesday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
+        </div>
+        <h4 class="unique2 text-right">الاربعاء</h4>
+        <div class="list-container col-12 version2">
+            @forelse ($wednesday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
+        </div>
+        <h4 class="unique2 text-right">الخميس</h4>
+        <div class="list-container col-12 version2">
+            @forelse ($thursday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
+        </div>
+        <h4 class="unique2 text-right">الجمعة</h4>
+        <div class="list-container col-12 version2">
+            @forelse ($friday as $anime)
+                @include("partials.anime_card2", ["anime", $anime])
+            @empty
+                <p>لا يوجد بيانات</p>
+            @endforelse
         </div>
     </div>
 

@@ -26,4 +26,11 @@ class Anime extends Model
     public function watching_by(){
         return $this->belongsToMany('App\User', 'watchings')->withPivot("status")->withTimestamps();
     }
+
+    public function scopeActive($query)
+    {
+        return $query->where('banned', 0)->whereNotNull("description")->whereDoesntHave("genres", function($genres){
+            $genres->where("banned", 1);
+        })->orderBy('score', 'desc');
+    }
 }

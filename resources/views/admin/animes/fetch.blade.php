@@ -3,7 +3,7 @@
 @section('content')
     <div class="form-container" >
         <div id="anime">
-            <button v-promise-btn @click="loadSeasonsAchive">Load Anime</button>
+            <button v-promise-btn @click="loadAll">Load Anime</button>
             <pre>
                 <code v-for="item in list">
                     <li>@{{ item }}</li>
@@ -14,5 +14,5 @@
 @endsection
 @section('scripts')
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/anime.js') }}" defer></script>
+    <script src="{{ asset('js/anime2.js') }}" defer></script>
 @endsection

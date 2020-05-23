@@ -10,7 +10,7 @@
         <li class="start-nav always-shown"><a href="{{route("home")}}"><img src="{{asset("assets/logo-white.png")}}" alt=""></a></li>
         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}">الرئيسية</a></li>
         <li class="{{ (request()->is('news*')) ? 'active' : '' }}"><a href="{{route("news")}}">الاخبار</a></li>
-        <li class="{{ (request()->is('later*')) ? 'active' : '' }}"><a href="">يعرض لاحقا</a></li>
+        <li class="{{ (request()->is('airing')) ? 'active' : '' }}"><a href="{{route("airing")}}">يعرض لاحقا</a></li>
         <li class="{{ (request()->is('calendar*')) ? 'active' : '' }}"><a href="{{route("calendar")}}">التقويم</a></li>
         <li class="{{ (request()->is('faq*')) ? 'active' : '' }}"><a href="{{route("faq")}}">الاسئلة الشائعة</a></li>
         <li class="{{ (request()->is('policy*')) ? 'active' : '' }}"><a href="{{route("policy")}}">سياسة الخصوصية</a></li>
