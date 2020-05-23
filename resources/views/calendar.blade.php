@@ -3,6 +3,7 @@
 @section('description', 'موقع انميات')
 
 @section('content')
+
     <div class="content">
         <h4 class="unique2 text-right">السبت 6-5-2020</h4>
         <div class="list-container col-12 version2">
