@@ -1,8 +1,8 @@
 <div class="list-item">
     <div class="anime-container">
         <div class="top">
-            <h5 class="ar-title text-right">{{$anime->title}}</h5>
-            <h6 class="en-title text-right">{{$anime->title_en}}</h6>
+            <h5 class="ar-title text-right">{{\Illuminate\Support\Str::limit($anime->title, 30)}}</h5>
+            <h6 class="en-title text-right">{{\Illuminate\Support\Str::limit($anime->title_en, 30)}}</h6>
         </div>
         <div class="middle row">
             <img src="{{$anime->image_url}}" alt="">
