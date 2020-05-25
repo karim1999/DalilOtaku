@@ -10,31 +10,31 @@ class CalendarController extends Controller
     //
     public function index(){
         $data= [];
-        $from= strtotime('saturday next week');
+        $from= strtotime('saturday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["saturday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('sunday next week');
+        $from= strtotime('sunday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["sunday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('monday next week');
+        $from= strtotime('monday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["monday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('tuesday next week');
+        $from= strtotime('tuesday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["tuesday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('wednesday next week');
+        $from= strtotime('wednesday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["wednesday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('thursday next week');
+        $from= strtotime('thursday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["thursday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
-        $from= strtotime('friday next week');
+        $from= strtotime('friday this week');
         $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
         $data["friday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
 
