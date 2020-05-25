@@ -23,15 +23,15 @@
                 @csrf
                 <div class="input-container flex-2">
                     @if($loop->first)
-                        <label for="name">التصنيف:</label>
+                        <label for="name">التصنيف بالعربية:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم التصنيف بالعربية..." type="text" name="name" value="{{$genre->name}}" autofocus>
+                    <input disabled type="text" name="name" value="{{$genre->name}}" autofocus>
                 </div>
                 <div class="input-container flex-2">
                     @if($loop->first)
-                        <label for="description">الوصف:</label>
+                        <label for="name_en">التصنيف باالنجليزية:</label>
                     @endif
-                    <input disabled placeholder="اكتب اسم الوصف بالعربية..." type="text" name="description" value="{{$genre->description}}" autofocus>
+                    <input disabled type="text" name="name_en" value="{{$genre->name_en}}" autofocus>
                 </div>
                 <a href="{{route("admin.genres.edit", $genre->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>

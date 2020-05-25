@@ -38,8 +38,8 @@
             @empty
                 <p class="empty">لا يوجد بيانات</p>
             @endforelse
-            {{ $animes->links() }}
         </div>
+            {{ $animes->links() }}
     </div>
 @endsection
 @section('scripts')
