@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/anime2.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +212,7 @@
       <workItem from="1589027722858" duration="73965000" />
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
-      <workItem from="1590086007513" duration="61823000" />
+      <workItem from="1590086007513" duration="63694000" />
     </task>
     <task id="LOCAL-00001" summary="Readme">
       <created>1588939873035</created>
@@ -543,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590409254128</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Https">
+      <created>1590409781886</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1590409781886</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +573,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-Fixed Responsive" />
     <MESSAGE value="-Migrations" />
     <MESSAGE value="-Seeders" />
     <MESSAGE value="-Admin Panel" />
@@ -591,6 +597,7 @@
     <MESSAGE value="news" />
     <MESSAGE value="Calender" />
     <MESSAGE value="Non Https" />
-    <option name="LAST_COMMIT_MESSAGE" value="Non Https" />
+    <MESSAGE value="Https" />
+    <option name="LAST_COMMIT_MESSAGE" value="Https" />
   </component>
 </project>
