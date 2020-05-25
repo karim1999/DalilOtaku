@@ -29,7 +29,7 @@ const anime = new Vue({
                           hasNextPage
                           perPage
                         }
-                        media(type: ANIME) {
+                        media(type: ANIME, status: RELEASING) {
                             idMal
                             format
                             siteUrl
