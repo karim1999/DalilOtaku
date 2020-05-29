@@ -376,7 +376,7 @@
     }
     .news-area{
         flex: 4;
-        @include display-flex(column, space-between, flex-start);
+        @include display-flex(column, space-between, stretch);
         padding-right: 40px;
         .news-item {
             @include display-flex(row, space-between, flex-start, wrap);
