@@ -22,6 +22,7 @@ Route::get('/who', "WhoController@index")->name("who");
 Route::get('/faq', "FaqController@index")->name("faq");
 Route::get('/news', "NewsController@index")->name("news");
 Route::get('/news/twitter/{id}', "NewsController@twitter")->name("news.twitter");
+Route::get('/news/website/{id}', "NewsController@website")->name("news.website");
 Route::get('/policy', "PolicyController@index")->name("policy");
 Route::get('/terms', "TermsController@index")->name("terms");
 Route::get('/calendar', "CalendarController@index")->name("calendar");
