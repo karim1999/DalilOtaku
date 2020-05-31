@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/anime_card1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/anime_card1.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,14 +227,7 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="42328000" />
-    </task>
-    <task id="LOCAL-00022" summary="-Admin Panel">
-      <created>1589629104493</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1589629104493</updated>
+      <workItem from="1590769037389" duration="42912000" />
     </task>
     <task id="LOCAL-00023" summary="-JSON to Text">
       <created>1589629411011</created>
@@ -570,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590937865960</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Cron job Daily">
+      <created>1590938294860</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1590938294860</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

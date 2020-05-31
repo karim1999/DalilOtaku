@@ -18,7 +18,7 @@
             if(this.status)
                 this.loadAnimeAiringInfo(this.malId)
             else
-                this.airingTime= "منتهي"
+                this.airingTime= "غير معروف"
         },
         computed: {
             getTime(){
@@ -56,7 +56,7 @@
                         this.airingTime= res.data.Media.nextAiringEpisode.timeUntilAiring
                         this.episode= res.data.Media.nextAiringEpisode.episode
                     }else{
-                        this.airingTime= "منتهي"
+                        this.airingTime= "غير معروف"
                     }
                 }).catch(error => {
                     console.log("Error: Anime is not available in Anichart.")

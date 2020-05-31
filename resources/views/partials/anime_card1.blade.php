@@ -21,7 +21,7 @@
             <div class="left">
                 <ul>
                     @if($anime->start_at)
-                        <li><i class="fa fa-calendar-alt unique"></i>{{date("F j, Y", strtotime($anime->start_at))}}</li>
+                        <li><i class="fa fa-calendar-alt unique"></i>{{date("F j, Y", $anime->start_at)}}</li>
                     @endif
                     @if($anime->score)
                         <li><i class="fa fa-star unique"></i>التقييم: {{$anime->score}}</li>

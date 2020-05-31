@@ -186,7 +186,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   created: function created() {
-    if (this.status) this.loadAnimeAiringInfo(this.malId);else this.airingTime = "منتهي";
+    if (this.status) this.loadAnimeAiringInfo(this.malId);else this.airingTime = "غير معروف";
   },
   computed: {
     getTime: function getTime() {
@@ -222,7 +222,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     _this.airingTime = res.data.Media.nextAiringEpisode.timeUntilAiring;
                     _this.episode = res.data.Media.nextAiringEpisode.episode;
                   } else {
-                    _this.airingTime = "منتهي";
+                    _this.airingTime = "غير معروف";
                   }
                 })["catch"](function (error) {
                   console.log("Error: Anime is not available in Anichart.");
