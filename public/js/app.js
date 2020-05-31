@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["query fetch($idMal: Int){\n          Media (idMal: $idMal) {\n            id\n            nextAiringEpisode {\n              timeUntilAiring\n              airingAt\n              episode\n            }\n          }}"]);
+  var data = _taggedTemplateLiteral(["query fetch($idMal: Int){\n                  Media (type: ANIME, idMal: $idMal) {\n                    id\n                    nextAiringEpisode {\n                      timeUntilAiring\n                      airingAt\n                      episode\n                    }\n                  }}"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -186,7 +186,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     };
   },
   created: function created() {
-    if (this.status) this.loadAnimeAiringInfo(this.malId);else this.airingTime = "غير معروف";
+    if (this.status) {
+      this.loadAnimeAiringInfo(this.malId);
+    } else {
+      this.airingTime = "غير معروف";
+    }
   },
   computed: {
     getTime: function getTime() {

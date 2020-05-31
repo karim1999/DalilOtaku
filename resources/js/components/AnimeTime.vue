@@ -15,10 +15,11 @@
             }
         },
         created() {
-            if(this.status)
+            if(this.status) {
                 this.loadAnimeAiringInfo(this.malId)
-            else
-                this.airingTime= "غير معروف"
+            }else {
+                this.airingTime = "غير معروف"
+            }
         },
         computed: {
             getTime(){
@@ -39,14 +40,14 @@
             async loadAnimeAiringInfo(mal_id){
                 await this.$apollo.query({
                     query: gql`query fetch($idMal: Int){
-              Media (idMal: $idMal) {
-                id
-                nextAiringEpisode {
-                  timeUntilAiring
-                  airingAt
-                  episode
-                }
-              }}`,
+                      Media (type: ANIME, idMal: $idMal) {
+                        id
+                        nextAiringEpisode {
+                          timeUntilAiring
+                          airingAt
+                          episode
+                        }
+                      }}`,
                     variables: {
                         idMal: mal_id,
                     }
