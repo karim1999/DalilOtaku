@@ -30,7 +30,7 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-wrap: wrap;
-  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.1);
 }
 
 .main-container .main-nav .nav-icon {
@@ -156,7 +156,7 @@
 }
 
 .main-container .footer {
-  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.1);
   margin: 0;
   padding: 10px 0 0 0;
 }
@@ -250,7 +250,7 @@
 
 .content form {
   padding: 20px 40px;
-  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.1);
   border-radius: 10px;
   background-color: #2b3844ff;
   text-align: center;
@@ -279,7 +279,7 @@
 }
 
 .login-form .horizontal-list li {
-  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.1);
   border-radius: 5px;
   padding: 20px 40px;
 }
@@ -330,7 +330,7 @@
 
 .list-container .anime-container {
   background-color: #2b3844ff;
-  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.2);
+  box-shadow: 0px 0px 5px 2px rgba(203, 203, 203, 0.1);
   padding-top: 10px;
 }
 

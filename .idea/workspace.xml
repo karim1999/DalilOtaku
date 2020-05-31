@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ThemeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/dark.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/dark.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,14 +219,7 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="28351000" />
-    </task>
-    <task id="LOCAL-00008" summary="Compress">
-      <created>1589148435680</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1589148435680</updated>
+      <workItem from="1590769037389" duration="28503000" />
     </task>
     <task id="LOCAL-00009" summary="News">
       <created>1589235230924</created>
@@ -568,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590921605680</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Theme">
+      <created>1590922455136</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1590922455136</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +587,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="logout" />
     <MESSAGE value="Anime Api" />
     <MESSAGE value="Anime Api Fetch" />
     <MESSAGE value="Genres, and Studios Api Fetch" />
@@ -616,6 +611,7 @@
     <MESSAGE value="websites" />
     <MESSAGE value="mail" />
     <MESSAGE value="contact" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact" />
+    <MESSAGE value="Theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Theme" />
   </component>
 </project>
