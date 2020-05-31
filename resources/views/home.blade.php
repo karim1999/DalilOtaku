@@ -17,12 +17,12 @@
         @if(!(isset($disable_secondary_nav) && $disable_secondary_nav))
             <div class="main-nav secondary-nav">
                 <ul class="middle-nav">
-                    <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}"><i class="fa fa-list unique"></i></a></li>
-                    <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}">عرض الكل</a></li>
-                    <li class="{{ (request()->is('season/spring')) ? 'active' : '' }}"><a href="{{route("season.show", "spring")}}"><i class="fa fa-cloud-sun"></i> الربيع</a></li>
-                    <li class="{{ (request()->is('season/summer')) ? 'active' : '' }}"><a href="{{route("season.show", "summer")}}"><i class="fa fa-sun"></i> الصيف</a></li>
-                    <li class="{{ (request()->is('season/fall')) ? 'active' : '' }}"><a href="{{route("season.show", "fall")}}"><i class="fa fa-leaf"></i> الخريف</a></li>
-                    <li class="{{ (request()->is('season/winter')) ? 'active' : '' }}"><a href="{{route("season.show", "winter")}}"><i class="fa fa-snowflake"></i> الشتاء</a></li>
+                    <li class="{{ (request()->is('all')) ? 'active' : '' }}"><a href="{{route("home.all")}}"><i class="fa fa-list"></i></a></li>
+                    <li class="{{ (request()->is('all')) ? 'active' : '' }}"><a href="{{route("home.all")}}">عرض الكل</a></li>
+                    <li class="{{ (request()->is('season/winter') || (isset($current_season) && $current_season == 'winter') ) ? 'active' : '' }}"><a href="{{route("season.show", "winter")}}"><i class="fa fa-snowflake"></i> الشتاء</a></li>
+                    <li class="{{ (request()->is('season/spring') || (isset($current_season) && $current_season == 'spring') ) ? 'active' : '' }}"><a href="{{route("season.show", "spring")}}"><i class="fa fa-cloud-sun"></i> الربيع</a></li>
+                    <li class="{{ (request()->is('season/summer') || (isset($current_season) && $current_season == 'summer') ) ? 'active' : '' }}"><a href="{{route("season.show", "summer")}}"><i class="fa fa-sun"></i> الصيف</a></li>
+                    <li class="{{ (request()->is('season/fall') || (isset($current_season) && $current_season == 'fall') ) ? 'active' : '' }}"><a href="{{route("season.show", "fall")}}"><i class="fa fa-leaf"></i> الخريف</a></li>
                     <li class="{{ (request()->is('type/tv')) ? 'active' : '' }}"><a href="{{route("type.show", "tv")}}">انمي</a></li>
                     <li class="{{ (request()->is('type/ova')) ? 'active' : '' }}"><a href="{{route("type.show", "ova")}}">اوفا</a></li>
                     <li class="{{ (request()->is('type/ona')) ? 'active' : '' }}"><a href="{{route("type.show", "ona")}}">اونا</a></li>

@@ -25,6 +25,18 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $current_season= $this->get_season_by_day(date("z"));
+        $data= [
+            "current_season" => $current_season,
+            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(15),
+            "welcome_title" =>  Setting::getOption("welcome_title"),
+            "welcome_content" =>  Setting::getOption("welcome_content"),
+            "welcome_link" =>  Setting::getOption("welcome_link"),
+        ];
+        return view('home', $data);
+    }
+    public function all()
+    {
         $data= [
             "animes" => Anime::active()->paginate(15),
             "welcome_title" =>  Setting::getOption("welcome_title"),
@@ -36,8 +48,37 @@ class HomeController extends Controller
     public function airing()
     {
         $data= [
-            "animes" => Anime::active()->where("is_airing", 1)->paginate(15),
+            "animes" => Anime::active()->whereNotNull("airing_at")->paginate(15),
         ];
         return view('home', $data);
     }
+    function get_season_by_day($day) {
+
+        //  Days of spring
+        $spring_starts = date("z", strtotime("March 21"));
+        $spring_ends   = date("z", strtotime("June 20"));
+
+        //  Days of summer
+        $summer_starts = date("z", strtotime("June 21"));
+        $summer_ends   = date("z", strtotime("September 22"));
+
+        //  Days of autumn
+        $autumn_starts = date("z", strtotime("September 23"));
+        $autumn_ends   = date("z", strtotime("December 20"));
+
+
+        //  If $day is between the days of spring, summer, autumn, and winter
+        if( $day >= $spring_starts && $day <= $spring_ends ) {
+            $season = "spring";
+        }else if( $day >= $summer_starts && $day <= $summer_ends ) {
+            $season = "summer";
+        }elseif( $day >= $autumn_starts && $day <= $autumn_ends ) {
+            $season = "autumn";
+        }else {
+            $season = "winter";
+        }
+
+        return $season;
+    }
+
 }

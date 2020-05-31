@@ -107,6 +107,8 @@ class AnimeController extends Controller
         }
     }
     private function make_time($arr){
+        if(!$arr["month"])
+            return null;
         return mktime(0, 0, 0, $arr["month"], $arr["day"], $arr["year"]);
     }
     private function loop_over_animes($anime_list){

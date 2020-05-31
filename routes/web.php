@@ -19,6 +19,7 @@ Route::get('/switch', "ThemeController@switch")->name("theme.switch");
 //Home
 Route::get('/', "HomeController@index")->name("home");
 Route::get('/home', "HomeController@index");
+Route::get('/all', "HomeController@all")->name("home.all");
 Route::get('/airing', "HomeController@airing")->name("airing");
 Route::get('/search', "SearchController@search")->name("search");
 

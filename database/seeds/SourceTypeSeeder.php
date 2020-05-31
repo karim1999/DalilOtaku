@@ -30,5 +30,7 @@ class SourceTypeSeeder extends Seeder
             'name_en' => 'Instagram'
         ]);
 
+
+
     }
 }
