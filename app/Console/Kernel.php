@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             $anime= new AnimeController;
             $anime->fetch_data_from_server();
-        })->everyFiveMinutes();
+        })->daily();
     }
 
     /**

@@ -4,7 +4,6 @@
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,14 +225,7 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="41931000" />
-    </task>
-    <task id="LOCAL-00020" summary="-Admin Panel">
-      <created>1589408777357</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1589408777357</updated>
+      <workItem from="1590769037389" duration="42078000" />
     </task>
     <task id="LOCAL-00021" summary="-Admin Panel">
       <created>1589580250395</created>
@@ -571,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590934855535</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Cron job">
+      <created>1590937719879</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1590937719879</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +593,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Just now" />
     <MESSAGE value="Test" />
     <MESSAGE value="news" />
     <MESSAGE value="Calender" />
@@ -619,6 +617,7 @@
     <MESSAGE value="No maximum" />
     <MESSAGE value="less memory" />
     <MESSAGE value="Only Releasing and Not released" />
-    <option name="LAST_COMMIT_MESSAGE" value="Only Releasing and Not released" />
+    <MESSAGE value="Cron job" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cron job" />
   </component>
 </project>
