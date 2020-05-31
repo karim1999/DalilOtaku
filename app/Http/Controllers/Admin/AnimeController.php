@@ -147,33 +147,37 @@ class AnimeController extends Controller
     }
 
     public function fetch_data_from_server(){
-        $page= 1;
-        $hasNextPage= true;
+        $statusArray= ["RELEASING", "NOT_YET_RELEASED"];
         $curl = curl_init();
-        while($hasNextPage){
+        foreach ($statusArray as $status){
+            $page= 1;
+            $hasNextPage= true;
+            while($hasNextPage){
 
-            curl_setopt_array($curl, array(
-                CURLOPT_URL => "https://graphql.anilist.co",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => "",
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => "POST",
-                CURLOPT_POSTFIELDS =>"{\"query\":\"{\\r\\nPage (page: $page, perPage: 50) {\\r\\npageInfo {\\r\\ntotal\\r\\ncurrentPage\\r\\nlastPage\\r\\nhasNextPage\\r\\nperPage\\r\\n}\\r\\nmedia(type: ANIME) {\\r\\nidMal\\r\\nformat\\r\\nsiteUrl\\r\\nstatus\\r\\nstartDate {\\r\\nyear\\r\\nmonth\\r\\nday\\r\\n}\\r\\nendDate {\\r\\nyear\\r\\nmonth\\r\\nday\\r\\n}\\r\\naverageScore\\r\\ndescription\\r\\nepisodes\\r\\nseason\\r\\nseasonYear\\r\\ntype\\r\\ngenres\\r\\nstudios (isMain: true) {\\r\\nnodes {\\r\\n  id\\r\\n  name\\r\\n}\\r\\n}\\r\\ncoverImage {\\r\\nextraLarge\\r\\nlarge\\r\\nmedium\\r\\ncolor\\r\\n}\\r\\nbannerImage\\r\\ntitle {\\r\\nromaji\\r\\nenglish\\r\\nnative\\r\\nuserPreferred\\r\\n}\\r\\nnextAiringEpisode {\\r\\ntimeUntilAiring\\r\\nairingAt\\r\\nepisode\\r\\n}\\r\\n}\\r\\n}\\r\\n}\",\"variables\":{}}",
-                CURLOPT_HTTPHEADER => array(
-                    "Content-Type: application/json"
-                ),
-            ));
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://graphql.anilist.co",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 0,
+                    CURLOPT_FOLLOWLOCATION => true,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "POST",
+                    CURLOPT_POSTFIELDS =>"{\"query\":\"{\\r\\nPage (page: $page, perPage: 50) {\\r\\npageInfo {\\r\\ntotal\\r\\ncurrentPage\\r\\nlastPage\\r\\nhasNextPage\\r\\nperPage\\r\\n}\\r\\nmedia(type: ANIME, status: $status) {\\r\\nidMal\\r\\nformat\\r\\nsiteUrl\\r\\nstatus\\r\\nstartDate {\\r\\nyear\\r\\nmonth\\r\\nday\\r\\n}\\r\\nendDate {\\r\\nyear\\r\\nmonth\\r\\nday\\r\\n}\\r\\naverageScore\\r\\ndescription\\r\\nepisodes\\r\\nseason\\r\\nseasonYear\\r\\ntype\\r\\ngenres\\r\\nstudios (isMain: true) {\\r\\nnodes {\\r\\n  id\\r\\n  name\\r\\n}\\r\\n}\\r\\ncoverImage {\\r\\nextraLarge\\r\\nlarge\\r\\nmedium\\r\\ncolor\\r\\n}\\r\\nbannerImage\\r\\ntitle {\\r\\nromaji\\r\\nenglish\\r\\nnative\\r\\nuserPreferred\\r\\n}\\r\\nnextAiringEpisode {\\r\\ntimeUntilAiring\\r\\nairingAt\\r\\nepisode\\r\\n}\\r\\n}\\r\\n}\\r\\n}\",\"variables\":{}}",
+                    CURLOPT_HTTPHEADER => array(
+                        "Content-Type: application/json"
+                    ),
+                ));
 
-            $response = json_decode(curl_exec($curl), true)["data"];
-            $hasNextPage= $response["Page"]["pageInfo"]["hasNextPage"];
-            $this->loop_over_animes($response["Page"]["media"]);
-            echo "Page number ".$page. " has just finished fetching.<br>";
-            $response= null;
-            $page++;
+                $response = json_decode(curl_exec($curl), true)["data"];
+                $hasNextPage= $response["Page"]["pageInfo"]["hasNextPage"];
+                $this->loop_over_animes($response["Page"]["media"]);
+                echo "Page number ".$page. " has just finished fetching.<br>";
+                $response= null;
+                $page++;
+            }
         }
         curl_close($curl);
+        return true;
     }
 }

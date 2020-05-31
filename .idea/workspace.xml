@@ -225,14 +225,7 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="37747000" />
-    </task>
-    <task id="LOCAL-00017" summary="-Fixed Responsive">
-      <created>1589363439384</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1589363439384</updated>
+      <workItem from="1590769037389" duration="39048000" />
     </task>
     <task id="LOCAL-00018" summary="-Migrations">
       <created>1589379369386</created>
@@ -570,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590931381195</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="less memory">
+      <created>1590932268073</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1590932268073</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +593,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Anichart" />
     <MESSAGE value="Actions" />
     <MESSAGE value="Just now" />
     <MESSAGE value="Test" />
@@ -618,6 +617,7 @@
     <MESSAGE value="-Graphgl PHP" />
     <MESSAGE value="-Add to composer" />
     <MESSAGE value="No maximum" />
-    <option name="LAST_COMMIT_MESSAGE" value="No maximum" />
+    <MESSAGE value="less memory" />
+    <option name="LAST_COMMIT_MESSAGE" value="less memory" />
   </component>
 </project>
