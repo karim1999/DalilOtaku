@@ -100,7 +100,7 @@ a {
     @include alert($warning, $white);
 }
 .alert-info {
-    @include alert($info, $black);
+    @include alert($secondary_color, $font_color);
 }
 .box{
     @include light-box;
