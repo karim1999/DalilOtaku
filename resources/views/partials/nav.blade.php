@@ -25,7 +25,9 @@
             </form>
             <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
         </li>
-        <li class="no-padding"><a href="{{route("home")}}"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></a></li>
+        <a href="{{route('theme.switch')}}">
+            <li class="no-padding"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></li>
+        </a>
         @auth
             <li class="no-padding"><a href="{{route("profile.favorites")}}"><img class="profile-img" src="{{Auth::user()->getFirstMediaUrl('avatar')}}" alt=""></a></li>
             <li class="no-padding"><a href="{{route("logout")}}">تسجيل الخروج</a></li>

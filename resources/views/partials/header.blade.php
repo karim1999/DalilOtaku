@@ -14,5 +14,9 @@
 @yield('scripts')
 
 <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@if(\Illuminate\Support\Facades\Cookie::get('theme') == "dark")
+    <link href="{{ asset('css/dark.css') }}" rel="stylesheet">
+@else
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@endif
 @yield('styles')

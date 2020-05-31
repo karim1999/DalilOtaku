@@ -12,29 +12,39 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Theme
+Route::get('/switch', "ThemeController@switch")->name("theme.switch");
 
+
+//Home
 Route::get('/', "HomeController@index")->name("home");
 Route::get('/home', "HomeController@index");
 Route::get('/airing', "HomeController@airing")->name("airing");
 Route::get('/search', "SearchController@search")->name("search");
 
+//Contact
 Route::get('/contact', "ContactController@index")->name("contact");
 Route::post('/contact', "ContactController@send")->name("contact.send");
 
 Route::get('/who', "WhoController@index")->name("who");
 Route::get('/faq', "FaqController@index")->name("faq");
 Route::get('/news', "NewsController@index")->name("news");
+
+//News
 Route::get('/news/twitter/{id}', "NewsController@twitter")->name("news.twitter");
 Route::get('/news/website/{id}', "NewsController@website")->name("news.website");
+
 Route::get('/policy', "PolicyController@index")->name("policy");
 Route::get('/terms', "TermsController@index")->name("terms");
 Route::get('/calendar', "CalendarController@index")->name("calendar");
+
+//Animes
 Route::get('genre/{id}', "GenreController@show")->name("genre.show");
 Route::get('type/{type}', "TypeController@show")->name("type.show");
 Route::get('season/{year}/{season}', "SeasonController@year")->name("year.season.show");
 Route::get('season/{season}', "SeasonController@show")->name("season.show");
 
-
+//Profile
 Route::prefix('profile')->name('profile.')->middleware(['auth'])->group(function () {
     Route::get('/settings', 'ProfileController@settings')->name("settings");
     Route::post('/settings', 'ProfileController@edit')->name("edit");
@@ -50,7 +60,7 @@ Route::get('/add/{anime_id}/favorites', 'AddController@add_favorites')->name("ad
 Route::get('/add/{anime_id}/watching/{status}', 'AddController@add_watching')->name("add.watching");
 
 
-
+//Auth
 Auth::routes();
 Route::get('/logout', "Auth\LoginController@logout");
 
