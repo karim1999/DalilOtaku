@@ -21,16 +21,12 @@ class NewsController extends Controller
         ];
     }
     private function crawler(){
-//        $client = new Client();
-//        $crawler = $client->request('GET', 'https://www.facebook.com/animelab');
-//        $crawler->filter('.userContentWrapper .userContent')->each(function ($node) {
-//            print $node->text()."\n";
-//        });
-//        $crawler = $client->request('GET', 'https://dalil-otaku.com/');
-//        $crawler->filter('.en-title')->each(function ($node) {
-//            print $node->text()."\n";
-//        });
-//        return;
+        $client = new Client();
+        $crawler = $client->request('GET', 'https://www.instagram.com/nanatsu.18');
+        $crawler->filter('article .userContent')->each(function ($node) {
+            print $node->text()."\n";
+        });
+        return;
     }
     public function index(){
         $twitter_sources= SourceType::findOrFail(3)->sources;

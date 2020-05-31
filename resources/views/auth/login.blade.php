@@ -6,12 +6,12 @@
     <form action="{{ route('login') }}" method="post">
         @csrf
         <h4 class="unique2">تسجيل الدخول</h4>
-        <ul class="horizontal-list">
-            <li><img src="{{asset("assets/social/twitter.png")}}" alt=""></li>
-            <li><img src="{{asset("assets/social/gmail.png")}}" alt=""></li>
-            <li><img src="{{asset("assets/social/facebook.png")}}" alt=""></li>
-        </ul>
-        <h5 class="text-center">او من خلال الحساب التقليدي</h5>
+{{--        <ul class="horizontal-list">--}}
+{{--            <li><img src="{{asset("assets/social/twitter.png")}}" alt=""></li>--}}
+{{--            <li><img src="{{asset("assets/social/gmail.png")}}" alt=""></li>--}}
+{{--            <li><img src="{{asset("assets/social/facebook.png")}}" alt=""></li>--}}
+{{--        </ul>--}}
+{{--        <h5 class="text-center">او من خلال الحساب التقليدي</h5>--}}
         <div class="input-container">
             <input placeholder="البريد الالكتروني..." type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             <img src="{{asset("assets/icons2/001-arroba.svg")}}" alt="">
