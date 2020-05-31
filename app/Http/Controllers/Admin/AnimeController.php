@@ -173,8 +173,6 @@ class AnimeController extends Controller
             $this->loop_over_animes($response["Page"]["media"]);
             echo "Page number ".$page. " has just finished fetching.<br>";
             $page++;
-            if($page == 5)
-                return true;
         }
     }
 }
