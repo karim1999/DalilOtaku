@@ -172,7 +172,7 @@ class AnimeController extends Controller
                 $response = json_decode(curl_exec($curl), true)["data"];
                 $hasNextPage= $response["Page"]["pageInfo"]["hasNextPage"];
                 $this->loop_over_animes($response["Page"]["media"]);
-                echo "<li>Page number $page in $status Animes has just finished fetching.</li>";
+                echo "Page number $page in $status Animes has just finished fetching.\n";
                 $response= null;
                 $page++;
             }
