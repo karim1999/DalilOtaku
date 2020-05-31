@@ -17,9 +17,9 @@ const anime = new Vue({
         list: [],
         archive: []
     },
-    created(){
-        this.loadAll()
-    },
+    // created(){
+    //     this.loadAll()
+    // },
     methods: {
         async getAnimesFromAnilist(page){
             return await this.$apollo.query({
