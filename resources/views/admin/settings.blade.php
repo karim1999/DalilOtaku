@@ -80,46 +80,46 @@
             <button type="submit">حفظ</button>
         </form>
 
-        <div class="splitter">
-            <h4 class="unique">المواقع التابع:</h4>
-            <span></span>
-        </div>
-        <form enctype="multipart/form-data" class="section" method="post" action="{{route('admin.websites.store')}}">
-            @method('POST')
-            @csrf
-            <div class="input-container">
-                <label for="terms_title">الشعار:</label>
-                <input type="file" name="logo" value="" required autofocus>
-            </div>
-            <div class="input-container">
-                <label for="terms_title">الاسم:</label>
-                <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="" required autofocus>
-            </div>
-            <div class="input-container flex-2">
-                <label for="terms_title">الرابط:</label>
-                <input placeholder="اكتب رابط الموقع..." type="text" name="description" required value="" autofocus>
-            </div>
-            <button class="">اضافة</button>
-        </form>
-        @foreach($websites as $website)
-            <form enctype="multipart/form-data" class="section base-line" method="post" action="{{route('admin.websites.update', $website->id)}}">
-                @method('PUT')
-                @csrf
-                <div class="input-container">
-                    <input type="file" name="logo" value="" autofocus>
-                </div>
-                <div class="input-container">
-                    <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="{{$website->title}}" required autofocus>
-                </div>
-                <div class="input-container flex-2">
-                    <input placeholder="اكتب رابط الموقع..." type="text" name="description" value="{{$website->description}}" required autofocus>
-                </div>
-                <button type="submit" class="btn-edit">تعديل</button>
-                <a href="{{route("admin.websites.destroy", $website->id)}}">
-                    <button type="button" class="btn-delete">حذف</button>
-                </a>
-            </form>
-        @endforeach
+{{--        <div class="splitter">--}}
+{{--            <h4 class="unique">المواقع التابع:</h4>--}}
+{{--            <span></span>--}}
+{{--        </div>--}}
+{{--        <form enctype="multipart/form-data" class="section" method="post" action="{{route('admin.websites.store')}}">--}}
+{{--            @method('POST')--}}
+{{--            @csrf--}}
+{{--            <div class="input-container">--}}
+{{--                <label for="terms_title">الشعار:</label>--}}
+{{--                <input type="file" name="logo" value="" required autofocus>--}}
+{{--            </div>--}}
+{{--            <div class="input-container">--}}
+{{--                <label for="terms_title">الاسم:</label>--}}
+{{--                <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="" required autofocus>--}}
+{{--            </div>--}}
+{{--            <div class="input-container flex-2">--}}
+{{--                <label for="terms_title">الرابط:</label>--}}
+{{--                <input placeholder="اكتب رابط الموقع..." type="text" name="description" required value="" autofocus>--}}
+{{--            </div>--}}
+{{--            <button class="">اضافة</button>--}}
+{{--        </form>--}}
+{{--        @foreach($websites as $website)--}}
+{{--            <form enctype="multipart/form-data" class="section base-line" method="post" action="{{route('admin.websites.update', $website->id)}}">--}}
+{{--                @method('PUT')--}}
+{{--                @csrf--}}
+{{--                <div class="input-container">--}}
+{{--                    <input type="file" name="logo" value="" autofocus>--}}
+{{--                </div>--}}
+{{--                <div class="input-container">--}}
+{{--                    <input placeholder="اكتب اسم الموقع..." type="text" name="title" value="{{$website->title}}" required autofocus>--}}
+{{--                </div>--}}
+{{--                <div class="input-container flex-2">--}}
+{{--                    <input placeholder="اكتب رابط الموقع..." type="text" name="description" value="{{$website->description}}" required autofocus>--}}
+{{--                </div>--}}
+{{--                <button type="submit" class="btn-edit">تعديل</button>--}}
+{{--                <a href="{{route("admin.websites.destroy", $website->id)}}">--}}
+{{--                    <button type="button" class="btn-delete">حذف</button>--}}
+{{--                </a>--}}
+{{--            </form>--}}
+{{--        @endforeach--}}
         <div class="splitter">
             <h4 class="unique">سكربتات:</h4>
             <span></span>

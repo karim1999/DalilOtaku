@@ -15,7 +15,7 @@ class SearchController extends Controller
             "title" => "بحث عن : " . $search,
             "animes" => Anime::active()->where(function($q) use($search){
                 $q->where("title", "like", "%".$search."%")->orWhere("title_en", "like", "%".$search."%");
-            })->paginate(15),
+            })->get(),
         ];
         return view('home', $data);
     }

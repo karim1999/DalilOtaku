@@ -13,7 +13,7 @@ class GenreController extends Controller
         $genre= Genre::findOrFail($genre_id);
         $data= [
             "title" => $genre->name_en,
-            "animes" => $genre->animes()->where('banned', 0)->whereNotNull("description")->paginate(15),
+            "animes" => $genre->animes()->where('banned', 0)->whereNotNull("description")->get(),
         ];
         return view('home', $data);
 

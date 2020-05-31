@@ -10,7 +10,7 @@ class TypeController extends Controller
     //
     public function show($type){
         $data= [
-            "animes" => Anime::where(['banned'=> 0, "type" => $type])->whereNotNull("description")->paginate(15),
+            "animes" => Anime::where(['banned'=> 0, "type" => $type])->whereNotNull("description")->get(),
         ];
         return view('home', $data);
 

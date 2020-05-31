@@ -23,16 +23,16 @@
             </div>
         </div>
     </div>
-    <div class="middle">
-        <div class="companies">
-            @foreach(\App\Website::all() as $website)
-                <a href="">
-                    <img src="{{$website->getFirstMediaUrl('logo')}}" alt="">
-                    <p class="h6">{{$website->title}}</p>
-                </a>
-            @endforeach
-        </div>
-    </div>
+{{--    <div class="middle">--}}
+{{--        <div class="companies">--}}
+{{--            @foreach(\App\Website::all() as $website)--}}
+{{--                <a href="">--}}
+{{--                    <img src="{{$website->getFirstMediaUrl('logo')}}" alt="">--}}
+{{--                    <p class="h6">{{$website->title}}</p>--}}
+{{--                </a>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="bottom">
         <p class="text-right col">حميع الحقوق محفوظة لموقع دليل اوتاكو</p>
         <ul class="text-center">

@@ -11,7 +11,7 @@ class SeasonController extends Controller
     //
     public function show($season){
         $data= [
-            "animes" => Anime::where(['season' => $season])->active()->paginate(15),
+            "animes" => Anime::where(['season' => $season])->active()->get(),
         ];
         return view('home', $data);
 
@@ -20,7 +20,7 @@ class SeasonController extends Controller
 //        $season= Season::where(["year" => $year, "season" => $season])->first();
         $data= [
             "title" => $season->season.", ". $season->year,
-            "animes" => Anime::where(['season' => $season, 'year' => $year])->active()->paginate(15),
+            "animes" => Anime::where(['season' => $season, 'year' => $year])->active()->get(),
         ];
         return view('home', $data);
 
