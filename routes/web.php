@@ -64,6 +64,7 @@ Route::get('/add/{anime_id}/watching/{status}', 'AddController@add_watching')->n
 Auth::routes();
 Route::get('/logout', "Auth\LoginController@logout");
 
+Route::get('/admin/fetch_data_from_server', "Admin\AnimeController@fetch_data_from_server")->name("admin.anime.fetch_data_from_server");
 //Admin Routes
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 'can:access admin'])->group(function () {
     Route::get('/', "AlertController@index")->name("home");

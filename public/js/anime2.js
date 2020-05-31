@@ -29461,9 +29461,9 @@ var anime = new Vue({
     list: [],
     archive: []
   },
-  created: function created() {
-    this.loadAll();
-  },
+  // created(){
+  //     this.loadAll()
+  // },
   methods: {
     getAnimesFromAnilist: function getAnimesFromAnilist(page) {
       var _this = this;
