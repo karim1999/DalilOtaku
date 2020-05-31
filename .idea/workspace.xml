@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DalilOtaku.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DalilOtaku.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AnimeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,14 +225,7 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="36856000" />
-    </task>
-    <task id="LOCAL-00016" summary="-Fixed Responsive">
-      <created>1589363320022</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1589363320022</updated>
+      <workItem from="1590769037389" duration="37747000" />
     </task>
     <task id="LOCAL-00017" summary="-Fixed Responsive">
       <created>1589363439384</created>
@@ -573,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590931081563</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="No maximum">
+      <created>1590931381195</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1590931381195</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +593,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing" />
     <MESSAGE value="Anichart" />
     <MESSAGE value="Actions" />
     <MESSAGE value="Just now" />
@@ -621,6 +617,7 @@
     <MESSAGE value="-Roll back" />
     <MESSAGE value="-Graphgl PHP" />
     <MESSAGE value="-Add to composer" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Add to composer" />
+    <MESSAGE value="No maximum" />
+    <option name="LAST_COMMIT_MESSAGE" value="No maximum" />
   </component>
 </project>

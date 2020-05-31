@@ -149,8 +149,8 @@ class AnimeController extends Controller
     public function fetch_data_from_server(){
         $page= 1;
         $hasNextPage= true;
+        $curl = curl_init();
         while($hasNextPage){
-            $curl = curl_init();
 
             curl_setopt_array($curl, array(
                 CURLOPT_URL => "https://graphql.anilist.co",
@@ -168,11 +168,12 @@ class AnimeController extends Controller
             ));
 
             $response = json_decode(curl_exec($curl), true)["data"];
-            curl_close($curl);
             $hasNextPage= $response["Page"]["pageInfo"]["hasNextPage"];
             $this->loop_over_animes($response["Page"]["media"]);
             echo "Page number ".$page. " has just finished fetching.<br>";
+            $response= null;
             $page++;
         }
+        curl_close($curl);
     }
 }
