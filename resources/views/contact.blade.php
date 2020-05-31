@@ -7,6 +7,11 @@
     <form action="{{route('contact.send')}}" method="post">
         @csrf
         <h4 class="unique2">اتصل بنا</h4>
+        @if (session('status'))
+            <div class="alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="input-container">
             <input name="name" placeholder="الاسم..." type="text">
             <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
