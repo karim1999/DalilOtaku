@@ -17,6 +17,9 @@ const anime = new Vue({
         list: [],
         archive: []
     },
+    created(){
+        this.loadAll()
+    },
     methods: {
         async getAnimesFromAnilist(page){
             return await this.$apollo.query({
@@ -33,6 +36,7 @@ const anime = new Vue({
                             idMal
                             format
                             siteUrl
+                            status
                             startDate {
                                 year
                                 month

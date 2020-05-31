@@ -64,6 +64,8 @@ Route::get('/add/{anime_id}/watching/{status}', 'AddController@add_watching')->n
 Auth::routes();
 Route::get('/logout', "Auth\LoginController@logout");
 
+Route::get('admin/fetch', 'admin\AnimeController@fetch');
+
 //Admin Routes
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 'can:access admin'])->group(function () {
     Route::get('/', "AlertController@index")->name("home");
@@ -88,7 +90,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 
     Route::resource('animes', 'AnimeController')->except(["create", "show"]);
     Route::get('animes/published', 'AnimeController@published')->name("animes.published");
     Route::get('animes/airing', 'AnimeController@airing')->name("animes.airing");
-    Route::get('fetch', 'AnimeController@fetch');
     Route::post('animes/addbatch', 'AnimeController@addbatch');
     Route::get('animes/{id}/enable', 'AnimeController@enable')->name("animes.enable");
 

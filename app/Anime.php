@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Anime extends Model
@@ -9,6 +10,14 @@ class Anime extends Model
     protected $with= ["genres", "studios"];
     protected $guarded= ['id'];
     //
+
+    protected static function booted()
+    {
+        static::addGlobalScope('airing', function (Builder $builder) {
+            $builder->where('is_airing', 1);
+        });
+    }
+
     public function genres(){
         return $this->belongsToMany('App\Genre', 'anime_genres');
     }

@@ -119,7 +119,7 @@ class AnimeController extends Controller
                 'title_en'=> $anime['title']['userPreferred'],
                 'description_en'=> $anime['description'],
                 'type'=> $anime['format'],
-                'is_airing'=> $anime['nextAiringEpisode'] ? true : false,
+                'is_airing'=> ($anime['status'] == "RELEASING" || $anime['status'] == "NOT_YET_RELEASED") ? true : false,
                 'start_at'=> $anime['startDate'] ? $this->make_time($anime['startDate']) : null,
                 'end_at'=> $anime['endDate'] ? $this->make_time($anime['endDate']) : null,
                 'score'=> $anime['averageScore']/10,
@@ -136,7 +136,7 @@ class AnimeController extends Controller
                 'description'=> "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
 إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.",
             );
-            $current_anime= Anime::firstOrCreate(['mal_id'=> $data['mal_id']], $data);
+            $current_anime= Anime::updateOrCreate(['mal_id'=> $data['mal_id']], $data);
             $this->addStudio($anime["studios"]["nodes"], $current_anime->id);
             $this->addGenres($anime["genres"], $current_anime->id);
         }
