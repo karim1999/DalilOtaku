@@ -135,8 +135,8 @@ class AnimeController extends Controller
 إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.",
             );
             $current_anime= Anime::updateOrCreate(['mal_id'=> $data['mal_id']], $data);
-//            $this->addStudio($anime["studios"]["nodes"], $current_anime->id);
-//            $this->addGenres($anime["genres"], $current_anime->id);
+            $this->addStudio($anime["studios"]["nodes"], $current_anime->id);
+            $this->addGenres($anime["genres"], $current_anime->id);
         }
     }
     public function addBatch(Request $request){
