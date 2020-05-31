@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Anime extends Model
 {
+    protected $with= ["genres", "studios"];
     protected $guarded= ['id'];
     //
     public function genres(){

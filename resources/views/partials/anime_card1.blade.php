@@ -30,7 +30,7 @@
                         <li><i class="fa fa-film unique"></i>{{$anime->episodes}} حلقة</li>
                     @endif
                     @if($anime->studios()->count() > 0)
-                        <li><i class="fa fa-pen unique"></i>استديو {{$anime->studios()->first()->name_en}}</li>
+                        <li><i class="fa fa-pen unique"></i>استديو {{$anime->studios[0]->name_en}}</li>
                     @endif
                     <anime-time mal-id="{{$anime->mal_id}}" :status="{{$anime->is_airing}}" airing-at="{{$anime->airing_at}}"></anime-time>
                 </ul>

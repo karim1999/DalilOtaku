@@ -16,12 +16,12 @@ class AddController extends Controller
         return redirect()->route('profile.bookmarked')->with('status', 'تم بنجاح');;
     }
     public function add_watching($anime_id, $status){
-        auth()->user()->watching()->toggle([$anime_id=> ['status' => $status]]);
+//        auth()->user()->watching()->toggle([$anime_id=> ['status' => $status]]);
 //        auth()->user()->watching()->syncWithoutDetaching([$anime_id=> ['status' => $status]]);
         $value= auth()->user()->watching()->where(["anime_id" => $anime_id])->first();
         if($value){
-            $value->status= $status;
-            $value->save();
+            $value->pivot->status= $status;
+            $value->pivot->save();
         }else{
             auth()->user()->watching()->toggle([$anime_id=> ['status' => $status]]);
         }
