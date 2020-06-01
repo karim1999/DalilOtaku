@@ -178,7 +178,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AnimeTime",
-  props: ["status", "malId"],
+  props: ["status", "malId", "airingAt"],
   data: function data() {
     return {
       airingTime: "",
@@ -187,6 +187,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   created: function created() {
     if (this.status) {
+      this.airingTime = this.airingAt;
       this.loadAnimeAiringInfo(this.malId);
     } else {
       this.airingTime = "غير معروف";

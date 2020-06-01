@@ -7,7 +7,7 @@
 
     export default {
         name: "AnimeTime",
-        props: ["status", "malId"],
+        props: ["status", "malId", "airingAt"],
         data: function () {
             return {
                 airingTime: "",
@@ -16,6 +16,7 @@
         },
         created() {
             if(this.status) {
+                this.airingTime = this.airingAt
                 this.loadAnimeAiringInfo(this.malId)
             }else {
                 this.airingTime = "غير معروف"

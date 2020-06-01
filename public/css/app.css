@@ -313,10 +313,14 @@
   box-shadow: none;
 }
 
+.list-container.version2 .list-item .anime-container .middle {
+  align-items: flex-start;
+}
+
 .list-container.version2 .list-item .anime-container img {
-  height: 280px;
   border-radius: 10px;
   margin-bottom: 10px;
+  max-height: 300px;
 }
 
 .list-container li {

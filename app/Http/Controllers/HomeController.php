@@ -28,7 +28,7 @@ class HomeController extends Controller
         $current_season= $this->get_season_by_day(date("z"));
         $data= [
             "current_season" => $current_season,
-            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->get(),
+            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(1000),
             "welcome_title" =>  Setting::getOption("welcome_title"),
             "welcome_content" =>  Setting::getOption("welcome_content"),
             "welcome_link" =>  Setting::getOption("welcome_link"),
@@ -38,17 +38,23 @@ class HomeController extends Controller
     public function all()
     {
         $data= [
-            "animes" => Anime::active()->get(),
+            "animes" => Anime::active()->paginate(30),
             "welcome_title" =>  Setting::getOption("welcome_title"),
             "welcome_content" =>  Setting::getOption("welcome_content"),
             "welcome_link" =>  Setting::getOption("welcome_link"),
         ];
         return view('home', $data);
     }
+    public function later(){
+        $data= [
+            "animes" => Anime::active()->where(["status" => "NOT_YET_RELEASED"])->paginate(30),
+        ];
+        return view('later', $data);
+    }
     public function airing()
     {
         $data= [
-            "animes" => Anime::active()->whereNotNull("airing_at")->get(),
+            "animes" => Anime::active()->whereNotNull("airing_at")->paginate(30),
         ];
         return view('home', $data);
     }

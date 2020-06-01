@@ -22,6 +22,7 @@ Route::get('/home', "HomeController@index");
 Route::get('/all', "HomeController@all")->name("home.all");
 Route::get('/airing', "HomeController@airing")->name("airing");
 Route::get('/search', "SearchController@search")->name("search");
+Route::get('/later', 'HomeController@later')->name("home.later");
 
 //Contact
 Route::get('/contact', "ContactController@index")->name("contact");

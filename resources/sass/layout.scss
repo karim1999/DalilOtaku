@@ -198,10 +198,14 @@
             .anime-container {
                 background-color: transparent;
                 box-shadow: none;
+                .middle{
+                    align-items: flex-start;
+                }
                 img {
-                    height: 280px;
+                    //height: 280px;
                     border-radius: 10px;
                     margin-bottom: 10px;
+                    max-height: 300px;
                 }
             }
         }

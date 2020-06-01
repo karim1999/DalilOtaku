@@ -32,7 +32,9 @@
                     @if($anime->studios()->count() > 0)
                         <li><i class="fa fa-pen unique"></i>استديو {{$anime->studios[0]->name_en}}</li>
                     @endif
-                    <anime-time mal-id="{{$anime->mal_id}}" :status="{{$anime->is_airing}}" airing-at="{{$anime->airing_at}}"></anime-time>
+                    @if($anime->airing_at)
+                        <anime-time mal-id="{{$anime->mal_id}}" :status="{{$anime->is_airing}}" airing-at="{{$anime->airing_at}}"></anime-time>
+                    @endif
                 </ul>
                 <p>{{$anime->description}}</p>
             </div>

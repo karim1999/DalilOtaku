@@ -39,7 +39,7 @@
                 <p class="empty">لا يوجد بيانات</p>
             @endforelse
         </div>
-{{--            {{ $animes->appends(['search' => Request::get('search')])->links() }}--}}
+            {{ $animes->appends(['search' => Request::get('search')])->links() }}
     </div>
 @endsection
 @section('scripts')
