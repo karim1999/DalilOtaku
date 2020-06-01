@@ -1,0 +1,47 @@
+{
+    "access admin": "الدخول الي لوحة التحكم",
+
+    "access ban": "الدخول الي صفحة المحظورات",
+
+    "access animes": "الدخول الي صفحة الانميات",
+    "edit animes": "تعديل الانميات",
+    "ban animes": "حظر الانميات",
+    "unban animes": "الغاء حظر الانميات",
+
+    "access genres": "الدخول الي صفحة التصنيفات",
+    "edit genres": "تعديل التصنيفات",
+    "ban genres": "حظر التصنيفات",
+    "unban genres": "الغاء حظر التصنيفات",
+
+    "access studios": "الدخول الي صفحة المنتجون",
+    "edit studios": "تعديل المنتجون",
+    "delete studios": "حذف المنتجون",
+
+    "access sources": "الدخول الي صفحة الاخبار",
+    "add sources": "اضافة الاخبار",
+    "edit sources": "تعديل الاخبار",
+    "delete sources": "حذف الاخبار",
+
+    "access users": "الدخول الي صفحة المستخدمين",
+    "add users": "اضافة المستخدمين",
+    "edit users": "تعديل المستخدمين",
+    "delete users": "حذف المستخدمين",
+
+    "access roles": "الدخول الي صفحة الادوار",
+    "add roles": "اضافة الادوار",
+    "edit roles": "تعديل الادوار",
+    "delete roles": "حذف الادوار",
+
+    "welcome": "تعديل الرسالة الترحيبية",
+    "policy": "تعديل سياسة الخصوصية",
+    "terms": "تعديل شروط الاستخدام",
+
+    "access questions": "الدخول لصفحة الاسئلة الشائعة",
+    "add questions": "اضافة سؤال جديد",
+    "edit questions": "تعديل الاسئلة",
+    "delete questions": "حذف الاسئلة",
+
+    "settings": "تعديل الاعدادات",
+    "scripts": "اضافة وتعديل الاعلانات"
+
+}

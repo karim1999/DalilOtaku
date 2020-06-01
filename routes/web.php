@@ -113,6 +113,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware(['auth', 
     Route::resource('studios', 'StudioController');
 
     Route::resource('users', 'UserController');
+    Route::resource('roles', 'RoleController');
 
     Route::resource('scripts', 'ScriptController')->only(['store', 'update']);
     Route::get('scripts/{id}/destroy', 'ScriptController@destroy')->name('scripts.destroy');

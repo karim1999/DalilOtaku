@@ -7,7 +7,7 @@
                 {{ session('status') }}
             </div>
         @endif
-{{--        <a href="{{route("admin.genres.create")}}"><button class="add-btn">اضافة تصنيف جديد</button></a>--}}
+        {{--        <a href="{{route("admin.genres.create")}}"><button class="add-btn">اضافة تصنيف جديد</button></a>--}}
         @foreach($genres as $genre)
             <form class="section {{$loop->first ? "" : "base-line"}}" method="post" action="{{route("admin.genres.destroy", $genre->id)}}">
                 @method('DELETE')
@@ -25,9 +25,13 @@
                     <input disabled type="text" name="description" value="{{$genre->name_en}}">
                 </div>
                 <a href="{{route("admin.genres.edit", $genre->id)}}">
-                    <button type="button" class="btn-edit">تعديل</button>
+                    @can("edit genres")
+                        <button type="button" class="btn-edit">تعديل</button>
+                    @endcan
                 </a>
-                <button type="submit" class="btn-delete">حظر</button>
+                @can("ban genres")
+                    <button type="submit" class="btn-delete">حظر</button>
+                @endcan
             </form>
         @endforeach
         {{$genres->links()}}

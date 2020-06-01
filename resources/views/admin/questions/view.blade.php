@@ -7,7 +7,9 @@
                 {{ session('status') }}
             </div>
         @endif
-        <a href="{{route("admin.questions.create")}}"><button class="add-btn">اضافة</button></a>
+            @can("add questions")
+                <a href="{{route("admin.questions.create")}}"><button class="add-btn">اضافة</button></a>
+            @endcan
         @foreach($questions as $question)
             <form class="section {{$loop->first ? "" : "base-line"}}" method="post" action="{{route("admin.questions.destroy", $question->id)}}">
                 @method('DELETE')
@@ -25,9 +27,13 @@
                     <input disabled type="text" name="answer" value="{{$question->answer}}" autofocus>
                 </div>
                 <a href="{{route("admin.questions.edit", $question->id)}}">
-                    <button type="button" class="btn-edit">تعديل</button>
+                    @can("edit questions")
+                        <button type="button" class="btn-edit">تعديل</button>
+                    @endcan
                 </a>
-                <button type="submit" class="btn-delete">حذف</button>
+                @can("delete questions")
+                    <button type="submit" class="btn-delete">حذف</button>
+                @endcan
             </form>
         @endforeach
     </div>

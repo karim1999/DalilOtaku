@@ -41,10 +41,14 @@
                     @endif
                     <input disabled type="text" name="role" value="{{$anime->description}}" autofocus>
                 </div>
-                <a href="{{route("admin.animes.edit", $anime->id)}}">
-                    <button type="button" class="btn-edit">تعديل</button>
-                </a>
-                <button type="submit" class="btn-delete">حظر</button>
+                @can("edit animes")
+                    <a href="{{route("admin.animes.edit", $anime->id)}}">
+                        <button type="button" class="btn-edit">تعديل</button>
+                    </a>
+                @endcan
+                @can("ban animes")
+                    <button type="submit" class="btn-delete">حظر</button>
+                @endcan
             </form>
         @endforeach
         {{ $animes->links() }}

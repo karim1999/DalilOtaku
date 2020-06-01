@@ -7,7 +7,9 @@
                 {{ session('status') }}
             </div>
         @endif
-        <a href="{{route("admin.sources.create")}}"><button class="add-btn">اضف</button></a>
+        @can("add sources")
+            <a href="{{route("admin.sources.create")}}"><button class="add-btn">اضف</button></a>
+        @endcan
         @foreach($sources as $source)
             <form class="section {{$loop->first ? "" : "base-line"}}" method="post" action="{{route("admin.sources.destroy", $source->id)}}">
                 @method('DELETE')
@@ -31,9 +33,13 @@
                     <input disabled type="text" name="link" value="{{$source->link}}" autofocus>
                 </div>
                 <a href="{{route("admin.sources.edit", $source->id)}}">
-                    <button type="button" class="btn-edit">تعديل</button>
+                    @can("edit sources")
+                        <button type="button" class="btn-edit">تعديل</button>
+                    @endcan
                 </a>
-                <button type="submit" class="btn-delete">حذف</button>
+                @can("delete sources")
+                    <button type="submit" class="btn-delete">حذف</button>
+                @endcan
             </form>
         @endforeach
     </div>

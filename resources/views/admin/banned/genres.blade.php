@@ -36,7 +36,9 @@
                 <a href="{{route("admin.genres.edit", $genre->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>
                 </a>
-                <button type="submit" class="btn-edit">الغاء الحظر</button>
+                @can("unban animes")
+                    <button type="submit" class="btn-edit">الغاء الحظر</button>
+                @endcan
             </form>
         @endforeach
         {{ $genres->links() }}

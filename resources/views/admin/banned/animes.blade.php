@@ -36,10 +36,9 @@
                     @endif
                     <input disabled type="text" name="role" value="{{$anime->description}}" autofocus>
                 </div>
-                <a href="{{route("admin.animes.edit", $anime->id)}}">
-                    <button type="button" class="btn-edit">تعديل</button>
-                </a>
-                <button type="submit" class="btn-edit">الغاء الحظر</button>
+                @can("unban animes")
+                    <button type="submit" class="btn-edit">الغاء الحظر</button>
+                @endcan
             </form>
         @endforeach
         {{ $animes->links() }}
