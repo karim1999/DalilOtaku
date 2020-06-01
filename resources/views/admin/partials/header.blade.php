@@ -4,10 +4,10 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ config('app.name', 'دليل اوتاكو') }} - @yield('title', 'الرئيسية')</title>
+<title>{{ \App\Setting::getOption("title") }} - @yield('title', 'لوحة التحكم')</title>
 <meta name="description"
-      content="@yield('description', 'موقع انميات')"></head>
-<link rel="icon" href="{{asset("assets/logo.png")}}" type="image/gif" sizes="16x16">
+      content="@yield('description', \App\Setting::getOption('description'))"></head>
+<link rel="icon" href="{{\App\Setting::getOption("icon", false)->getFirstMediaUrl('icon')}}" type="image/gif" sizes="16x16">
 
 <!-- Scripts -->
 @yield('scripts')

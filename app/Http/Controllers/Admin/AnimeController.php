@@ -120,7 +120,7 @@ class AnimeController extends Controller
                 'description_en'=> $anime['description'],
                 'type'=> $anime['format'],
                 'is_airing'=> ($anime['status'] == "RELEASING" || $anime['status'] == "NOT_YET_RELEASED") ? true : false,
-                'status'=> $anime['status'],
+                'releasing'=> $anime['status'] == "RELEASING" ? true : false,
                 'start_at'=> $anime['startDate'] ? $this->make_time($anime['startDate']) : null,
                 'end_at'=> $anime['endDate'] ? $this->make_time($anime['endDate']) : null,
                 'score'=> $anime['averageScore']/10,

@@ -47,7 +47,7 @@ class HomeController extends Controller
     }
     public function later(){
         $data= [
-            "animes" => Anime::active()->where(["status" => "NOT_YET_RELEASED"])->paginate(30),
+            "animes" => Anime::active()->where(["releasing" => 0])->paginate(30),
         ];
         return view('later', $data);
     }

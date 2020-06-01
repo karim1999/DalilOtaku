@@ -11,7 +11,7 @@
                 تــكون الفكرة وصلت :)</p>
         </div>
         <div class="col">
-            <img src="{{asset("assets/footer/g22078@2x.png")}}" alt="">
+            <img src="{{\App\Setting::getOption("logo", false)->getFirstMediaUrl('logo')}}" alt="">
             <div class="row">
                 <a href="{{route("faq")}}">الأسئلة الشائعة</a>
                 -

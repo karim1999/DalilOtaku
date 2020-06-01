@@ -7,7 +7,7 @@
     </template>
     <i @click="menuToggle" :class="['fa fa-times hidden sm-only nav-icon nav-close-icon clickable', showMenu ? showClass : hideClass]"></i>
     <ul :class="['middle-nav', showMenu ? showClass : hideClass]">
-        <li class="start-nav always-shown"><a href="{{route("home")}}"><img src="{{asset("assets/logo-white.png")}}" alt=""></a></li>
+        <li class="start-nav always-shown"><a href="{{route("home")}}"><img src="{{\App\Setting::getOption("logo", false)->getFirstMediaUrl('logo')}}" alt=""></a></li>
         <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{route("home")}}">الرئيسية</a></li>
         <li class="{{ (request()->is('news*')) ? 'active' : '' }}"><a href="{{route("news")}}">الاخبار</a></li>
         <li class="{{ (request()->is('later')) ? 'active' : '' }}"><a href="{{route("home.later")}}">يعرض لاحقا</a></li>

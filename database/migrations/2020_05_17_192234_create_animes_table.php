@@ -23,7 +23,7 @@ class CreateAnimesTable extends Migration
             $table->boolean('is_airing')->nullable();
             $table->string('start_at')->nullable();
             $table->string('end_at')->nullable();
-            $table->string('status')->nullable();
+            $table->string('releasing')->nullable();
             $table->double('score')->default(0)->nullable();
             $table->longText('description')->nullable();
             $table->longText('description_en')->nullable();
