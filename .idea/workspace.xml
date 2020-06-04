@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -225,14 +227,7 @@
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
       <workItem from="1590769037389" duration="62192000" />
-      <workItem from="1591300571708" duration="3373000" />
-    </task>
-    <task id="LOCAL-00038" summary="Search">
-      <created>1590104523815</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1590104523815</updated>
+      <workItem from="1591300571708" duration="3528000" />
     </task>
     <task id="LOCAL-00039" summary="testing">
       <created>1590109201395</created>
@@ -570,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591303839892</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="no time">
+      <created>1591304020007</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1591304020007</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +595,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-Fixed Adding to watching problems&#10;-Improved performance" />
     <MESSAGE value="-Loading Animes Auto" />
     <MESSAGE value="-Roll back" />
     <MESSAGE value="-Graphgl PHP" />
@@ -618,6 +619,7 @@
     <MESSAGE value="htaccess" />
     <MESSAGE value="less requests" />
     <MESSAGE value="paginate" />
-    <option name="LAST_COMMIT_MESSAGE" value="paginate" />
+    <MESSAGE value="no time" />
+    <option name="LAST_COMMIT_MESSAGE" value="no time" />
   </component>
 </project>
