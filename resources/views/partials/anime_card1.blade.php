@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="middle row">
-            <img defer src="{{$anime->image_url}}" alt="">
+            <img class="lazyload" data-src="{{$anime->image_url}}" alt="">
             <div class="left">
                 <ul>
                     @if($anime->start_at)

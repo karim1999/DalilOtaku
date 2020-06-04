@@ -43,3 +43,4 @@
         <p class="text-left col">مصمم من <span class="unique">Sasini</span></p>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha256-+2SfyuYhd9/mPmcIHdzrgwtc4fBaQYTpu7fYesS49OU=" crossorigin="anonymous" async></script>
