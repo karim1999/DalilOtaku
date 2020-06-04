@@ -29,9 +29,7 @@ class HomeController extends Controller
         $data= [
             "current_season" => $current_season,
             "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(1000),
-            "welcome_title" =>  Setting::getOption("welcome_title"),
-            "welcome_content" =>  Setting::getOption("welcome_content"),
-            "welcome_link" =>  Setting::getOption("welcome_link"),
+            "settings"=> Setting::all()->keyBy("key"),
         ];
         return view('home', $data);
     }
@@ -39,9 +37,7 @@ class HomeController extends Controller
     {
         $data= [
             "animes" => Anime::active()->paginate(30),
-            "welcome_title" =>  Setting::getOption("welcome_title"),
-            "welcome_content" =>  Setting::getOption("welcome_content"),
-            "welcome_link" =>  Setting::getOption("welcome_link"),
+            "settings"=> Setting::all()->keyBy("key"),
         ];
         return view('home', $data);
     }

@@ -5,12 +5,12 @@
         @if(isset($title))
             <h3 class="text-center unique2">{{$title}}</h3>
         @endif
-        @if(isset($welcome_title))
+        @if(isset($settings['welcome_title']->value))
             <div class="alert-info col-6 col-md-10">
-                <h4>{{$welcome_title}}</h4>
-                <p>{{$welcome_content}}</p>
-                @if($welcome_link)
-                    <a href="{{$welcome_link}}"><button>اضغط هنا</button></a>
+                <h4>{{$settings['welcome_title']->value}}</h4>
+                <p>{{$settings['welcome_content']->value}}</p>
+                @if($settings['welcome_link']->value)
+                    <a href="{{$settings['welcome_link']->value}}"><button>اضغط هنا</button></a>
                 @endif
             </div>
         @endif

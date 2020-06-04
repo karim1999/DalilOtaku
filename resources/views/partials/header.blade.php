@@ -4,10 +4,10 @@
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ \App\Setting::getOption("title") }} - @yield('title', 'الرئيسية')</title>
+<title>{{ isset($settings) ? $settings['title']->value : \App\Setting::getOption("title") }} - @yield('title', 'الرئيسية')</title>
 <meta name="description"
       content="@yield('description', 'موقع انميات')"></head>
-<link rel="icon" href="{{\App\Setting::getOption("icon", false)->getFirstMediaUrl('icon')}}" type="image/gif" sizes="16x16">
+<link rel="icon" href="{{isset($settings) ? $settings['icon']->getFirstMediaUrl('icon') : \App\Setting::getOption("icon", false)->getFirstMediaUrl('icon')}}" type="image/gif" sizes="16x16">
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
