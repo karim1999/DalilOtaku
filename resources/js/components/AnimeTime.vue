@@ -17,7 +17,7 @@
         created() {
             if(this.status) {
                 this.airingTime = Number.parseInt(this.airingAt)
-                this.loadAnimeAiringInfo(this.malId)
+                // this.loadAnimeAiringInfo(this.malId)
             }else {
                 this.airingTime = "غير معروف"
             }
