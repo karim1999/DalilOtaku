@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="middle row">
-            <img src="{{$anime->image_url}}" alt="">
+            <img defer src="{{$anime->image_url}}" alt="">
             <div class="left">
                 <ul>
                     @if($anime->start_at)
