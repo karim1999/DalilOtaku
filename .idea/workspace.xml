@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RoleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/roles/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banned/animes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/banned/animes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/banned/genres.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/banned/genres.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/genres/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/genres/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/partials/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/questions/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/questions/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sources/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sources/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/studios/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/studios/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/animeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/faq.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/faq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/anime_card1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/anime_card1.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,21 +236,8 @@
       <workItem from="1589373350650" duration="63325000" />
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
-      <workItem from="1590769037389" duration="60798000" />
-    </task>
-    <task id="LOCAL-00029" summary="Settings">
-      <created>1589725931964</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1589725931964</updated>
-    </task>
-    <task id="LOCAL-00030" summary="logout">
-      <created>1589740995899</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1589740995899</updated>
+      <workItem from="1590769037389" duration="62192000" />
+      <workItem from="1591300571708" duration="251000" />
     </task>
     <task id="LOCAL-00031" summary="Anime Api">
       <created>1589827461124</created>
@@ -584,7 +568,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591040777218</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Roles and Permissions">
+      <created>1591051605507</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1591051605507</updated>
+    </task>
+    <task id="LOCAL-00079" summary="yarn prod">
+      <created>1591051775924</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1591051775924</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,8 +605,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="truncating" />
-    <MESSAGE value="-Pagination&#10;-Banned" />
     <MESSAGE value="-Twitter API" />
     <MESSAGE value="websites" />
     <MESSAGE value="mail" />
@@ -632,6 +628,8 @@
     <MESSAGE value="Google added" />
     <MESSAGE value="-Pagination back&#10;-Later Page" />
     <MESSAGE value="Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Settings" />
+    <MESSAGE value="Roles and Permissions" />
+    <MESSAGE value="yarn prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="yarn prod" />
   </component>
 </project>

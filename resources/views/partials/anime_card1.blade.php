@@ -29,7 +29,7 @@
                     @if($anime->episodes)
                         <li><i class="fa fa-film unique"></i>{{$anime->episodes}} حلقة</li>
                     @endif
-                    @if($anime->studios()->count() > 0)
+                    @if(count($anime->studios) > 0)
                         <li><i class="fa fa-pen unique"></i>استديو {{$anime->studios[0]->name_en}}</li>
                     @endif
                     @if($anime->airing_at)
