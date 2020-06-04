@@ -28,7 +28,7 @@ class HomeController extends Controller
         $current_season= $this->get_season_by_day(date("z"));
         $data= [
             "current_season" => $current_season,
-            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(1000),
+            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(15),
             "settings"=> Setting::all()->keyBy("key"),
         ];
         return view('home', $data);
