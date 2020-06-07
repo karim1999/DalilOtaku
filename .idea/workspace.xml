@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/animeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/faq.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/faq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeList.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -232,21 +238,7 @@
       <workItem from="1590086007513" duration="65997000" />
       <workItem from="1590769037389" duration="62192000" />
       <workItem from="1591300571708" duration="5846000" />
-      <workItem from="1591453773488" duration="29724000" />
-    </task>
-    <task id="LOCAL-00043" summary="Just now">
-      <created>1590184193789</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1590184193789</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Test">
-      <created>1590236816313</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1590236816313</updated>
+      <workItem from="1591453773488" duration="30316000" />
     </task>
     <task id="LOCAL-00045" summary="news">
       <created>1590261124790</created>
@@ -577,7 +569,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591541326600</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="profile">
+      <created>1591542659099</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1591542659099</updated>
+    </task>
+    <task id="LOCAL-00093" summary="prod mode">
+      <created>1591542709426</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1591542709426</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,8 +606,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="No maximum" />
-    <MESSAGE value="less memory" />
     <MESSAGE value="Only Releasing and Not released" />
     <MESSAGE value="Cron job" />
     <MESSAGE value="Cron job Daily" />
@@ -625,6 +629,8 @@
     <MESSAGE value="New Anime Card" />
     <MESSAGE value="Theme Switcher" />
     <MESSAGE value="-Signup form&#10;-Increased expire date" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Signup form&#10;-Increased expire date" />
+    <MESSAGE value="profile" />
+    <MESSAGE value="prod mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod mode" />
   </component>
 </project>
