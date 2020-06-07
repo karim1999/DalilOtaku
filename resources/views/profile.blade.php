@@ -29,18 +29,21 @@
                 {{ $animes->links() }}
             </div>
         @else
-            <form action="{{route("profile.edit")}}" method="post">
+            <form enctype="multipart/form-data" id="profileSettings" action="{{route("profile.edit")}}" method="post">
+                <img style="border-radius: 100%; width: 64px; height: 64px" @click="changeImage" class="clickable" :src="img ? img : '{{Auth::user()->getFirstMediaUrl('avatar')}}'" alt="Profile Picture">
+                <input @change="onFileChange" ref="img" type="file" name="avatar" hidden style="display: none">
+                <p>اضغط لتغيير الصورة</p>
                 <h4 class="unique2">تغيير اعدادات الملف الشخصي </h4>
                 @csrf
                 <div class="input-container">
-                    <input placeholder="كلمة المرور..." type="password"  class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                    <input placeholder="كلمة المرور..." type="password"  class="@error('password') is-invalid @enderror" name="password" autocomplete="new-password">
                     <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
                 </div>
                 @error('password')
                 <h6 class="unique text-right no-padding">{{ $message }}</h6>
                 @enderror
                 <div class="input-container">
-                    <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password">
+                    <input placeholder="تكرار كلمة المرور..." type="password"  class="@error('password_confirmation') is-invalid @enderror" name="password_confirmation" autocomplete="new-password">
                     <img src="{{asset("assets/icons2/008-lock.svg")}}" alt="">
                 </div>
                 @error('password_conformation')
@@ -55,4 +58,5 @@
 @endsection
 @section('scripts')
     <script src="{{ asset('js/animeList.js') }}" defer></script>
+    <script src="{{ asset('js/profile.js') }}" defer></script>
 @endsection

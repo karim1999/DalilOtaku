@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +26,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="JavaScript File" />
         <option value="blade" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -234,14 +232,7 @@
       <workItem from="1590086007513" duration="65997000" />
       <workItem from="1590769037389" duration="62192000" />
       <workItem from="1591300571708" duration="5846000" />
-      <workItem from="1591453773488" duration="28351000" />
-    </task>
-    <task id="LOCAL-00042" summary="Actions">
-      <created>1590178421248</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1590178421248</updated>
+      <workItem from="1591453773488" duration="29724000" />
     </task>
     <task id="LOCAL-00043" summary="Just now">
       <created>1590184193789</created>
@@ -579,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591539550785</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="-Signup form&#10;-Increased expire date">
+      <created>1591541326600</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1591541326600</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +600,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-Add to composer" />
     <MESSAGE value="No maximum" />
     <MESSAGE value="less memory" />
     <MESSAGE value="Only Releasing and Not released" />
@@ -627,6 +624,7 @@
     <MESSAGE value="back" />
     <MESSAGE value="New Anime Card" />
     <MESSAGE value="Theme Switcher" />
-    <option name="LAST_COMMIT_MESSAGE" value="Theme Switcher" />
+    <MESSAGE value="-Signup form&#10;-Increased expire date" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Signup form&#10;-Increased expire date" />
   </component>
 </project>

@@ -8,5 +8,6 @@
     "/css/admin.css": "/css/admin.css",
     "/js/dropdown.js": "/js/dropdown.js",
     "/js/faq.js": "/js/faq.js",
-    "/js/nav.js": "/js/nav.js"
+    "/js/nav.js": "/js/nav.js",
+    "/js/profile.js": "/js/profile.js"
 }

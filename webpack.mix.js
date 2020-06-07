@@ -21,6 +21,7 @@ mix.js('resources/js/dropdown.js', 'public/js')
 mix.js('resources/js/anime.js', 'public/js')
 mix.js('resources/js/anime2.js', 'public/js')
 mix.js('resources/js/animeList.js', 'public/js')
+mix.js('resources/js/profile.js', 'public/js')
 
 
 

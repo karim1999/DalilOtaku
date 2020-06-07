@@ -45,12 +45,17 @@ class ProfileController extends Controller
     }
 
     public function edit(Request $request){
-        $validatedData = $request->validate([
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
         $user= auth()->user();
-        $user->password= Hash::make($request->input('password'));
-        $user->save();
-        return back()->with("status", "تم تغيير كلمة المرور بنجاح");
+        if($request->input("password")){
+            $validatedData = $request->validate([
+                'password' => ['required', 'string', 'min:8', 'confirmed'],
+            ]);
+            $user->password= Hash::make($request->input('password'));
+            $user->save();
+        }
+        if($request->file("avatar"))
+            $user->addMediaFromRequest("avatar")->toMediaCollection('avatar');
+
+        return back()->with("status", "تم تغيير الاعدادات بنجاح");
     }
 }
