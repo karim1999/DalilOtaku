@@ -27,7 +27,7 @@
                     <div class="bottom">
                         <ul class="categories">
                             <li v-for="genre in anime.genres.slice(0,3)">
-                                <a href="" class="btn-category">
+                                <a :href="'/genre/'+genre.id" class="btn-category">
                                     {{genre.name ? genre.name : genre.name_en}}
                                 </a>
                             </li>

@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/animeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/faq.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/faq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeCard3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeCard3.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,14 +227,8 @@
       <workItem from="1590086007513" duration="65997000" />
       <workItem from="1590769037389" duration="62192000" />
       <workItem from="1591300571708" duration="5846000" />
-      <workItem from="1591453773488" duration="30316000" />
-    </task>
-    <task id="LOCAL-00045" summary="news">
-      <created>1590261124790</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1590261124790</updated>
+      <workItem from="1591453773488" duration="30447000" />
+      <workItem from="1591547433390" duration="109000" />
     </task>
     <task id="LOCAL-00046" summary="Calender">
       <created>1590408118669</created>
@@ -583,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591542709426</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="final prod">
+      <created>1591543289511</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1591543289511</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +596,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Only Releasing and Not released" />
     <MESSAGE value="Cron job" />
     <MESSAGE value="Cron job Daily" />
     <MESSAGE value="Fixed airing at problem" />
@@ -631,6 +620,7 @@
     <MESSAGE value="-Signup form&#10;-Increased expire date" />
     <MESSAGE value="profile" />
     <MESSAGE value="prod mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="prod mode" />
+    <MESSAGE value="final prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="final prod" />
   </component>
 </project>
