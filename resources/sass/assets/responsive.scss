@@ -20,10 +20,23 @@
         flex-direction: column;
         align-items: center;
     }
+    .middle{
+        & > img {
+            height: auto !important;
+            width: 180px !important;
+        }
+    }
+
 }
 @media only screen and (max-width: 768px) {
     .list-container .list-item {
         flex-basis: 80%;
+    }
+    .middle{
+        & > img {
+            height: 326px !important;
+            width: auto !important;
+        }
     }
 }
 @media only screen and (max-width: 767px) {
@@ -40,7 +53,7 @@
             flex-wrap: wrap;
             height: auto;
             justify-content: center;
-            img {
+            & > img {
                 height: 200px;
             }
         }

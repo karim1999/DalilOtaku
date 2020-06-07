@@ -23,34 +23,49 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $current_season= $this->get_season_by_day(date("z"));
+        $animes= Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(15)->appends($request->query());
+        if($request->input("json"))
+            return response()->json($animes);
+
         $data= [
             "current_season" => $current_season,
-            "animes" => Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(1000),
+            "animes" => $animes,
             "settings"=> Setting::all()->keyBy("key"),
         ];
         return view('home', $data);
     }
-    public function all()
+    public function all(Request $request)
     {
+        $animes= Anime::active()->paginate(15)->appends($request->query());
+        if($request->input("json"))
+            return response()->json($animes);
+
         $data= [
-            "animes" => Anime::active()->paginate(30),
+            "animes" => $animes,
             "settings"=> Setting::all()->keyBy("key"),
         ];
         return view('home', $data);
     }
-    public function later(){
+    public function later(Request $request){
+        $animes= Anime::active()->where(["releasing" => 0])->paginate(15)->appends($request->query());
+        if($request->input("json"))
+            return response()->json($animes);
         $data= [
-            "animes" => Anime::active()->where(["releasing" => 0])->paginate(30),
+            "animes" => $animes,
         ];
         return view('later', $data);
     }
-    public function airing()
+    public function airing(Request $request)
     {
+        $animes= Anime::active()->whereNotNull("airing_at")->paginate(15)->appends($request->query());
+        if($request->input("json"))
+            return response()->json($animes);
+
         $data= [
-            "animes" => Anime::active()->whereNotNull("airing_at")->paginate(30),
+            "animes" => $animes,
         ];
         return view('home', $data);
     }

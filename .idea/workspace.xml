@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
+    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="New Anime Card">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/AnimeActions2.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/AnimeCard3.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/AnimeList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/anime_card3.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anime.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SeasonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SeasonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TypeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/animeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/faq.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/faq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/animeList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeTime.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/assets/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/assets/responsive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +190,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/roles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -177,19 +203,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\web\DalilOtaku\resources\js\components" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\roles" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\partials" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\banned" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\animes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\web\DalilOtaku\public\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass" />
       <recent name="C:\projects\web\DalilOtaku\public\assets\social" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\roles" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\partials" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\banned" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\animes" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\questions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,14 +253,8 @@
       <workItem from="1589748215900" duration="48450000" />
       <workItem from="1590086007513" duration="65997000" />
       <workItem from="1590769037389" duration="62192000" />
-      <workItem from="1591300571708" duration="3528000" />
-    </task>
-    <task id="LOCAL-00039" summary="testing">
-      <created>1590109201395</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1590109201395</updated>
+      <workItem from="1591300571708" duration="5846000" />
+      <workItem from="1591453773488" duration="22001000" />
     </task>
     <task id="LOCAL-00040" summary="testing">
       <created>1590109212144</created>
@@ -572,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591304020007</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="back">
+      <created>1591304139220</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1591304139220</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +622,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="-Loading Animes Auto" />
     <MESSAGE value="-Roll back" />
     <MESSAGE value="-Graphgl PHP" />
     <MESSAGE value="-Add to composer" />
@@ -620,6 +646,7 @@
     <MESSAGE value="less requests" />
     <MESSAGE value="paginate" />
     <MESSAGE value="no time" />
-    <option name="LAST_COMMIT_MESSAGE" value="no time" />
+    <MESSAGE value="back" />
+    <option name="LAST_COMMIT_MESSAGE" value="back" />
   </component>
 </project>

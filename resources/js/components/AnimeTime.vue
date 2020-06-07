@@ -7,7 +7,7 @@
 
     export default {
         name: "AnimeTime",
-        props: ["status", "malId", "airingAt"],
+        props: ["status", "malId", "airingAt", "currentEpisode"],
         data: function () {
             return {
                 airingTime: "",
@@ -15,9 +15,14 @@
             }
         },
         created() {
+            let currentTimestamp = Math.round(new Date().getTime()/1000)
             if(this.status) {
-                this.airingTime = Number.parseInt(this.airingAt)
-                this.loadAnimeAiringInfo(this.malId)
+                let airingAt= Number.parseInt(this.airingAt)
+                // console.log("now: ", currentTimestamp, "at: ", new Date(airingAt).getTime())
+                this.episode= this.currentEpisode
+                if(airingAt < currentTimestamp)
+                    this.loadAnimeAiringInfo(this.malId)
+                this.airingTime = airingAt - currentTimestamp
             }else {
                 this.airingTime = "غير معروف"
             }

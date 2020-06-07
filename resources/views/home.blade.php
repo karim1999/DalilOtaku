@@ -32,14 +32,30 @@
                 </ul>
             </div>
         @endif
-        <div class="list-container" id="anime_list">
-            @forelse ($animes as $anime)
-                @include("partials.anime_card1", ["anime" => $anime])
-            @empty
-                <p class="empty">لا يوجد بيانات</p>
-            @endforelse
+        <div id="anime_list">
+            <anime-list
+                :animes-list='@json($animes)'
+            >
+                <template v-slot:default="slotProps">
+                    <anime-card3 v-for="anime in slotProps.animes" :key="anime.id" :anime="anime">
+                        <template v-slot:default="childProps">
+                            @auth
+                                <anime-actions2
+                                    :url="'{{route("home")."/add/"}}'+childProps.anime.id"
+                                ></anime-actions2>
+                            @endauth
+                        </template>
+                    </anime-card3>
+                </template>
+            </anime-list>
+{{--            @forelse ($animes as $anime)--}}
+{{--                @include("partials.anime_card3", ["anime" => $anime])--}}
+{{--            @empty--}}
+{{--                <p class="empty">لا يوجد بيانات</p>--}}
+{{--            @endforelse--}}
         </div>
-            {{ $animes->appends(['search' => Request::get('search')])->links() }}
+
+            {{--            {{ $animes->appends(['search' => Request::get('search')])->links() }}--}}
     </div>
 @endsection
 @section('scripts')

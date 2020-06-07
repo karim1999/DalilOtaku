@@ -210,6 +210,86 @@
             }
         }
     }
+    &.version3 {
+        .list-item {
+            .anime-container {
+                padding-top: 0;
+                .middle {
+                    height: max-content;
+                    .anime-image{
+                        position: relative;
+                        & > img {
+                            height: 326px;
+                            width: 230px;
+                        }
+                        .title-area{
+                            color: #F8FBFC;
+                            width: 100%;
+                            position: absolute;
+                            bottom: 0;
+                            background-color: rgba(0, 0, 0, 0.76);
+                        }
+                    }
+                    .left {
+                        height: 326px;
+                        padding: 0;
+                        &>* {
+                            padding-right: 10px;
+                            align-self: stretch;
+                        }
+                        ul.sources, div.bottom{
+                            li {
+                                min-width: auto;
+                            }
+                            img{
+                                margin-right: 5px;
+                                width: 30px;
+                                filter: invert(90%);
+                            }
+                            a.active img{
+                                filter: invert(50%);
+                            }
+                        }
+                    }
+                    .bottom {
+                        margin: 0;
+                        background-color: $primary_color;
+                        @include display-flex(row, flex-start, flex-start, wrap);
+                        .categories{
+                            @include display-flex(row, flex-start, flex-start, wrap);
+                            flex: 1;
+                            margin-bottom: 3px;
+                            .btn-category{
+                                @include button-light-rounded($h6);
+                                background-color: $secondary_color;
+                                margin-bottom: 5px;
+                                border-color: $primary_color;
+                            }
+                            li:first-child a{
+                                @include button-filled($h6);
+                                border-radius: 25px;
+                                border-color: $secondary2_color;
+                            }
+                        }
+                    }
+                }
+                .actions-area {
+                    flex: 0;
+                    align-self: center;
+                    .toggle-icon{
+                        font-size: 20px;
+                        margin-left: 5px;
+                    }
+                    .action-list{
+                        width: 150px;
+                        li{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
     li {
         list-style-type: none;
     }
