@@ -29,7 +29,7 @@ let nav= new Vue({
         },
         setCookie(cname, cvalue, duration= 512640) {
             let d = new Date();
-            d.setTime(d.getTime() + (duration));
+            d.setTime(d.getTime() + (duration*100000));
             let expires = "expires="+ d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         },

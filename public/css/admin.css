@@ -771,6 +771,10 @@ ul.pagination li.active {
     height: auto !important;
     width: 180px !important;
   }
+
+  .promotion {
+    margin-right: 20px !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {

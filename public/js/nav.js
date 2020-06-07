@@ -2137,7 +2137,7 @@ var nav = new Vue({
     setCookie: function setCookie(cname, cvalue) {
       var duration = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 512640;
       var d = new Date();
-      d.setTime(d.getTime() + duration);
+      d.setTime(d.getTime() + duration * 100000);
       var expires = "expires=" + d.toUTCString();
       document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     },

@@ -186,6 +186,31 @@
     }
 }
 
+.signup-form{
+    @include display-flex(row, center, center, wrap);
+    min-height: 100vh;
+    .promotion{
+        flex: .6;
+        margin-right: 200px;
+        align-self: flex-start;
+        margin-top: 200px;
+        li{
+            list-style-type: none;
+            font-size: $h2;
+            margin-top: 30px;
+            i{
+                color: $secondary2_color;
+            }
+        }
+    }
+    .content.login-form{
+        align-items: flex-start;
+        .signup-form-container{
+            @include display-flex(column, center, center)
+        }
+    }
+}
+
 
 
 //Anime

@@ -288,6 +288,44 @@
   width: 20px;
 }
 
+.signup-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.signup-form .promotion {
+  flex: 0.6;
+  margin-right: 200px;
+  align-self: flex-start;
+  margin-top: 200px;
+}
+
+.signup-form .promotion li {
+  list-style-type: none;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.signup-form .promotion li i {
+  color: #ff4e6aff;
+}
+
+.signup-form .content.login-form {
+  align-items: flex-start;
+}
+
+.signup-form .content.login-form .signup-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .list-container {
   display: flex;
   flex-direction: row;
@@ -1284,6 +1322,10 @@ ul.pagination li.active {
   .middle > img {
     height: auto !important;
     width: 180px !important;
+  }
+
+  .promotion {
+    margin-right: 20px !important;
   }
 }
 
