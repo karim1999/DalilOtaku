@@ -25,7 +25,7 @@
             </form>
             <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
         </li>
-        <a href="{{route('theme.switch')}}">
+        <a href="#" @click="themeToggle">
             <li class="no-padding"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></li>
         </a>
         @auth
@@ -37,4 +37,8 @@
             <li><a href="{{route("register")}}"><button class="signup-button">تسجيل</button></a></li>
         @endguest
     </ul>
+    <template v-if="live">
+        <link v-if="mode == 'dark'" href="{{ asset('css/dark.css') }}" rel="stylesheet">
+        <link v-else href="{{ asset('css/app.css') }}" rel="stylesheet">
+    </template>
 </div>

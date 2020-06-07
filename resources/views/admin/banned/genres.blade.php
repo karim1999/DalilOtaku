@@ -33,6 +33,12 @@
                     @endif
                     <input disabled type="text" name="name_en" value="{{$genre->name_en}}" autofocus>
                 </div>
+                <div class="input-container flex-2">
+                    @if($loop->first)
+                        <label for="description">عدد الانميات:</label>
+                    @endif
+                    <input disabled type="text" name="description" value="{{$genre->animes->count()}}">
+                </div>
                 <a href="{{route("admin.genres.edit", $genre->id)}}">
                     <button type="button" class="btn-edit">تعديل</button>
                 </a>

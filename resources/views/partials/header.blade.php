@@ -14,7 +14,7 @@
 @yield('scripts')
 
 <!-- Styles -->
-@if(\Illuminate\Support\Facades\Cookie::get('theme') == "dark")
+@if(isset($_COOKIE['mode']) && $_COOKIE['mode'] == "dark")
     <link href="{{ asset('css/dark.css') }}" rel="stylesheet">
 @else
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
