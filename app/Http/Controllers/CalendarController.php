@@ -9,34 +9,29 @@ class CalendarController extends Controller
 {
     //
     public function index(){
+        $today= strtolower(date('l'));
+//        return $today;
+        $week= [
+            "saturday" => "السبت",
+            "sunday" => "الاحد",
+            "monday" => "الاثنين",
+            "tuesday" => "الثلاثاء",
+            "wednesday" => "الاربعاء",
+            "thursday" => "الخميس",
+            "friday" => "الجمعة",
+        ];
+        $week[$today]= "اليوم";
+
         $data= [];
-        $from= strtotime('saturday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["saturday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('sunday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["sunday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('monday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["monday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('tuesday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["tuesday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('wednesday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["wednesday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('thursday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["thursday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
-
-        $from= strtotime('friday this week');
-        $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
-        $data["friday"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
+        $data["calendar"]= [];
+        $from= strtotime("today");
+        for ($i= 1; $i<= 7; $i++){
+            $to= strtotime(date('Y-m-d', $from) . ' + 1 days');
+            $data["calendar"][$i]["animes"]= Anime::active()->whereBetween("airing_at", [$from, $to])->get();
+            $data["calendar"][$i]["name"]= $week[strtolower(date('l', $from))];
+            $data["calendar"][$i]["date"]= strtolower(date('Y-m-d', $from));
+            $from= $to;
+        }
 
 //        return $data;
         return view("calendar", $data);
