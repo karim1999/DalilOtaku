@@ -25,7 +25,7 @@ class SeasonController extends Controller
         if($request->input("json"))
             return response()->json($animes);
         $data= [
-            "title" => $season->season.", ". $season->year,
+            "title" => $season.", ". $year,
             "animes" => $animes,
         ];
         return view('home', $data);
