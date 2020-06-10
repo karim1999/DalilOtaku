@@ -25,6 +25,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+//        $current_year= date('Y');
         $current_season= $this->get_season_by_day(date("z"));
         $animes= Anime::active()->where(["season" => $current_season, "year" => date("Y")])->paginate(15)->appends($request->query());
         if($request->input("json"))
@@ -55,8 +56,10 @@ class HomeController extends Controller
             return response()->json($animes);
         $data= [
             "animes" => $animes,
+            "disable_secondary_nav" => true,
+
         ];
-        return view('later', $data);
+        return view('home', $data);
     }
     public function airing(Request $request)
     {

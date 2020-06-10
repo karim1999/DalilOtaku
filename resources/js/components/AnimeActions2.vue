@@ -1,5 +1,7 @@
 <template>
-    <div class="actions-area row">
+    <div class="actions-area row"
+         v-click-outside="hideMenu"
+    >
         <i @click="menuToggle" class="fa fa-plus-circle clickable toggle-icon"></i>
         <div v-if="showMenu" class="action-list">
             <ul>
@@ -31,7 +33,16 @@
         methods: {
             menuToggle(){
                 this.showMenu= !this.showMenu
+            },
+            hideMenu: function (event) {
+                console.log("hide")
+                this.showMenu= false
             }
+        },
+        events: {
+            // hideMenu: function (event) {
+            //     this.showMenu= false
+            // }
         }
     }
 </script>

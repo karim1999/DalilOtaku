@@ -33,13 +33,18 @@
                 let days = Math.floor(delta / 86400);
                 delta -= days * 86400;
 
-                let hours = Math.floor(delta / 3600) % 24;
-                delta -= hours * 3600;
+                if(days <= 15){
+                    let hours = Math.floor(delta / 3600) % 24;
+                    delta -= hours * 3600;
 
-                let minutes = Math.floor(delta / 60) % 60;
-                delta -= minutes * 60;
+                    let minutes = Math.floor(delta / 60) % 60;
+                    delta -= minutes * 60;
 
-                return "الحلقة " + this.episode + " بعد " + days + " يوم و " + hours + " ساعات و " + minutes + " دقيقة"
+                    return "الحلقة " + this.episode + " بعد " + days + " يوم و " + hours + " ساعات و " + minutes + " دقيقة"
+                }else{
+                    console.log(this.airingAt)
+                    return "الحلقة " + this.episode + " ستعرض يوم " + new Date(this.airingAt * 1000).toLocaleDateString("en-US")
+                }
             }
         },
         methods: {

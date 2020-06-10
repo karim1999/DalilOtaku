@@ -33,6 +33,7 @@
     padding: 8px;
     width: 100%;
     outline: none;
+    color: $font_color;
     &:focus{
         border: $border;
         border-color: $secondary2_color !important;

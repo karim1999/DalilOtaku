@@ -1,5 +1,7 @@
 <template>
-    <div class="actions-area row">
+    <div class="actions-area row"
+         v-click-outside="hideMenu"
+    >
         <a :class="{unique: isBookmarked}" :href="url + '/bookmarks'"><p class="clickable">{{bookmarks}}<i class="far fa-bookmark"></i></p></a>
         <a :class="{unique: isFavorite}" :href="url + '/favorites'"><p class="clickable">{{favorites}}<i class="far fa-heart"></i></p></a>
         <i @click="menuToggle" class="fa fa-ellipsis-v clickable"></i>
@@ -35,7 +37,12 @@
         methods: {
             menuToggle(){
                 this.showMenu= !this.showMenu
+            },
+            hideMenu: function (event) {
+                console.log("hide")
+                this.showMenu= false
             }
+
         }
     }
 </script>

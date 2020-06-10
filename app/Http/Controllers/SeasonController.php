@@ -10,7 +10,7 @@ class SeasonController extends Controller
 {
     //
     public function show($season, Request $request){
-        $animes= Anime::where(['season' => $season])->active()->paginate(15)->appends($request->query());
+        $animes= Anime::where(['season' => $season, 'year'=> date('Y')])->active()->paginate(15)->appends($request->query());
         if($request->input("json"))
             return response()->json($animes);
         $data= [

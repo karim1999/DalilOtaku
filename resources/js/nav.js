@@ -16,7 +16,7 @@ let nav= new Vue({
         menuToggle(){
             this.showMenu= !this.showMenu
         },
-        themeToggle(){
+        themeToggle(e){
             this.live= true
             console.log(this.mode)
             if(this.mode == "light"){
@@ -26,6 +26,7 @@ let nav= new Vue({
                 this.setCookie("mode", "light")
                 this.mode= "light"
             }
+            e.preventDefault()
         },
         setCookie(cname, cvalue, duration= 512640) {
             let d = new Date();

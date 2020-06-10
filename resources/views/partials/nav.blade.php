@@ -15,19 +15,32 @@
         <li class="{{ (request()->is('faq*')) ? 'active' : '' }}"><a href="{{route("faq")}}">الاسئلة الشائعة</a></li>
         <li class="{{ (request()->is('policy*')) ? 'active' : '' }}"><a href="{{route("policy")}}">سياسة الخصوصية</a></li>
         <li class="{{ (request()->is('terms*')) ? 'active' : '' }}"><a href="{{route("terms")}}">شروط الاستخدام</a></li>
-{{--        <li class="{{ (request()->is('who*')) ? 'active' : '' }}"><a href="{{route("who")}}">من نحن</a></li>--}}
+        {{--        <li class="{{ (request()->is('who*')) ? 'active' : '' }}"><a href="{{route("who")}}">من نحن</a></li>--}}
         <li  class="{{ (request()->is('contact*')) ? 'active' : '' }} no-padding"><a href="{{route("contact")}}">اتصل بنا</a></li>
     </ul>
     <ul :class="['end-nav', showMenu ? showClass : hideClass]">
         <li class="input-container no-padding">
-            <form method="get" action="{{route("search")}}">
-                <input placeholder="ابحث في الموقع" name="search" type="text">
+            <form ref="searchForm" method="get" action="{{route("search")}}">
+                <div class="input-container">
+                    <input value="{{request()->input('search')}}" placeholder="ابحث في الموقع" name="search" type="text">
+                    <img class="clickable" @click="$refs['searchForm'].submit()" src="{{asset("assets/icons2/002-search.svg")}}" alt="">
+                </div>
             </form>
-            <img src="{{asset("assets/icons2/002-search.svg")}}" alt="">
         </li>
-        <a href="#" @click="themeToggle">
-            <li class="no-padding"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></li>
+        <a href="" @click="themeToggle">
+            <template v-if="live">
+                <li v-if="mode != 'dark'" class="no-padding"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></li>
+                <li v-else class="no-padding"><img src="{{asset("assets/icons2/dark.svg")}}" alt=""></li>
+            </template>
+            <template v-else>
+                @if(isset($_COOKIE['mode']) && $_COOKIE['mode'] == "dark")
+                    <li class="no-padding"><img src="{{asset("assets/icons2/dark.svg")}}" alt=""></li>
+                @else
+                    <li class="no-padding"><img src="{{asset("assets/icons2/032-night.svg")}}" alt=""></li>
+                @endif
+            </template>
         </a>
+
         @auth
             <li class="no-padding"><a href="{{route("profile.favorites")}}"><img class="profile-img" src="{{Auth::user()->getFirstMediaUrl('avatar')}}" alt=""></a></li>
             <li class="no-padding"><a href="{{route("logout")}}">تسجيل الخروج</a></li>

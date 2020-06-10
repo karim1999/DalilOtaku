@@ -6,6 +6,7 @@ let animeList= new Vue({
     directives: {infiniteScroll},
     apolloProvider,
     data: {
+
     },
 
 })

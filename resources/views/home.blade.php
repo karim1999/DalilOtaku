@@ -37,15 +37,18 @@
                 :animes-list='@json($animes)'
             >
                 <template v-slot:default="slotProps">
-                    <anime-card3 v-for="anime in slotProps.animes" :key="anime.id" :anime="anime">
-                        <template v-slot:default="childProps">
-                            @auth
-                                <anime-actions2
-                                    :url="'{{route("home")."/add/"}}'+childProps.anime.id"
-                                ></anime-actions2>
-                            @endauth
-                        </template>
-                    </anime-card3>
+                    <template v-for="anime in slotProps.animes" v-if="anime.releasing == 0 || (anime.airing_at && anime.releasing == 1)">
+                        <h4 v-if="slotProps.types[anime.type] && slotProps.types[anime.type].id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types[anime.type].name}}</h4>
+                        <anime-card3 :key="anime.id" :anime="anime">
+                            <template v-slot:default="childProps">
+                                @auth
+                                    <anime-actions2
+                                        :url="'{{route("home")."/add/"}}'+childProps.anime.id"
+                                    ></anime-actions2>
+                                @endauth
+                            </template>
+                        </anime-card3>
+                    </template>
                 </template>
             </anime-list>
 {{--            @forelse ($animes as $anime)--}}
