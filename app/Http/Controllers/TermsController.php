@@ -9,9 +9,11 @@ class TermsController extends Controller
 {
     //
     public function index(){
+        $settings= Setting::all()->keyBy("key");
         $data= [
-            "terms_title" =>  Setting::getOption("terms_title"),
-            "terms_content" =>  Setting::getOption("terms_content"),
+            "settings"=> $settings,
+            "terms_title" =>  $settings["terms_title"]->value,
+            "terms_content" =>  $settings["terms_content"]->value,
         ];
 
         return view("terms", $data);

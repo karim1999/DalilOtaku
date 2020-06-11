@@ -23,17 +23,17 @@
         },
         mounted(){
             console.log(this.animesList)
+            this.setTypes(this.animesList.data)
             this.animes= this.animesList.data
             this.link= this.animesList.next_page_url
-            this.setTypes(this.animesList.data)
         },
         methods: {
             setTypes(data){
                 let types= {
-                    // TV: {
-                    //     id: 0,
-                    //     name: "انمي"
-                    // },
+                    TV: {
+                        id: 0,
+                        name: "انمي"
+                    },
                     TV_SHORT: {
                         id: 0,
                         name: "انمي"
@@ -52,23 +52,26 @@
                     },
                 }
                 data.map(anime => {
-                    // if(types.TV.id == 0 && anime.type == "TV"){
-                    //     types.TV.id= anime.id
-                    // }
-                    if(types.TV_SHORT.id == 0 && anime.type == "TV_SHORT"){
-                        types.TV_SHORT.id= anime.id
-                    }
-                    if(types.MOVIE.id == 0 && anime.type == "MOVIE"){
-                        types.MOVIE.id= anime.id
-                    }
-                    if(types.OVA.id == 0 && anime.type == "OVA"){
-                        types.OVA.id= anime.id
-                    }
-                    if(types.ONA.id == 0 && anime.type == "ONA"){
-                        types.ONA.id= anime.id
+                    if(anime.releasing == 0 || (anime.airing_at && anime.releasing == 1)){
+                        if(types.TV.id == 0 && (anime.type == "TV" || anime.type == "TV_SHORT")){
+                            types.TV.id= anime.id
+                        }
+                        // if(types.TV_SHORT.id == 0 && anime.type == "TV_SHORT"){
+                        //     types.TV_SHORT.id= anime.id
+                        // }
+                        if(types.MOVIE.id == 0 && anime.type == "MOVIE"){
+                            types.MOVIE.id= anime.id
+                        }
+                        if(types.OVA.id == 0 && (anime.type == "OVA")){
+                            types.OVA.id= anime.id
+                        }
+                        if(types.ONA.id == 0 && anime.type == "ONA"){
+                            types.ONA.id= anime.id
+                        }
                     }
                 })
                 this.types= types
+                console.log(types)
 
             },
             loadMore(){

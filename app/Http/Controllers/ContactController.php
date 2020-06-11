@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
+use App\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Spatie\Permission\Models\Role;
@@ -11,7 +12,10 @@ class ContactController extends Controller
 {
     //
     public function index(){
-        return view("contact");
+        $data= [
+            "settings"=> Setting::all()->keyBy("key"),
+        ];
+        return view("contact", $data);
     }
     public function send(Request $request){
         $subject= "رسال من اتصل بنا";

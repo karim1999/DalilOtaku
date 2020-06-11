@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anime;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class TypeController extends Controller
@@ -14,6 +15,7 @@ class TypeController extends Controller
             return response()->json($animes);
 
         $data= [
+            "settings"=> Setting::all()->keyBy("key"),
             "animes" => $animes,
         ];
         return view('home', $data);

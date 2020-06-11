@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anime;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class CalendarController extends Controller
@@ -22,7 +23,9 @@ class CalendarController extends Controller
         ];
         $week[$today]= "اليوم";
 
-        $data= [];
+        $data= [
+            "settings"=> Setting::all()->keyBy("key"),
+        ];
         $data["calendar"]= [];
         $from= strtotime("today");
         for ($i= 1; $i<= 7; $i++){

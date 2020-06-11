@@ -1,5 +1,5 @@
 <template>
-    <div class="list-item">
+    <div :data-id="anime.id" class="list-item">
         <div class="anime-container">
             <div class="middle row">
                 <div class="anime-image">
@@ -18,7 +18,7 @@
                         <li v-else><i class="fa fa-play-circle unique"></i>{{seasons[anime.season]}},{{anime.year}}</li>
 
                         <li v-if="anime.score"><i class="fa fa-star unique"></i>{{anime.score * 10}}%</li>
-                        <li v-if="anime.score"><i class="fa fa-heart unique"></i>{{anime.favorites.length}}</li>
+                        <li v-if="anime.favorites"><i class="fa fa-heart unique"></i>{{anime.favorites.length}}</li>
                     </ul>
                     <p>{{anime.description}}</p>
                     <ul class="sources row">

@@ -42,7 +42,7 @@
 
                     return "الحلقة " + this.episode + " بعد " + days + " يوم و " + hours + " ساعات و " + minutes + " دقيقة"
                 }else{
-                    console.log(this.airingAt)
+                    // console.log(this.airingAt)
                     return "الحلقة " + this.episode + " ستعرض يوم " + new Date(this.airingAt * 1000).toLocaleDateString("en-US")
                 }
             }

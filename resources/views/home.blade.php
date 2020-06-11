@@ -27,7 +27,7 @@
                     <li class="{{ (request()->is('type/ova')) ? 'active' : '' }}"><a href="{{route("type.show", "ova")}}">اوفا</a></li>
                     <li class="{{ (request()->is('type/ona')) ? 'active' : '' }}"><a href="{{route("type.show", "ona")}}">اونا</a></li>
                     <li class="{{ (request()->is('type/movie')) ? 'active' : '' }}"><a href="{{route("type.show", "movie")}}">افلام</a></li>
-                    <li class="{{ (request()->is('type/special')) ? 'active' : '' }}"><a href="{{route("type.show", "special")}}">خاص</a></li>
+{{--                    <li class="{{ (request()->is('type/special')) ? 'active' : '' }}"><a href="{{route("type.show", "special")}}">خاص</a></li>--}}
                     <li class="{{ (request()->is('airing')) ? 'active' : '' }}"><a href="{{route("airing")}}">انمي مستمر</a></li>
                 </ul>
             </div>
@@ -37,9 +37,21 @@
                 :animes-list='@json($animes)'
             >
                 <template v-slot:default="slotProps">
-                    <template v-for="anime in slotProps.animes" v-if="anime.releasing == 0 || (anime.airing_at && anime.releasing == 1)">
-                        <h4 v-if="slotProps.types[anime.type] && slotProps.types[anime.type].id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types[anime.type].name}}</h4>
-                        <anime-card3 :key="anime.id" :anime="anime">
+                    <template v-for="anime in slotProps.animes">
+                        <template v-if="anime.type == 'TV' || anime.type == 'TV_SHORT' ">
+                            <h4 v-if="slotProps.types.TV.id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types.TV.name}}</h4>
+                        </template>
+                        <template v-else-if="anime.type == 'MOVIE'">
+                            <h4 v-if="slotProps.types.MOVIE.id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types.MOVIE.name}}</h4>
+                        </template>
+                        <template v-else-if="anime.type == 'ONA'">
+                            <h4 v-if="slotProps.types.ONA.id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types.ONA.name}}</h4>
+                        </template>
+                        <template v-else>
+                            <h4 v-if="slotProps.types.OVA.id == anime.id" :class="'loader-container unique2 '+ anime.type">@{{slotProps.types.OVA.name}}</h4>
+                        </template>
+                        <p style="display: none">@{{slotProps.types.TV.id}}</p>
+                        <anime-card3 v-if="anime.releasing == 0 || (anime.airing_at && anime.releasing == 1)" :key="anime.id" :anime="anime">
                             <template v-slot:default="childProps">
                                 @auth
                                     <anime-actions2

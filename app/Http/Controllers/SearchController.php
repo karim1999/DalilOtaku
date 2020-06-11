@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Anime;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
@@ -17,6 +18,7 @@ class SearchController extends Controller
             return response()->json($animes);
 
         $data= [
+            "settings"=> Setting::all()->keyBy("key"),
             "disable_secondary_nav" => true,
             "title" => "بحث عن : " . $search,
             "animes" => $animes,

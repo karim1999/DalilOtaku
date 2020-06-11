@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Anime;
 use App\Season;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class SeasonController extends Controller
@@ -14,6 +15,7 @@ class SeasonController extends Controller
         if($request->input("json"))
             return response()->json($animes);
         $data= [
+            "settings"=> Setting::all()->keyBy("key"),
             "animes" => $animes,
         ];
         return view('home', $data);
@@ -25,6 +27,7 @@ class SeasonController extends Controller
         if($request->input("json"))
             return response()->json($animes);
         $data= [
+            "settings"=> Setting::all()->keyBy("key"),
             "title" => $season.", ". $year,
             "animes" => $animes,
         ];

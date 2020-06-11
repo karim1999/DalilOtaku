@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'سياسة الحصوصية')
-@section('description', 'موقع انميات')
 
 @section('content')
     <div class="content">

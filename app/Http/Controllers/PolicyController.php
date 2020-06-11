@@ -9,9 +9,11 @@ class PolicyController extends Controller
 {
     //
     public function index(){
+        $settings= Setting::all()->keyBy("key");
         $data= [
-            "policy_title" =>  Setting::getOption("policy_title"),
-            "policy_content" =>  Setting::getOption("policy_content"),
+            "settings"=> $settings,
+            "policy_title" =>  $settings["policy_title"]->value,
+            "policy_content" =>  $settings["policy_content"]->value,
         ];
         return view("policy", $data);
     }

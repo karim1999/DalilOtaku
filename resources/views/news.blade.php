@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'اخر الاخبار')
-@section('description', 'موقع انميات')
 
 @section('content')
     <div class="content news">

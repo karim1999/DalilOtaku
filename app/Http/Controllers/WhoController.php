@@ -10,8 +10,7 @@ class WhoController extends Controller
     //
     public function index(){
         $data= [
-            "who_title" =>  Setting::getOption("who_title"),
-            "who_content" =>  Setting::getOption("who_content"),
+            "settings"=> Setting::all()->keyBy("key"),
         ];
         return view("who", $data);
     }

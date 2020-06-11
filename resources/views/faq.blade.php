@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'الاسئلة الشائعة')
-@section('description', 'موقع انميات')
 
 @section('content')
     <div id="faq">

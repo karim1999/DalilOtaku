@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Anime;
 use App\Genre;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
@@ -16,6 +17,7 @@ class GenreController extends Controller
             return response()->json($animes);
 
         $data= [
+            "settings"=> Setting::all()->keyBy("key"),
             "title" => $genre->name_en,
             "animes" => $animes,
         ];

@@ -5,7 +5,7 @@
             <h6 class="en-title text-right">{{\Illuminate\Support\Str::limit($anime->title_en, 30)}}</h6>
         </div>
         <div class="middle row">
-            <img src="{{$anime->image_url}}" alt="">
+            <img class="lazyload" data-src="{{$anime->image_url}}" alt="">
         </div>
     </div>
     @auth

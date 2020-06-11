@@ -2118,17 +2118,17 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     console.log(this.animesList);
+    this.setTypes(this.animesList.data);
     this.animes = this.animesList.data;
     this.link = this.animesList.next_page_url;
-    this.setTypes(this.animesList.data);
   },
   methods: {
     setTypes: function setTypes(data) {
       var types = {
-        // TV: {
-        //     id: 0,
-        //     name: "انمي"
-        // },
+        TV: {
+          id: 0,
+          name: "انمي"
+        },
         TV_SHORT: {
           id: 0,
           name: "انمي"
@@ -2147,26 +2147,29 @@ __webpack_require__.r(__webpack_exports__);
         }
       };
       data.map(function (anime) {
-        // if(types.TV.id == 0 && anime.type == "TV"){
-        //     types.TV.id= anime.id
-        // }
-        if (types.TV_SHORT.id == 0 && anime.type == "TV_SHORT") {
-          types.TV_SHORT.id = anime.id;
-        }
+        if (anime.releasing == 0 || anime.airing_at && anime.releasing == 1) {
+          if (types.TV.id == 0 && (anime.type == "TV" || anime.type == "TV_SHORT")) {
+            types.TV.id = anime.id;
+          } // if(types.TV_SHORT.id == 0 && anime.type == "TV_SHORT"){
+          //     types.TV_SHORT.id= anime.id
+          // }
 
-        if (types.MOVIE.id == 0 && anime.type == "MOVIE") {
-          types.MOVIE.id = anime.id;
-        }
 
-        if (types.OVA.id == 0 && anime.type == "OVA") {
-          types.OVA.id = anime.id;
-        }
+          if (types.MOVIE.id == 0 && anime.type == "MOVIE") {
+            types.MOVIE.id = anime.id;
+          }
 
-        if (types.ONA.id == 0 && anime.type == "ONA") {
-          types.ONA.id = anime.id;
+          if (types.OVA.id == 0 && anime.type == "OVA") {
+            types.OVA.id = anime.id;
+          }
+
+          if (types.ONA.id == 0 && anime.type == "ONA") {
+            types.ONA.id = anime.id;
+          }
         }
       });
       this.types = types;
+      console.log(types);
     },
     loadMore: function loadMore() {
       var _this = this;
@@ -2267,7 +2270,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         delta -= minutes * 60;
         return "الحلقة " + this.episode + " بعد " + days + " يوم و " + hours + " ساعات و " + minutes + " دقيقة";
       } else {
-        console.log(this.airingAt);
+        // console.log(this.airingAt)
         return "الحلقة " + this.episode + " ستعرض يوم " + new Date(this.airingAt * 1000).toLocaleDateString("en-US");
       }
     }
@@ -7383,223 +7386,227 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "list-item" }, [
-    _c("div", { staticClass: "anime-container" }, [
-      _c("div", { staticClass: "middle row" }, [
-        _c("div", { staticClass: "anime-image" }, [
-          _c("img", {
-            staticClass: "lazyload",
-            attrs: { "data-src": _vm.anime.image_url, alt: "" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "title-area" }, [
-            _c("h5", { staticClass: "ar-title text-center" }, [
-              _vm._v(_vm._s(_vm.anime.title))
-            ]),
+  return _c(
+    "div",
+    { staticClass: "list-item", attrs: { "data-id": _vm.anime.id } },
+    [
+      _c("div", { staticClass: "anime-container" }, [
+        _c("div", { staticClass: "middle row" }, [
+          _c("div", { staticClass: "anime-image" }, [
+            _c("img", {
+              staticClass: "lazyload",
+              attrs: { "data-src": _vm.anime.image_url, alt: "" }
+            }),
             _vm._v(" "),
-            _c("h6", { staticClass: "en-title text-center" }, [
-              _vm._v(_vm._s(_vm.anime.title_en))
+            _c("div", { staticClass: "title-area" }, [
+              _c("h5", { staticClass: "ar-title text-center" }, [
+                _vm._v(_vm._s(_vm.anime.title))
+              ]),
+              _vm._v(" "),
+              _c("h6", { staticClass: "en-title text-center" }, [
+                _vm._v(_vm._s(_vm.anime.title_en))
+              ])
             ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "left" }, [
-          _c(
-            "ul",
-            [
-              _vm.anime.releasing == 1
-                ? [
-                    _vm.anime.airing_at
-                      ? _c("anime-time", {
-                          attrs: {
-                            "mal-id": _vm.anime.mal_id,
-                            status: _vm.anime.is_airing,
-                            "airing-at": _vm.anime.airing_at,
-                            "current-episode": _vm.anime.last_episode
-                          }
-                        })
-                      : _vm._e()
-                  ]
-                : _vm.anime.start_at
-                ? _c("anime-time", {
-                    attrs: {
-                      "mal-id": _vm.anime.mal_id,
-                      status: true,
-                      "airing-at": _vm.anime.start_at,
-                      "current-episode": 1
-                    }
-                  })
-                : _c("li", [
-                    _c("i", { staticClass: "fa fa-play-circle unique" }),
-                    _vm._v(
-                      _vm._s(_vm.seasons[_vm.anime.season]) +
-                        "," +
-                        _vm._s(_vm.anime.year)
-                    )
-                  ]),
-              _vm._v(" "),
-              _vm.anime.score
-                ? _c("li", [
-                    _c("i", { staticClass: "fa fa-star unique" }),
-                    _vm._v(_vm._s(_vm.anime.score * 10) + "%")
-                  ])
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.anime.score
-                ? _c("li", [
-                    _c("i", { staticClass: "fa fa-heart unique" }),
-                    _vm._v(_vm._s(_vm.anime.favorites.length))
-                  ])
-                : _vm._e()
-            ],
-            2
-          ),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.anime.description))]),
-          _vm._v(" "),
-          _c("ul", { staticClass: "sources row" }, [
-            _vm.anime.ani_db
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.ani_db ? "active" : "",
-                      attrs: { href: _vm.anime.ani_db }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/aDB.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.anime.anilist
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.anilist ? "active" : "",
-                      attrs: { href: _vm.anime.anilist }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/AL.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.anime.ani_planet
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.ani_planet ? "active" : "",
-                      attrs: { href: _vm.anime.ani_planet }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/aS.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.anime.website
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.website ? "active" : "",
-                      attrs: { href: _vm.anime.website }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/link.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.anime.mal_id
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.mal_id ? "active" : "",
-                      attrs: {
-                        href:
-                          "https://myanimelist.net/anime/" + _vm.anime.mal_id
-                      }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/MAL.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.anime.ani_search
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      class: _vm.anime.ani_search ? "active" : "",
-                      attrs: { href: _vm.anime.ani_search }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/assets/icons1/aS.svg", alt: "" }
-                      })
-                    ]
-                  )
-                ])
-              : _vm._e()
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "bottom" },
-            [
-              _c(
-                "ul",
-                { staticClass: "categories" },
-                _vm._l(_vm.anime.genres.slice(0, 3), function(genre) {
-                  return _c("li", [
+          _c("div", { staticClass: "left" }, [
+            _c(
+              "ul",
+              [
+                _vm.anime.releasing == 1
+                  ? [
+                      _vm.anime.airing_at
+                        ? _c("anime-time", {
+                            attrs: {
+                              "mal-id": _vm.anime.mal_id,
+                              status: _vm.anime.is_airing,
+                              "airing-at": _vm.anime.airing_at,
+                              "current-episode": _vm.anime.last_episode
+                            }
+                          })
+                        : _vm._e()
+                    ]
+                  : _vm.anime.start_at
+                  ? _c("anime-time", {
+                      attrs: {
+                        "mal-id": _vm.anime.mal_id,
+                        status: true,
+                        "airing-at": _vm.anime.start_at,
+                        "current-episode": 1
+                      }
+                    })
+                  : _c("li", [
+                      _c("i", { staticClass: "fa fa-play-circle unique" }),
+                      _vm._v(
+                        _vm._s(_vm.seasons[_vm.anime.season]) +
+                          "," +
+                          _vm._s(_vm.anime.year)
+                      )
+                    ]),
+                _vm._v(" "),
+                _vm.anime.score
+                  ? _c("li", [
+                      _c("i", { staticClass: "fa fa-star unique" }),
+                      _vm._v(_vm._s(_vm.anime.score * 10) + "%")
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.anime.favorites
+                  ? _c("li", [
+                      _c("i", { staticClass: "fa fa-heart unique" }),
+                      _vm._v(_vm._s(_vm.anime.favorites.length))
+                    ])
+                  : _vm._e()
+              ],
+              2
+            ),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.anime.description))]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "sources row" }, [
+              _vm.anime.ani_db
+                ? _c("li", [
                     _c(
                       "a",
                       {
-                        staticClass: "btn-category",
-                        attrs: { href: "/genre/" + genre.id }
+                        class: _vm.anime.ani_db ? "active" : "",
+                        attrs: { href: _vm.anime.ani_db }
                       },
                       [
-                        _vm._v(
-                          "\n                                " +
-                            _vm._s(genre.name ? genre.name : genre.name_en) +
-                            "\n                            "
-                        )
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/aDB.svg", alt: "" }
+                        })
                       ]
                     )
                   ])
-                }),
-                0
-              ),
+                : _vm._e(),
               _vm._v(" "),
-              _vm._t("default", null, { anime: _vm.anime })
-            ],
-            2
-          )
+              _vm.anime.anilist
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        class: _vm.anime.anilist ? "active" : "",
+                        attrs: { href: _vm.anime.anilist }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/AL.svg", alt: "" }
+                        })
+                      ]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.anime.ani_planet
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        class: _vm.anime.ani_planet ? "active" : "",
+                        attrs: { href: _vm.anime.ani_planet }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/aS.svg", alt: "" }
+                        })
+                      ]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.anime.website
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        class: _vm.anime.website ? "active" : "",
+                        attrs: { href: _vm.anime.website }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/link.svg", alt: "" }
+                        })
+                      ]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.anime.mal_id
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        class: _vm.anime.mal_id ? "active" : "",
+                        attrs: {
+                          href:
+                            "https://myanimelist.net/anime/" + _vm.anime.mal_id
+                        }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/MAL.svg", alt: "" }
+                        })
+                      ]
+                    )
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.anime.ani_search
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        class: _vm.anime.ani_search ? "active" : "",
+                        attrs: { href: _vm.anime.ani_search }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/assets/icons1/aS.svg", alt: "" }
+                        })
+                      ]
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "bottom" },
+              [
+                _c(
+                  "ul",
+                  { staticClass: "categories" },
+                  _vm._l(_vm.anime.genres.slice(0, 3), function(genre) {
+                    return _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn-category",
+                          attrs: { href: "/genre/" + genre.id }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                " +
+                              _vm._s(genre.name ? genre.name : genre.name_en) +
+                              "\n                            "
+                          )
+                        ]
+                      )
+                    ])
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _vm._t("default", null, { anime: _vm.anime })
+              ],
+              2
+            )
+          ])
         ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

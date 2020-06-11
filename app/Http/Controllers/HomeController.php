@@ -63,7 +63,7 @@ class HomeController extends Controller
     }
     public function airing(Request $request)
     {
-        $animes= Anime::active()->whereNotNull("airing_at")->paginate(15)->appends($request->query());
+        $animes= Anime::active()->where("releasing", 1)->whereNotNull("airing_at")->paginate(15)->appends($request->query());
         if($request->input("json"))
             return response()->json($animes);
 

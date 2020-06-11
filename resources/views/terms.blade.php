@@ -1,6 +1,5 @@
 @extends('layouts.main')
 @section('title', 'شروط الاستمخدام')
-@section('description', 'موقع انميات')
 
 @section('content')
     <div class="content">
