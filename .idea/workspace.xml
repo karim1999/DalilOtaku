@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="" />
+    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="prod">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/anime.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/anime.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22078.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22078.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22120.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22120.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22120@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22120@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/footer/image22014.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/image22014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/logo-grey.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo-grey.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/logo@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/news1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/news1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/user.png" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,13 +243,7 @@
       <workItem from="1591640217101" duration="2083000" />
       <workItem from="1591730116173" duration="752000" />
       <workItem from="1591812811897" duration="21192000" />
-    </task>
-    <task id="LOCAL-00051" summary="truncating">
-      <created>1590414922309</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1590414922309</updated>
+      <workItem from="1591894465473" duration="903000" />
     </task>
     <task id="LOCAL-00052" summary="-Pagination&#10;-Banned">
       <created>1590415530027</created>
@@ -575,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591868713342</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="prod">
+      <created>1591894490063</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1591894490064</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +617,6 @@
     <MESSAGE value="Roles and Permissions" />
     <MESSAGE value="yarn prod" />
     <MESSAGE value="less queries" />
-    <MESSAGE value="prod" />
     <MESSAGE value="defer" />
     <MESSAGE value="Lazyloading images" />
     <MESSAGE value="htaccess" />
@@ -623,6 +635,7 @@
     <MESSAGE value="Fixed year problem" />
     <MESSAGE value="Lots of Edits" />
     <MESSAGE value="Some Logic Problems were fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Logic Problems were fixed" />
+    <MESSAGE value="prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod" />
   </component>
 </project>
