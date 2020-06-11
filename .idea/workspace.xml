@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="prod">
+    <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/anime.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/anime.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22078.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22078.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22120.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22120.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/footer/g22120@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/g22120@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/footer/image22014.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/footer/image22014.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/logo-grey.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo-grey.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/logo@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/news1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/news1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -243,14 +234,7 @@
       <workItem from="1591640217101" duration="2083000" />
       <workItem from="1591730116173" duration="752000" />
       <workItem from="1591812811897" duration="21192000" />
-      <workItem from="1591894465473" duration="903000" />
-    </task>
-    <task id="LOCAL-00052" summary="-Pagination&#10;-Banned">
-      <created>1590415530027</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1590415530027</updated>
+      <workItem from="1591894465473" duration="998000" />
     </task>
     <task id="LOCAL-00053" summary="-Twitter API">
       <created>1590777868084</created>
@@ -588,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591894490064</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="prod">
+      <created>1591895373604</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1591895373604</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

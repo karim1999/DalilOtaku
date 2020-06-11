@@ -1,11 +1,11 @@
 <div class="footer">
     <div class="top">
         <div class="col">
-            <img src="{{asset("assets/footer/g22078@2x.png")}}" alt="">
+            <img src="{{asset("assets/footer/g22078.png")}}" alt="">
             <p>{{ isset($settings) ? $settings['description']->value : \App\Setting::getOption("description")}}</p>
         </div>
         <div class="col">
-            <img src="{{asset("assets/footer/image22014@2x.png")}}" alt="">
+            <img src="{{asset("assets/footer/image22014.png")}}" alt="">
             <p>هنا نص غير حقيقي الهدف منه تعبئة الفراغ لا أكثر، يجب أن يوضع نص حــــقــيـــقـــي
                 بدل منه عند برمجة الموقـع شـــرط أن يعبر عن الموقع وهدفه وما إلى ذلك.. أرجـو أن
                 تــكون الفكرة وصلت :)</p>
