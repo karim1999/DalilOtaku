@@ -5,7 +5,7 @@
         @if(isset($title))
             <h3 class="text-center unique2">{{$title}}</h3>
         @endif
-        @if(isset($settings['welcome_title']->value))
+        @if(isset($settings['welcome']->value) && $settings['welcome']->value)
             <div class="alert-info col-6 col-md-10">
                 <h4>{{$settings['welcome_title']->value}}</h4>
                 <p>{{$settings['welcome_content']->value}}</p>

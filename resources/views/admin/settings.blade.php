@@ -43,6 +43,19 @@
                 </div>
                 <div class="flex-4"></div>
             </div>
+            <div class="section" id="tagsInput">
+                <div class="input-container">
+                    <input style="display: none" hidden ref="initial" type="text" name="keywords" value="{{$keywords}}">
+                    <input style="display: none" hidden ref="keywords" type="text" name="keywords" :value="getTagsAsString">
+                    <label for="keywords">الكلمات الدلالية:</label>
+                    <vue-tags-input
+                        v-model="tag"
+                        :tags="tags"
+                        :separators="[';', ',']"
+                        @tags-changed="newTags => tags = newTags"
+                    ></vue-tags-input>
+                </div>
+            </div>
             <div class="splitter">
                 <h4 class="unique">ادوات جوجل</h4>
                 <span></span>
@@ -146,4 +159,8 @@
             </form>
         @endforeach
     </div>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/tag.js') }}" defer></script>
 @endsection

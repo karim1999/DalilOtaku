@@ -5,8 +5,8 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <title>{{ isset($settings) ? $settings['title']->value : \App\Setting::getOption("title") }} - @yield('title', 'الرئيسية')</title>
-<meta name="description"
-      content="@yield('description', \App\Setting::getOption('description'))"></head>
+<meta name="description" content="@yield('description', isset($settings) ? $settings['description']->value : \App\Setting::getOption('description'))"></head>
+<meta name="keywords" content="@yield('keywords', isset($settings) ? $settings['keywords']->value : \App\Setting::getOption('keywords'))"></head>
 <link rel="icon" href="{{isset($settings) ? $settings['icon']->getFirstMediaUrl('icon') : \App\Setting::getOption("icon", false)->getFirstMediaUrl('icon')}}" type="image/gif" sizes="16x16">
 
 <!-- Scripts -->

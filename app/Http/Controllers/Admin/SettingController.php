@@ -13,6 +13,7 @@ class SettingController extends Controller
     //
     public function index(){
         $data= [
+            'keywords' => Setting::getOption('keywords'),
             'title' => Setting::getOption('title'),
             'subtitle' => Setting::getOption('subtitle'),
             'logo' => Setting::getOption('logo'),
@@ -29,6 +30,7 @@ class SettingController extends Controller
     }
     public function action(Request $request){
         $data= [
+            'keywords' => $request->input('keywords'),
             'title' => $request->input('title'),
             'subtitle' => $request->input('subtitle'),
             'description' => $request->input('description'),

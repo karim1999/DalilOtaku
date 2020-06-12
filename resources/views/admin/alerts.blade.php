@@ -10,6 +10,10 @@
             </div>
         @endif
         <div class="input-container">
+            <label for="welcome">تفعيل:</label>
+            <input style="width: auto" type="checkbox" name="welcome" {{$welcome ? "checked" : "" }} autofocus>
+        </div>
+        <div class="input-container">
             <label for="welcome_title">العنوان:</label>
             <input placeholder="اكتب عنوان الرسالة..." type="text" name="welcome_title" value="{{$welcome_title}}" autofocus>
         </div>
