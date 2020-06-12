@@ -135,3 +135,12 @@
 .ti-new-tag-input{
     border: none !important;
 }
+.genres-container {
+    display: flex;
+    button {
+        padding: 5px !important;
+        margin-right: 5px;
+        background-color: cadetblue !important;
+        height: 48px !important;
+    }
+}

@@ -1,5 +1,5 @@
 import VueTagsInput from '@johmun/vue-tags-input';
-const profile = new Vue({
+const tag = new Vue({
     el: '#tagsInput',
     components: {
         VueTagsInput,

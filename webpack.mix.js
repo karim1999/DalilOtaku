@@ -23,6 +23,7 @@ mix.js('resources/js/anime2.js', 'public/js')
 mix.js('resources/js/animeList.js', 'public/js')
 mix.js('resources/js/profile.js', 'public/js')
 mix.js('resources/js/tag.js', 'public/js')
+mix.js('resources/js/multiple.js', 'public/js')
 
 
 

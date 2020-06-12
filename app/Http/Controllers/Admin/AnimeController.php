@@ -7,13 +7,16 @@ use App\Genre;
 use App\Http\Controllers\Controller;
 use App\Season;
 use App\Studio;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class AnimeController extends Controller
 {
     //
     public function index(){
+        $genres= Genre::all();
         $data= [
+            'genres'=> $genres,
             'animes' => Anime::where('banned', '0')->whereNull("description")->paginate(10),
             'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
@@ -22,7 +25,9 @@ class AnimeController extends Controller
         return view("admin.animes.view", $data);
     }
     public function published(){
+        $genres= Genre::all();
         $data= [
+            'genres'=> $genres,
             'animes' => Anime::where('banned', '0')->whereNotNull("description")->paginate(10),
             'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
@@ -30,9 +35,51 @@ class AnimeController extends Controller
         ];
         return view("admin.animes.view", $data);
     }
-    public function airing(){
+    private function filterAnime($animes, $request){
+        if($request->input('genres')){
+            $genres= explode(",", request()->input("genres"));
+            foreach ($genres as $genre){
+                $animes= $animes->whereHas('genres', function (Builder $query) use($genre) {
+                    $query->where('genres.id', $genre);
+                });
+            }
+        }
+        if($request->input('search')){
+            $search= $request->input('search');
+            $animes= $animes->where(function ($query) use ($search) {
+                $query->where("title", "like", "%".$search."%")->orWhere("title_en", "like", "%".$search."%");
+            });
+        }
+        if($request->input('year')){
+            $year= $request->input('year');
+            $animes= $animes->where("year", $year);
+        }
+        if($request->input('season')){
+            $season= $request->input('season');
+            $animes= $animes->where("season", $season);
+        }
+
+        if($request->input('num')){
+            $num= $request->input('num');
+            $animes= $animes->paginate($num);
+        }else{
+            $animes= $animes->paginate(10);
+        }
+        return $animes;
+    }
+    public function airing(Request $request){
+        $animes= Anime::where('banned', '0')->where("is_airing", 1);
+        $animes= $this->filterAnime($animes, $request);
+        $genres= Genre::all();
+        $currentGenres= array();
+        if($request->input('genres')){
+            $currentGenres= Genre::whereIn("id", explode(",", request()->input("genres")))->get();
+        }
+
         $data= [
-            'animes' => Anime::where('banned', '0')->where("is_airing", 1)->paginate(10),
+            "currentGenres"=> $currentGenres,
+            'genres'=> $genres,
+            'animes' => $animes,
             'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
             'translating' => Anime::where('banned', '0')->whereNull("description")->count(),

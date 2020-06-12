@@ -45,7 +45,7 @@
             </div>
             <div class="section" id="tagsInput">
                 <div class="input-container">
-                    <input style="display: none" hidden ref="initial" type="text" name="keywords" value="{{$keywords}}">
+                    <input style="display: none" hidden ref="initial" type="text" value="{{$keywords}}">
                     <input style="display: none" hidden ref="keywords" type="text" name="keywords" :value="getTagsAsString">
                     <label for="keywords">الكلمات الدلالية:</label>
                     <vue-tags-input
