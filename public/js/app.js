@@ -1920,6 +1920,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1938,6 +1940,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AnimeActions",
   props: ["favorites", "bookmarks", "isFavorite", "isBookmarked", "isWatching", "isWatched", "isLater", "url"],
@@ -1953,6 +1956,32 @@ __webpack_require__.r(__webpack_exports__);
     hideMenu: function hideMenu(event) {
       console.log("hide");
       this.showMenu = false;
+    },
+    addAnime: function addAnime(url) {
+      var _this = this;
+
+      console.log(url);
+      var loading = this.$toasted.show('جاري الاضافة....', {
+        position: "top-center",
+        duration: 5000
+      });
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(url).then(function (res) {
+        _this.$toasted.clear();
+
+        _this.$toasted.success('تمت اضافة الانمي بنجاح', {
+          position: "top-center",
+          duration: 2000
+        });
+
+        _this.hideMenu();
+      })["catch"](function (err) {
+        _this.$toasted.clear();
+
+        _this.$toasted.error('حصل خطأ...', {
+          position: "top-center",
+          duration: 2000
+        });
+      });
     }
   }
 });
@@ -1968,6 +1997,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1984,6 +2015,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AnimeActions",
   props: ["isFavorite", "isBookmarked", "isWatching", "isWatched", "isLater", "url"],
@@ -1999,11 +2031,33 @@ __webpack_require__.r(__webpack_exports__);
     hideMenu: function hideMenu(event) {
       console.log("hide");
       this.showMenu = false;
+    },
+    addAnime: function addAnime(url) {
+      var _this = this;
+
+      console.log(url);
+      var loading = this.$toasted.show('جاري الاضافة....', {
+        position: "top-center",
+        duration: 5000
+      });
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(url).then(function (res) {
+        _this.$toasted.clear();
+
+        _this.$toasted.success('تمت اضافة الانمي بنجاح', {
+          position: "top-center",
+          duration: 2000
+        });
+
+        _this.hideMenu();
+      })["catch"](function (err) {
+        _this.$toasted.clear();
+
+        _this.$toasted.error('حصل خطأ...', {
+          position: "top-center",
+          duration: 2000
+        });
+      });
     }
-  },
-  events: {// hideMenu: function (event) {
-    //     this.showMenu= false
-    // }
   }
 });
 
@@ -7266,26 +7320,53 @@ var render = function() {
             _c("ul", [
               _c("li", [_vm._v("اضف الانمي الي:")]),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/watching" } }, [
-                _c("li", { class: { active: _vm.isWatching } }, [
+              _c(
+                "li",
+                {
+                  class: _vm.isWatching ? "active clickable" : "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/watching")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" الانميات المتابعة")
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/watched" } }, [
-                _c("li", { class: { active: _vm.isWatched } }, [
+              _c(
+                "li",
+                {
+                  class: _vm.isWatched ? "active clickable" : "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/watched")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" تمت مشاهدتها")
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/later" } }, [
-                _c("li", { class: { active: _vm.isLater } }, [
+              _c(
+                "li",
+                {
+                  class: _vm.isLater ? "active clickable" : "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/later")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" المشاهدة لاحقا")
-                ])
-              ])
+                ]
+              )
             ])
           ])
         : _vm._e()
@@ -7338,26 +7419,53 @@ var render = function() {
             _c("ul", [
               _c("li", [_vm._v("اضف الانمي الي:")]),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/watching" } }, [
-                _c("li", { class: { active: _vm.isWatching } }, [
+              _c(
+                "li",
+                {
+                  staticClass: "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/watching")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" الانميات المتابعة")
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/watched" } }, [
-                _c("li", { class: { active: _vm.isWatched } }, [
+              _c(
+                "li",
+                {
+                  staticClass: "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/watched")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" تمت مشاهدتها")
-                ])
-              ]),
+                ]
+              ),
               _vm._v(" "),
-              _c("a", { attrs: { href: _vm.url + "/watching/later" } }, [
-                _c("li", { class: { active: _vm.isLater } }, [
+              _c(
+                "li",
+                {
+                  staticClass: "clickable",
+                  on: {
+                    click: function($event) {
+                      return _vm.addAnime(_vm.url + "/watching/later")
+                    }
+                  }
+                },
+                [
                   _c("i", { staticClass: "fa fa-check-circle" }),
                   _vm._v(" المشاهدة لاحقا")
-                ])
-              ])
+                ]
+              )
             ])
           ])
         : _vm._e()

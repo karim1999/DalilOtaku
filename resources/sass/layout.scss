@@ -438,6 +438,10 @@ html, body, .main-container {
                     &.active{
                         color: $secondary2_color;
                     }
+                    &.clickable:hover{
+                        color: $secondary2_color;
+                    }
+
                 }
             }
 

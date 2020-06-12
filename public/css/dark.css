@@ -646,6 +646,10 @@ body,
   color: #ff4e6aff;
 }
 
+.list-container .actions-area .action-list ul li.clickable:hover {
+  color: #ff4e6aff;
+}
+
 .news {
   padding-left: 20%;
   display: flex;
