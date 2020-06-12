@@ -64,6 +64,7 @@ let nav= new Vue({
         },
         changeSearch(value){
             this.$refs.search.value= value
+            this.search(value)
         }
     }
 })
