@@ -41,6 +41,10 @@ class Anime extends Model
     {
         return $query->where('banned', 0)->whereNotNull("description")->whereDoesntHave("genres", function($genres){
             $genres->where("banned", 1);
+        })->where(function ($query) {
+            $query->where("releasing", 0)->orWhere(function ($query) {
+                $query->where("releasing", 1)->whereNotNull("airing_at");
+            });
         })->orderBy('type', 'desc');
     }
 }

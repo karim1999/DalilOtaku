@@ -7,7 +7,8 @@ let nav= new Vue({
         showMenu: false,
         showClass: 'sm-only',
         hideClass: 'hidden-sm',
-        results: []
+        results: [],
+        showResults: false
     },
     created(){
         this.mode= this.getCookie("mode", "light")
@@ -51,6 +52,7 @@ let nav= new Vue({
             return defaultValue
         },
         search(value){
+            this.showResults= true
             console.log(value.target.value)
             axios.get("/search", {
                 params: {
@@ -64,7 +66,15 @@ let nav= new Vue({
         },
         changeSearch(value){
             this.$refs.search.value= value
-            this.search(value)
+            this.search({
+                    target: {
+                        value,
+                    }
+                }
+            )
+        },
+        hideResults(){
+            this.showResults= false
         }
     }
 })
