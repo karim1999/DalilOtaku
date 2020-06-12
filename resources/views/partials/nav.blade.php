@@ -20,10 +20,21 @@
     </ul>
     <ul :class="['end-nav', showMenu ? showClass : hideClass]">
         <li class="input-container no-padding">
-            <form ref="searchForm" method="get" action="{{route("search")}}">
+            <form class="search-form" ref="searchForm" method="get" action="{{route("search")}}">
                 <div class="input-container">
-                    <input value="{{request()->input('search')}}" placeholder="ابحث في الموقع" name="search" type="text">
+                    <input ref="search" @input="search" value="{{request()->input('search')}}" placeholder="ابحث في الموقع" name="search" type="text">
                     <img class="clickable" @click="$refs['searchForm'].submit()" src="{{asset("assets/icons2/002-search.svg")}}" alt="">
+                </div>
+                <div v-if="results.length >= 1" class="results">
+                    <ul>
+                        <li v-for="result in results" @click="changeSearch(result.title_en)" class="clickable">
+                            <img :src="result.image_url" alt="">
+                            <div class="left">
+                                <h5>@{{result.title}}</h5>
+                                <h6>@{{result.title_en}}</h6>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </form>
         </li>
