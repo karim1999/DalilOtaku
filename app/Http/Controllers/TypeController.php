@@ -10,7 +10,7 @@ class TypeController extends Controller
 {
     //
     public function show($type, Request $request){
-        $animes= Anime::where(['banned'=> 0, "type" => $type])->whereNotNull("description")->paginate(15)->appends($request->query());
+        $animes= Anime::where(["type" => $type])->active()->paginate(15)->appends($request->query());
         if($request->input("json"))
             return response()->json($animes);
 
