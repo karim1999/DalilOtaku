@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AnimeCard3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AnimeCard3.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,14 +236,7 @@
       <workItem from="1591894465473" duration="2021000" />
       <workItem from="1591961452233" duration="21422000" />
       <workItem from="1591998957826" duration="602000" />
-      <workItem from="1592038597826" duration="182000" />
-    </task>
-    <task id="LOCAL-00061" summary="-Loading Animes Auto">
-      <created>1590927032576</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1590927032576</updated>
+      <workItem from="1592038597826" duration="418000" />
     </task>
     <task id="LOCAL-00062" summary="-Roll back">
       <created>1590927501062</created>
@@ -581,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592038673711</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="genre fixed">
+      <created>1592038788970</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1592038788970</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +604,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Lazyloading images" />
     <MESSAGE value="htaccess" />
     <MESSAGE value="less requests" />
     <MESSAGE value="paginate" />
@@ -629,6 +628,7 @@
     <MESSAGE value="Prod" />
     <MESSAGE value="Everything" />
     <MESSAGE value="type fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="type fixed" />
+    <MESSAGE value="genre fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="genre fixed" />
   </component>
 </project>

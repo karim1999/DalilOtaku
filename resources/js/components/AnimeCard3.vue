@@ -15,7 +15,9 @@
                             <anime-time v-if="anime.airing_at" :mal-id="anime.mal_id" :status="anime.is_airing" :airing-at="anime.airing_at" :current-episode="anime.last_episode"></anime-time>
                         </template>
                         <anime-time v-else-if="anime.start_at" :mal-id="anime.mal_id" :status="true" :airing-at="anime.start_at" :current-episode="1"></anime-time>
-                        <li v-else><i class="fa fa-play-circle unique"></i>{{seasons[anime.season]}},{{anime.year}}</li>
+                        <template v-else>
+                            <li v-if="anime.year"><i class="fa fa-play-circle unique"></i>{{seasons[anime.season]}},{{anime.year}}</li>
+                        </template>
 
                         <li v-if="anime.score"><i class="fa fa-star unique"></i>{{anime.score * 10}}%</li>
                         <li v-if="anime.favorites"><i class="fa fa-heart unique"></i>{{anime.favorites.length}}</li>
