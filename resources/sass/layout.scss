@@ -463,6 +463,8 @@ html, body, .main-container {
         color: $font_color;
         margin-top: 20px;
         padding: 10px;
+        flex: auto;
+        max-width: 320px;
         @include display-flex(column, flex-start, center);
         flex: 1;
         ul {
@@ -521,6 +523,9 @@ html, body, .main-container {
                 @include display-flex(column, space-between, flex-start);
                 min-height: 300px;
                 padding: 0px 10px;
+                p {
+                    word-break: break-all;
+                }
                 .bottom {
                     width: 100%;
                     @include display-flex(row, space-between, center);

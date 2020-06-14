@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/anime2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/anime2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/animeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/animeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/faq.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/faq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/multiple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/layout.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,14 +252,9 @@
       <workItem from="1591998957826" duration="602000" />
       <workItem from="1592038597826" duration="636000" />
       <workItem from="1592068799644" duration="940000" />
-      <workItem from="1592120841790" duration="660000" />
-    </task>
-    <task id="LOCAL-00064" summary="-Add to composer">
-      <created>1590931081563</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1590931081563</updated>
+      <workItem from="1592120841790" duration="881000" />
+      <workItem from="1592132300579" duration="263000" />
+      <workItem from="1592135012659" duration="587000" />
     </task>
     <task id="LOCAL-00065" summary="No maximum">
       <created>1590931381195</created>
@@ -584,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592121058469</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="Roles Default">
+      <created>1592121518785</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1592121518785</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +622,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="htaccess" />
     <MESSAGE value="less requests" />
     <MESSAGE value="paginate" />
     <MESSAGE value="no time" />
@@ -632,6 +646,7 @@
     <MESSAGE value="genre fixed" />
     <MESSAGE value="prod" />
     <MESSAGE value="Everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything" />
+    <MESSAGE value="Roles Default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Roles Default" />
   </component>
 </project>
