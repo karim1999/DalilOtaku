@@ -18,7 +18,7 @@ class GenreController extends Controller
 
         $data= [
             "settings"=> Setting::all()->keyBy("key"),
-            "title" => $genre->name_en,
+            "title" => $genre->name != "" ? $genre->name : $genre->name_en,
             "animes" => $animes,
         ];
         return view('home', $data);

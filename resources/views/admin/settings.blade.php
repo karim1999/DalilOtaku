@@ -65,10 +65,10 @@
                     <label for="google_id">كود مصادقة جوجل:</label>
                     <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google_id" value="{{$google_id}}" autofocus>
                 </div>
-                <div class="input-container">
-                    <label for="google">كود مصادقة جوجل:</label>
-                    <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google" value="" autofocus>
-                </div>
+{{--                <div class="input-container">--}}
+{{--                    <label for="google">كود مصادقة جوجل:</label>--}}
+{{--                    <input placeholder="اكتب كود مصادقة جوجل..." type="text" name="google" value="" autofocus>--}}
+{{--                </div>--}}
                 <div class="flex-3"></div>
             </div>
             <div class="splitter">

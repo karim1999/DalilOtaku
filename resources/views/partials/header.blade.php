@@ -20,3 +20,16 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @endif
 @yield('styles')
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+@if(isset($settings) && $settings['google_id']->value != "")
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{$settings['google_id']->value}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{$settings["google_id"]->value}}');
+    </script>
+@endif

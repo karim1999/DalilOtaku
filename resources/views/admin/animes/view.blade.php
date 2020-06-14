@@ -54,9 +54,8 @@
             </div>
             <div class="section" id="tagsInput">
                 <div id="multipleSelect" class="input-container" :assignDefault='assignDefault(@json($currentGenres))'>
-                    <label for="search"> الموسم:</label>
-                    <multiselect :multiple="true" v-model="value" track-by="id" label="name_en" placeholder="Select one" :options='@json($genres)' :searchable="true" :allow-empty="true">
-                        <template slot="singleLabel" slot-scope="{ option }">@{{ option.name != "" ? option.name : option.name_en }}</template>
+                    <label for="search"> التصنيف:</label>
+                    <multiselect :multiple="true" v-model="value" track-by="id"  :custom-label="nameLang" placeholder="Select one" :options='@json($genres)' :searchable="true" :allow-empty="true">
                     </multiselect>
                     <input style="display: none" hidden type="text" name="genres" :value="getGenresAsString">
                 </div>
@@ -106,7 +105,11 @@
                     @endif
                     <div class="genres-container">
                         @foreach($anime->genres as $genre)
-                            <button>{{$genre->name ? $genre->name : $genre->name_en}}</button>
+                            <h4>{{$genre->name ? $genre->name : $genre->name_en}}</h4>
+                            @if(!$loop->last)
+                                <h4>|</h4>
+                            @endif
+
                         @endforeach
                     </div>
                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
@@ -11,9 +12,35 @@ use Spatie\Permission\Models\Role;
 class UserController extends Controller
 {
     //
-    public function index(){
+    private function filterUser($users, $request){
+        if($request->input('search')){
+            $search= $request->input('search');
+            $users= $users->where(function ($query) use ($search) {
+                $query->where("email", "like", "%".$search."%")->orWhere("name", "like", "%".$search."%");
+            });
+        }
+
+        if($request->input('role')){
+            $role= $request->input('role');
+            $users= $users->whereHas('roles', function (Builder $query) use($role) {
+                $query->where('roles.id', $role);
+            });
+        }
+
+        if($request->input('num')){
+            $num= $request->input('num');
+            $users= $users->paginate($num);
+        }else{
+            $users= $users->paginate(10);
+        }
+        return $users;
+    }
+
+    public function index(Request $request){
+        $users= User::whereNotNull("id");
+        $users= $this->filterUser($users, $request);
         $data= [
-            'users' => User::all()
+            'users' => $users
         ];
         return view("admin.users.view", $data);
     }

@@ -23,11 +23,11 @@
         </div>
         <div class="input-container">
             <label for="description_en">الوصف بالانجليزية:</label>
-            <textarea placeholder="اكتب الوصف بالانجليزية..." required name="description_en">{{isset($description_en) ? $description_en : ""}}</textarea>
+            <textarea placeholder="اكتب الوصف بالانجليزية..." name="description_en">{{isset($description_en) ? $description_en : ""}}</textarea>
         </div>
         <div class="input-container">
             <label for="description">الوصف بالعربية:</label>
-            <textarea placeholder="اكتب الوصف بالعربية..." required name="description">{{isset($description) ? $description : ""}}</textarea>
+            <textarea placeholder="اكتب الوصف بالعربية..." name="description">{{isset($description) ? $description : ""}}</textarea>
         </div>
         <button type="submit">حفظ</button>
     </form>

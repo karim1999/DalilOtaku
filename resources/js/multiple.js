@@ -15,6 +15,9 @@ const multiple = new Vue({
                 this.value= value
                 this.assigned= true
             }
+        },
+        nameLang (anime) {
+            return anime.name || anime.name_en
         }
     },
     computed: {
