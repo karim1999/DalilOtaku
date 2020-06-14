@@ -13,22 +13,38 @@ use Illuminate\Http\Request;
 class AnimeController extends Controller
 {
     //
-    public function index(){
+    public function index(Request $request){
+        $animes= Anime::where('banned', '0')->whereNull("description");
+        $animes= $this->filterAnime($animes, $request);
         $genres= Genre::all();
+        $currentGenres= array();
+        if($request->input('genres')){
+            $currentGenres= Genre::whereIn("id", explode(",", request()->input("genres")))->get();
+        }
+
         $data= [
+            "currentGenres"=> $currentGenres,
             'genres'=> $genres,
-            'animes' => Anime::where('banned', '0')->whereNull("description")->paginate(10),
+            'animes' => $animes,
             'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
             'translating' => Anime::where('banned', '0')->whereNull("title")->count(),
         ];
         return view("admin.animes.view", $data);
     }
-    public function published(){
+    public function published(Request $request){
+        $animes= Anime::where('banned', '0')->whereNotNull("description");
+        $animes= $this->filterAnime($animes, $request);
         $genres= Genre::all();
+        $currentGenres= array();
+        if($request->input('genres')){
+            $currentGenres= Genre::whereIn("id", explode(",", request()->input("genres")))->get();
+        }
+
         $data= [
+            "currentGenres"=> $currentGenres,
             'genres'=> $genres,
-            'animes' => Anime::where('banned', '0')->whereNotNull("description")->paginate(10),
+            'animes' => $animes,
             'published' => Anime::where('banned', '0')->whereNotNull("description")->count(),
             'airing' => Anime::where('banned', '0')->where("is_airing", 1)->count(),
             'translating' => Anime::where('banned', '0')->whereNull("description")->count(),
