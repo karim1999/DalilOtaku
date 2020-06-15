@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GenreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/multiple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/multiple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/animes/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/genres/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/genres/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="blade" />
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="blade" />
       </list>
     </option>
   </component>
@@ -171,7 +165,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SocialMedia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -184,19 +178,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\web\DalilOtaku\public" />
+      <recent name="C:\projects\web\DalilOtaku\resources\js\components" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\roles" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\partials" />
+      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\banned" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\web\DalilOtaku\public\assets\icons2" />
       <recent name="C:\projects\web\DalilOtaku\public\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\views\admin" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass\assets" />
       <recent name="C:\projects\web\DalilOtaku\resources\sass" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\web\DalilOtaku\resources\js\components" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\roles" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\partials" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\banned" />
-      <recent name="C:\projects\web\DalilOtaku\resources\views\admin\animes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,14 +244,8 @@
       <workItem from="1592120841790" duration="881000" />
       <workItem from="1592132300579" duration="263000" />
       <workItem from="1592135012659" duration="732000" />
-      <workItem from="1592158243436" duration="3935000" />
-    </task>
-    <task id="LOCAL-00066" summary="less memory">
-      <created>1590932268073</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1590932268073</updated>
+      <workItem from="1592158243436" duration="4172000" />
+      <workItem from="1592218865522" duration="842000" />
     </task>
     <task id="LOCAL-00067" summary="Only Releasing and Not released">
       <created>1590933594600</created>
@@ -595,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592135626593</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Everything">
+      <created>1592162252932</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1592162252932</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,9 +635,9 @@
     <MESSAGE value="type fixed" />
     <MESSAGE value="genre fixed" />
     <MESSAGE value="prod" />
-    <MESSAGE value="Everything" />
     <MESSAGE value="Roles Default" />
     <MESSAGE value="News Design fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="News Design fixed" />
+    <MESSAGE value="Everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything" />
   </component>
 </project>
