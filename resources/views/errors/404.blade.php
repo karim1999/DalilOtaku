@@ -5,7 +5,14 @@
         .mainbox {
             margin: auto;
             height: 600px;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+        .container-404{
+            margin: auto;
+            height: 600px;
+            max-width: 500px;
             position: relative;
         }
 
@@ -21,7 +28,7 @@
         .far {
             position: absolute;
             font-size: 8.5rem;
-            left: 42%;
+            left: 40%;
             top: 15%;
             /*color: #ffffff;*/
         }
@@ -54,9 +61,11 @@
         }
     </style>
     <div class="mainbox">
-        <div class="err">4</div>
-        <i class="far fa-question-circle fa-spin"></i>
-        <div class="err2">4</div>
+        <div class="container-404">
+            <div class="err">4</div>
+            <i class="far fa-question-circle fa-spin"></i>
+            <div class="err2">4</div>
+        </div>
         <div class="msg"> الصفحة التي تبحث عنها غير موجودة.<br> <a href="#">اضغط هنا للذهاب للرئيسية</a>
             <br>
             <img style="margin-top: 20px" src="{{asset('assets/logo.png')}}" alt="">

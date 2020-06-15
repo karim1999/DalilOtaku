@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -245,14 +243,8 @@
       <workItem from="1592132300579" duration="263000" />
       <workItem from="1592135012659" duration="732000" />
       <workItem from="1592158243436" duration="4172000" />
-      <workItem from="1592218865522" duration="842000" />
-    </task>
-    <task id="LOCAL-00067" summary="Only Releasing and Not released">
-      <created>1590933594600</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1590933594600</updated>
+      <workItem from="1592218865522" duration="2474000" />
+      <workItem from="1592221818120" duration="408000" />
     </task>
     <task id="LOCAL-00068" summary="Only Releasing and Not released">
       <created>1590934855535</created>
@@ -590,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592162252932</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Sitemap&#10;404">
+      <created>1592219727194</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1592219727195</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +612,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="paginate" />
     <MESSAGE value="no time" />
     <MESSAGE value="back" />
     <MESSAGE value="New Anime Card" />
@@ -638,6 +636,7 @@
     <MESSAGE value="Roles Default" />
     <MESSAGE value="News Design fixed" />
     <MESSAGE value="Everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything" />
+    <MESSAGE value="Sitemap&#10;404" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sitemap&#10;404" />
   </component>
 </project>
