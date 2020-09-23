@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6024e8e6-2680-40c3-ac06-ef5c152d6a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -244,14 +244,25 @@
       <workItem from="1592135012659" duration="732000" />
       <workItem from="1592158243436" duration="4172000" />
       <workItem from="1592218865522" duration="2474000" />
-      <workItem from="1592221818120" duration="408000" />
-    </task>
-    <task id="LOCAL-00068" summary="Only Releasing and Not released">
-      <created>1590934855535</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1590934855535</updated>
+      <workItem from="1592221818120" duration="498000" />
+      <workItem from="1592388986148" duration="555000" />
+      <workItem from="1592862039624" duration="650000" />
+      <workItem from="1596066173825" duration="2000" />
+      <workItem from="1596108832201" duration="75000" />
+      <workItem from="1596108990365" duration="1144000" />
+      <workItem from="1596112077877" duration="732000" />
+      <workItem from="1596295786735" duration="686000" />
+      <workItem from="1596296933180" duration="49000" />
+      <workItem from="1596298446912" duration="3000" />
+      <workItem from="1596457951293" duration="250000" />
+      <workItem from="1596478754529" duration="460000" />
+      <workItem from="1596479391594" duration="125000" />
+      <workItem from="1597685769477" duration="1051000" />
+      <workItem from="1598094599983" duration="36000" />
+      <workItem from="1598204621880" duration="85000" />
+      <workItem from="1600632923294" duration="135000" />
+      <workItem from="1600780758576" duration="137000" />
+      <workItem from="1600890611217" duration="17000" />
     </task>
     <task id="LOCAL-00069" summary="Cron job">
       <created>1590937719879</created>
@@ -589,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592219727195</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Responsive 404">
+      <created>1592222237539</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1592222237540</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,7 +630,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="no time" />
     <MESSAGE value="back" />
     <MESSAGE value="New Anime Card" />
     <MESSAGE value="Theme Switcher" />
@@ -637,6 +654,7 @@
     <MESSAGE value="News Design fixed" />
     <MESSAGE value="Everything" />
     <MESSAGE value="Sitemap&#10;404" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sitemap&#10;404" />
+    <MESSAGE value="Responsive 404" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive 404" />
   </component>
 </project>

@@ -93,7 +93,7 @@ class HomeController extends Controller
         }else if( $day >= $summer_starts && $day <= $summer_ends ) {
             $season = "summer";
         }elseif( $day >= $autumn_starts && $day <= $autumn_ends ) {
-            $season = "autumn";
+            $season = "fall";
         }else {
             $season = "winter";
         }
